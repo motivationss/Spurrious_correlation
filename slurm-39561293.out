@@ -1,0 +1,5 @@
+bash: results/CUB/CUB_sample_exp/train_downstream_ERM_upweight_0_epochs_74_lr_1e-05_weight_decay_0.0/final_epoch32/JTT_upweight_50_epochs_80_lr_1e-05_weight_decay_1.0/job.sh: No such file or directory
+
+
+problem with metadata_aug.csv
+(<class 'NotADirectoryError'>, NotADirectoryError(20, 'Not a directory'), <traceback object at 0x2b7574a9dc88>)

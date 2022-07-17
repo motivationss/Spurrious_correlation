@@ -1,0 +1,1325 @@
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 24 --root_dir ./jigsaw --n_epochs 3 --aug_col None --log_dir results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/metadata_aug.csv --lr 2e-05 --weight_decay 0.0 --up_weight 0 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 0 --wandb --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/job.sh
+
+
+wandb: Currently logged in as: gaotang. Use `wandb login --relogin` to force relogin
+
+
+
+
+
+ WARNING, Using bert-base-uncased without using BERT HYPER-PARAMS 
+
+
+
+
+
+
+
+WARNING: You are using 'all_data_with_identities.csv' instead of the default 'metadata.csv'.
+
+
+wandb: Tracking run with wandb version 0.12.18
+wandb: Run data is saved locally in /home/gaotang/jtt/wandb/run-20220620_233536-126rzae8
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run royal-smoke-18
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_jigsaw
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_jigsaw/runs/126rzae8
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Dataset: jigsaw
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: toxicity
+Confounder names: ['identity_any']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./jigsaw
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert-base-uncased
+Train from scratch: False
+N epochs: 3
+Batch size: 24
+Lr: 2e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: all_data_with_identities.csv
+Fold: None
+Metadata path: results/jigsaw/jigsaw_sample_exp/metadata_aug.csv
+Aug col: None
+
+metadata_csv_name: all_data_with_identities.csv
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    toxicity = 0, identity_any = 0: n = 143628
+    toxicity = 0, identity_any = 1: n = 94895
+    toxicity = 1, identity_any = 0: n = 11940
+    toxicity = 1, identity_any = 1: n = 18575
+Validation Data...
+    toxicity = 0, identity_any = 0: n = 24366
+    toxicity = 0, identity_any = 1: n = 15759
+    toxicity = 1, identity_any = 0: n = 1967
+    toxicity = 1, identity_any = 1: n = 3088
+Test Data...
+    toxicity = 0, identity_any = 0: n = 72373
+    toxicity = 0, identity_any = 1: n = 46185
+    toxicity = 1, identity_any = 0: n = 6063
+    toxicity = 1, identity_any = 1: n = 9161
+n_classes = 2
+
+Epoch [0]:
+Training:
+Average incurred loss: 0.609  
+Average sample loss: 0.609  
+Average acc: 0.656  
+  toxicity = 0, identity_any = 0  [n = 636]:	loss = 0.561  exp loss = 0.359  adjusted loss = 0.359  adv prob = 0.250000   acc = 0.717
+  toxicity = 0, identity_any = 1  [n = 419]:	loss = 0.571  exp loss = 0.352  adjusted loss = 0.352  adv prob = 0.250000   acc = 0.675
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 0.946  exp loss = 1.291  adjusted loss = 1.291  adv prob = 0.250000   acc = 0.304
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 0.917  exp loss = 1.208  adjusted loss = 1.208  adv prob = 0.250000   acc = 0.348
+Average incurred loss: 0.411  
+Average sample loss: 0.411  
+Average acc: 0.867  
+  toxicity = 0, identity_any = 0  [n = 656]:	loss = 0.211  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 384]:	loss = 0.205  exp loss = 0.185  adjusted loss = 0.185  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 1.725  exp loss = 1.806  adjusted loss = 1.806  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 97]:	loss = 1.723  exp loss = 1.843  adjusted loss = 1.843  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.348  
+Average sample loss: 0.348  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 649]:	loss = 0.154  exp loss = 0.141  adjusted loss = 0.141  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.146  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 1.989  exp loss = 2.062  adjusted loss = 2.062  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 66]:	loss = 2.065  exp loss = 2.216  adjusted loss = 2.216  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.341  
+Average sample loss: 0.341  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 625]:	loss = 0.125  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 448]:	loss = 0.121  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 2.199  exp loss = 2.186  adjusted loss = 2.186  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 72]:	loss = 2.158  exp loss = 2.158  adjusted loss = 2.158  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.329  
+Average sample loss: 0.329  
+Average acc: 0.902  
+  toxicity = 0, identity_any = 0  [n = 639]:	loss = 0.120  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 443]:	loss = 0.114  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 50]:	loss = 2.233  exp loss = 2.213  adjusted loss = 2.213  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 68]:	loss = 2.289  exp loss = 2.284  adjusted loss = 2.284  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.367  
+Average sample loss: 0.367  
+Average acc: 0.883  
+  toxicity = 0, identity_any = 0  [n = 625]:	loss = 0.111  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 435]:	loss = 0.106  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 2.277  exp loss = 2.200  adjusted loss = 2.200  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.349  exp loss = 2.264  adjusted loss = 2.264  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.336  
+Average sample loss: 0.336  
+Average acc: 0.897  
+  toxicity = 0, identity_any = 0  [n = 605]:	loss = 0.124  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 472]:	loss = 0.121  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 2.167  exp loss = 2.120  adjusted loss = 2.120  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 67]:	loss = 2.240  exp loss = 2.268  adjusted loss = 2.268  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.375  
+Average sample loss: 0.375  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 633]:	loss = 0.123  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 422]:	loss = 0.117  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 62]:	loss = 2.166  exp loss = 2.202  adjusted loss = 2.202  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 2.268  exp loss = 2.290  adjusted loss = 2.290  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.388  
+Average sample loss: 0.388  
+Average acc: 0.873  
+  toxicity = 0, identity_any = 0  [n = 640]:	loss = 0.129  exp loss = 0.140  adjusted loss = 0.140  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 408]:	loss = 0.119  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 2.192  exp loss = 2.168  adjusted loss = 2.168  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 98]:	loss = 2.205  exp loss = 2.199  adjusted loss = 2.199  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.336  
+Average sample loss: 0.336  
+Average acc: 0.896  
+  toxicity = 0, identity_any = 0  [n = 628]:	loss = 0.134  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 448]:	loss = 0.132  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 2.086  exp loss = 2.093  adjusted loss = 2.093  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 78]:	loss = 2.106  exp loss = 2.066  adjusted loss = 2.066  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.362  
+Average sample loss: 0.362  
+Average acc: 0.883  
+  toxicity = 0, identity_any = 0  [n = 641]:	loss = 0.123  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 418]:	loss = 0.119  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.111  exp loss = 2.179  adjusted loss = 2.179  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 2.196  exp loss = 2.197  adjusted loss = 2.197  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.325  
+Average sample loss: 0.325  
+Average acc: 0.900  
+  toxicity = 0, identity_any = 0  [n = 655]:	loss = 0.121  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.115  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 50]:	loss = 2.195  exp loss = 2.239  adjusted loss = 2.239  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 70]:	loss = 2.182  exp loss = 2.171  adjusted loss = 2.171  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.336  
+Average sample loss: 0.336  
+Average acc: 0.897  
+  toxicity = 0, identity_any = 0  [n = 634]:	loss = 0.116  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 442]:	loss = 0.108  exp loss = 0.107  adjusted loss = 0.107  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 47]:	loss = 2.219  exp loss = 2.224  adjusted loss = 2.224  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 2.316  exp loss = 2.264  adjusted loss = 2.264  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.386  
+Average sample loss: 0.386  
+Average acc: 0.875  
+  toxicity = 0, identity_any = 0  [n = 626]:	loss = 0.123  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 424]:	loss = 0.116  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 2.169  exp loss = 2.181  adjusted loss = 2.181  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 107]:	loss = 2.275  exp loss = 2.190  adjusted loss = 2.190  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.354  
+Average sample loss: 0.354  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 667]:	loss = 0.129  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 399]:	loss = 0.121  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 61]:	loss = 2.077  exp loss = 2.085  adjusted loss = 2.085  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 73]:	loss = 2.241  exp loss = 2.235  adjusted loss = 2.235  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.379  
+Average sample loss: 0.379  
+Average acc: 0.877  
+  toxicity = 0, identity_any = 0  [n = 626]:	loss = 0.128  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 427]:	loss = 0.121  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 2.161  exp loss = 2.135  adjusted loss = 2.135  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 2.232  exp loss = 2.245  adjusted loss = 2.245  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.370  
+Average sample loss: 0.370  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 630]:	loss = 0.132  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 427]:	loss = 0.128  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 61]:	loss = 2.121  exp loss = 2.139  adjusted loss = 2.139  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 2.157  exp loss = 2.147  adjusted loss = 2.147  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.383  
+Average sample loss: 0.383  
+Average acc: 0.876  
+  toxicity = 0, identity_any = 0  [n = 628]:	loss = 0.132  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 423]:	loss = 0.125  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 2.150  exp loss = 2.070  adjusted loss = 2.070  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 2.187  exp loss = 2.145  adjusted loss = 2.145  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.350  
+Average sample loss: 0.350  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 643]:	loss = 0.136  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 424]:	loss = 0.131  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 48]:	loss = 2.055  exp loss = 2.064  adjusted loss = 2.064  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.105  exp loss = 2.131  adjusted loss = 2.131  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.338  
+Average sample loss: 0.338  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 642]:	loss = 0.125  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 430]:	loss = 0.118  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 2.114  exp loss = 2.092  adjusted loss = 2.092  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.158  exp loss = 2.213  adjusted loss = 2.213  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.356  
+Average sample loss: 0.356  
+Average acc: 0.887  
+  toxicity = 0, identity_any = 0  [n = 629]:	loss = 0.118  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 436]:	loss = 0.113  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 2.205  exp loss = 2.199  adjusted loss = 2.199  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 2.280  exp loss = 2.312  adjusted loss = 2.312  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.371  
+Average sample loss: 0.371  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.121  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 411]:	loss = 0.116  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 2.172  exp loss = 2.162  adjusted loss = 2.162  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 2.216  exp loss = 2.204  adjusted loss = 2.204  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.347  
+Average sample loss: 0.347  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 658]:	loss = 0.126  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.121  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 2.187  exp loss = 2.163  adjusted loss = 2.163  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 2.197  exp loss = 2.225  adjusted loss = 2.225  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.330  
+Average sample loss: 0.330  
+Average acc: 0.896  
+  toxicity = 0, identity_any = 0  [n = 651]:	loss = 0.120  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.118  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 2.128  exp loss = 2.186  adjusted loss = 2.186  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 70]:	loss = 2.172  exp loss = 2.176  adjusted loss = 2.176  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.372  
+Average sample loss: 0.372  
+Average acc: 0.878  
+  toxicity = 0, identity_any = 0  [n = 642]:	loss = 0.120  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 411]:	loss = 0.112  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 59]:	loss = 2.139  exp loss = 2.141  adjusted loss = 2.141  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 88]:	loss = 2.235  exp loss = 2.242  adjusted loss = 2.242  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.363  
+Average sample loss: 0.363  
+Average acc: 0.883  
+  toxicity = 0, identity_any = 0  [n = 617]:	loss = 0.126  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 443]:	loss = 0.118  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.124  exp loss = 2.174  adjusted loss = 2.174  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 88]:	loss = 2.211  exp loss = 2.262  adjusted loss = 2.262  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.379  
+Average sample loss: 0.379  
+Average acc: 0.875  
+  toxicity = 0, identity_any = 0  [n = 612]:	loss = 0.131  exp loss = 0.133  adjusted loss = 0.133  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 438]:	loss = 0.125  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 2.080  exp loss = 2.088  adjusted loss = 2.088  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 2.164  exp loss = 2.152  adjusted loss = 2.152  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.348  
+Average sample loss: 0.348  
+Average acc: 0.892  
+  toxicity = 0, identity_any = 0  [n = 605]:	loss = 0.130  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 465]:	loss = 0.125  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.114  exp loss = 2.089  adjusted loss = 2.089  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 78]:	loss = 2.188  exp loss = 2.147  adjusted loss = 2.147  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.384  
+Average sample loss: 0.384  
+Average acc: 0.870  
+  toxicity = 0, identity_any = 0  [n = 657]:	loss = 0.130  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 387]:	loss = 0.123  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 62]:	loss = 2.081  exp loss = 2.087  adjusted loss = 2.087  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 94]:	loss = 2.109  exp loss = 2.039  adjusted loss = 2.039  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.358  
+Average sample loss: 0.358  
+Average acc: 0.884  
+  toxicity = 0, identity_any = 0  [n = 659]:	loss = 0.136  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 402]:	loss = 0.129  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 2.069  exp loss = 2.078  adjusted loss = 2.078  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 2.073  exp loss = 2.090  adjusted loss = 2.090  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.365  
+Average sample loss: 0.365  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 627]:	loss = 0.131  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 430]:	loss = 0.120  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 2.079  exp loss = 2.003  adjusted loss = 2.003  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 2.156  exp loss = 2.183  adjusted loss = 2.183  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.346  
+Average sample loss: 0.346  
+Average acc: 0.890  
+  toxicity = 0, identity_any = 0  [n = 651]:	loss = 0.124  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 417]:	loss = 0.118  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.107  exp loss = 2.100  adjusted loss = 2.100  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 81]:	loss = 2.198  exp loss = 2.247  adjusted loss = 2.247  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.354  
+Average sample loss: 0.354  
+Average acc: 0.885  
+  toxicity = 0, identity_any = 0  [n = 657]:	loss = 0.126  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 405]:	loss = 0.119  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 2.079  exp loss = 2.069  adjusted loss = 2.069  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 78]:	loss = 2.165  exp loss = 2.186  adjusted loss = 2.186  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.323  
+Average sample loss: 0.323  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 668]:	loss = 0.118  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 415]:	loss = 0.113  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 2.226  exp loss = 2.205  adjusted loss = 2.205  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 63]:	loss = 2.254  exp loss = 2.293  adjusted loss = 2.293  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.364  
+Average sample loss: 0.364  
+Average acc: 0.880  
+  toxicity = 0, identity_any = 0  [n = 616]:	loss = 0.118  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 440]:	loss = 0.112  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 59]:	loss = 2.155  exp loss = 2.128  adjusted loss = 2.128  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.204  exp loss = 2.216  adjusted loss = 2.216  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.380  
+Average sample loss: 0.380  
+Average acc: 0.872  
+  toxicity = 0, identity_any = 0  [n = 621]:	loss = 0.130  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.122  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 2.007  exp loss = 1.960  adjusted loss = 1.960  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 91]:	loss = 2.174  exp loss = 2.149  adjusted loss = 2.149  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.336  
+Average sample loss: 0.336  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 646]:	loss = 0.131  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 426]:	loss = 0.124  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 59]:	loss = 2.071  exp loss = 2.113  adjusted loss = 2.113  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 69]:	loss = 2.090  exp loss = 2.081  adjusted loss = 2.081  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.363  
+Average sample loss: 0.363  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 657]:	loss = 0.128  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 400]:	loss = 0.118  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 2.087  exp loss = 2.061  adjusted loss = 2.061  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 88]:	loss = 2.148  exp loss = 2.116  adjusted loss = 2.116  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.326  
+Average sample loss: 0.326  
+Average acc: 0.900  
+  toxicity = 0, identity_any = 0  [n = 647]:	loss = 0.122  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 433]:	loss = 0.118  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 2.152  exp loss = 2.184  adjusted loss = 2.184  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 75]:	loss = 2.188  exp loss = 2.122  adjusted loss = 2.122  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.347  
+Average sample loss: 0.347  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 634]:	loss = 0.118  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 432]:	loss = 0.110  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 2.151  exp loss = 2.063  adjusted loss = 2.063  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 81]:	loss = 2.224  exp loss = 2.259  adjusted loss = 2.259  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.371  
+Average sample loss: 0.371  
+Average acc: 0.878  
+  toxicity = 0, identity_any = 0  [n = 645]:	loss = 0.121  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 409]:	loss = 0.117  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 2.180  exp loss = 2.214  adjusted loss = 2.214  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 2.186  exp loss = 2.191  adjusted loss = 2.191  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.324  
+Average sample loss: 0.324  
+Average acc: 0.899  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.117  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 435]:	loss = 0.113  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 65]:	loss = 2.155  exp loss = 2.209  adjusted loss = 2.209  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 56]:	loss = 2.222  exp loss = 2.200  adjusted loss = 2.200  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.333  
+Average sample loss: 0.333  
+Average acc: 0.897  
+  toxicity = 0, identity_any = 0  [n = 629]:	loss = 0.116  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 447]:	loss = 0.110  exp loss = 0.106  adjusted loss = 0.106  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.236  exp loss = 2.282  adjusted loss = 2.282  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 73]:	loss = 2.238  exp loss = 2.252  adjusted loss = 2.252  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.357  
+Average sample loss: 0.357  
+Average acc: 0.882  
+  toxicity = 0, identity_any = 0  [n = 625]:	loss = 0.121  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 433]:	loss = 0.114  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 58]:	loss = 2.108  exp loss = 2.102  adjusted loss = 2.102  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 2.161  exp loss = 2.114  adjusted loss = 2.114  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.338  
+Average sample loss: 0.338  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 659]:	loss = 0.122  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.117  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.125  exp loss = 2.101  adjusted loss = 2.101  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 2.193  exp loss = 2.195  adjusted loss = 2.195  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.310  
+Average sample loss: 0.310  
+Average acc: 0.906  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.114  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 443]:	loss = 0.110  exp loss = 0.106  adjusted loss = 0.106  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 2.173  exp loss = 2.115  adjusted loss = 2.115  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 70]:	loss = 2.237  exp loss = 2.294  adjusted loss = 2.294  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.346  
+Average sample loss: 0.346  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 637]:	loss = 0.112  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 430]:	loss = 0.108  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 47]:	loss = 2.191  exp loss = 2.150  adjusted loss = 2.150  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 2.259  exp loss = 2.266  adjusted loss = 2.266  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.354  
+Average sample loss: 0.354  
+Average acc: 0.883  
+  toxicity = 0, identity_any = 0  [n = 608]:	loss = 0.117  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 452]:	loss = 0.113  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 2.140  exp loss = 2.098  adjusted loss = 2.098  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 2.173  exp loss = 2.199  adjusted loss = 2.199  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.332  
+Average sample loss: 0.332  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 653]:	loss = 0.118  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 421]:	loss = 0.114  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.141  exp loss = 2.143  adjusted loss = 2.143  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 2.192  exp loss = 2.177  adjusted loss = 2.177  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.355  
+Average sample loss: 0.355  
+Average acc: 0.884  
+  toxicity = 0, identity_any = 0  [n = 618]:	loss = 0.119  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 443]:	loss = 0.112  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 2.151  exp loss = 2.171  adjusted loss = 2.171  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 79]:	loss = 2.198  exp loss = 2.236  adjusted loss = 2.236  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.340  
+Average sample loss: 0.340  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 648]:	loss = 0.122  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 423]:	loss = 0.117  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 32]:	loss = 2.088  exp loss = 2.064  adjusted loss = 2.064  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 97]:	loss = 2.189  exp loss = 2.242  adjusted loss = 2.242  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.371  
+Average sample loss: 0.371  
+Average acc: 0.875  
+  toxicity = 0, identity_any = 0  [n = 634]:	loss = 0.126  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 416]:	loss = 0.118  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 2.092  exp loss = 2.103  adjusted loss = 2.103  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 95]:	loss = 2.116  exp loss = 2.174  adjusted loss = 2.174  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.368  
+Average sample loss: 0.368  
+Average acc: 0.877  
+  toxicity = 0, identity_any = 0  [n = 639]:	loss = 0.122  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.119  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.080  exp loss = 2.098  adjusted loss = 2.098  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 96]:	loss = 2.143  exp loss = 2.136  adjusted loss = 2.136  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.363  
+Average sample loss: 0.363  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 629]:	loss = 0.134  exp loss = 0.137  adjusted loss = 0.137  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 426]:	loss = 0.129  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.999  exp loss = 2.023  adjusted loss = 2.023  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 91]:	loss = 2.071  exp loss = 2.106  adjusted loss = 2.106  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.365  
+Average sample loss: 0.365  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 627]:	loss = 0.136  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 429]:	loss = 0.128  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 59]:	loss = 2.051  exp loss = 2.044  adjusted loss = 2.044  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.076  exp loss = 2.140  adjusted loss = 2.140  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.332  
+Average sample loss: 0.332  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 660]:	loss = 0.126  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.119  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 2.048  exp loss = 2.110  adjusted loss = 2.110  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 2.117  exp loss = 2.090  adjusted loss = 2.090  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.333  
+Average sample loss: 0.333  
+Average acc: 0.891  
+  toxicity = 0, identity_any = 0  [n = 647]:	loss = 0.119  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 422]:	loss = 0.116  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 49]:	loss = 2.084  exp loss = 2.116  adjusted loss = 2.116  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 2.094  exp loss = 2.073  adjusted loss = 2.073  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.361  
+Average sample loss: 0.361  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 654]:	loss = 0.124  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 402]:	loss = 0.118  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 62]:	loss = 2.063  exp loss = 1.954  adjusted loss = 1.954  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 2.156  exp loss = 2.242  adjusted loss = 2.242  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.370  
+Average sample loss: 0.370  
+Average acc: 0.876  
+  toxicity = 0, identity_any = 0  [n = 634]:	loss = 0.126  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 417]:	loss = 0.120  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 65]:	loss = 2.090  exp loss = 2.081  adjusted loss = 2.081  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 2.117  exp loss = 2.071  adjusted loss = 2.071  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.372  
+Average sample loss: 0.372  
+Average acc: 0.872  
+  toxicity = 0, identity_any = 0  [n = 627]:	loss = 0.129  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 421]:	loss = 0.129  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 66]:	loss = 1.964  exp loss = 1.926  adjusted loss = 1.926  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 2.107  exp loss = 2.154  adjusted loss = 2.154  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.339  
+Average sample loss: 0.339  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 620]:	loss = 0.128  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 446]:	loss = 0.128  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.981  exp loss = 1.974  adjusted loss = 1.974  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 78]:	loss = 2.053  exp loss = 2.033  adjusted loss = 2.033  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.346  
+Average sample loss: 0.346  
+Average acc: 0.885  
+  toxicity = 0, identity_any = 0  [n = 645]:	loss = 0.124  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 418]:	loss = 0.126  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 57]:	loss = 2.016  exp loss = 2.025  adjusted loss = 2.025  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 80]:	loss = 2.094  exp loss = 2.167  adjusted loss = 2.167  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.364  
+Average sample loss: 0.364  
+Average acc: 0.874  
+  toxicity = 0, identity_any = 0  [n = 628]:	loss = 0.122  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 421]:	loss = 0.119  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 61]:	loss = 2.078  exp loss = 2.117  adjusted loss = 2.117  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 90]:	loss = 2.045  exp loss = 2.043  adjusted loss = 2.043  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.358  
+Average sample loss: 0.358  
+Average acc: 0.880  
+  toxicity = 0, identity_any = 0  [n = 668]:	loss = 0.128  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 388]:	loss = 0.123  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 44]:	loss = 2.003  exp loss = 2.071  adjusted loss = 2.071  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 100]:	loss = 2.076  exp loss = 2.066  adjusted loss = 2.066  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.297  
+Average sample loss: 0.297  
+Average acc: 0.909  
+  toxicity = 0, identity_any = 0  [n = 664]:	loss = 0.117  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 427]:	loss = 0.118  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 39]:	loss = 2.035  exp loss = 2.059  adjusted loss = 2.059  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 70]:	loss = 2.120  exp loss = 2.238  adjusted loss = 2.238  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.349  
+Average sample loss: 0.349  
+Average acc: 0.886  
+  toxicity = 0, identity_any = 0  [n = 659]:	loss = 0.119  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 404]:	loss = 0.114  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 2.096  exp loss = 2.046  adjusted loss = 2.046  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 81]:	loss = 2.185  exp loss = 2.152  adjusted loss = 2.152  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.365  
+Average sample loss: 0.365  
+Average acc: 0.876  
+  toxicity = 0, identity_any = 0  [n = 620]:	loss = 0.122  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 431]:	loss = 0.122  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 2.028  exp loss = 1.974  adjusted loss = 1.974  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 2.121  exp loss = 2.055  adjusted loss = 2.055  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.344  
+Average sample loss: 0.344  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 668]:	loss = 0.122  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 397]:	loss = 0.125  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.050  exp loss = 2.012  adjusted loss = 2.012  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 2.111  exp loss = 2.125  adjusted loss = 2.125  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.363  
+Average sample loss: 0.363  
+Average acc: 0.874  
+  toxicity = 0, identity_any = 0  [n = 600]:	loss = 0.123  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 450]:	loss = 0.126  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 2.042  exp loss = 2.075  adjusted loss = 2.075  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 87]:	loss = 2.036  exp loss = 2.129  adjusted loss = 2.129  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.330  
+Average sample loss: 0.330  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 647]:	loss = 0.122  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 424]:	loss = 0.125  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.018  exp loss = 2.034  adjusted loss = 2.034  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 78]:	loss = 2.074  exp loss = 2.151  adjusted loss = 2.151  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.307  
+Average sample loss: 0.307  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 650]:	loss = 0.113  exp loss = 0.104  adjusted loss = 0.104  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 433]:	loss = 0.112  exp loss = 0.103  adjusted loss = 0.103  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 42]:	loss = 2.085  exp loss = 2.087  adjusted loss = 2.087  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 75]:	loss = 2.131  exp loss = 2.130  adjusted loss = 2.130  adv prob = 0.250000   acc = 0.013
+Average incurred loss: 0.336  
+Average sample loss: 0.336  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 626]:	loss = 0.115  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 441]:	loss = 0.117  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 59]:	loss = 2.102  exp loss = 2.067  adjusted loss = 2.067  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 2.099  exp loss = 2.081  adjusted loss = 2.081  adv prob = 0.250000   acc = 0.014
+Average incurred loss: 0.354  
+Average sample loss: 0.354  
+Average acc: 0.876  
+  toxicity = 0, identity_any = 0  [n = 629]:	loss = 0.113  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 422]:	loss = 0.112  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 2.039  exp loss = 2.019  adjusted loss = 2.019  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 95]:	loss = 2.061  exp loss = 1.952  adjusted loss = 1.952  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.348  
+Average sample loss: 0.348  
+Average acc: 0.882  
+  toxicity = 0, identity_any = 0  [n = 625]:	loss = 0.123  exp loss = 0.127  adjusted loss = 0.127  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 434]:	loss = 0.122  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 2.030  exp loss = 1.882  adjusted loss = 1.882  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 2.052  exp loss = 2.004  adjusted loss = 2.004  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.363  
+Average sample loss: 0.363  
+Average acc: 0.872  
+  toxicity = 0, identity_any = 0  [n = 646]:	loss = 0.130  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 404]:	loss = 0.129  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 1.961  exp loss = 1.976  adjusted loss = 1.976  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 99]:	loss = 2.020  exp loss = 1.965  adjusted loss = 1.965  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.341  
+Average sample loss: 0.341  
+Average acc: 0.883  
+  toxicity = 0, identity_any = 0  [n = 630]:	loss = 0.129  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 431]:	loss = 0.130  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 57]:	loss = 1.959  exp loss = 1.985  adjusted loss = 1.985  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.958  exp loss = 1.901  adjusted loss = 1.901  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.314  
+Average sample loss: 0.314  
+Average acc: 0.897  
+  toxicity = 0, identity_any = 0  [n = 649]:	loss = 0.119  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 427]:	loss = 0.115  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.994  exp loss = 2.025  adjusted loss = 2.025  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 68]:	loss = 2.034  exp loss = 2.035  adjusted loss = 2.035  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.346  
+Average sample loss: 0.346  
+Average acc: 0.880  
+  toxicity = 0, identity_any = 0  [n = 635]:	loss = 0.118  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 421]:	loss = 0.114  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 2.010  exp loss = 1.978  adjusted loss = 1.978  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 93]:	loss = 2.044  exp loss = 2.033  adjusted loss = 2.033  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.327  
+Average sample loss: 0.327  
+Average acc: 0.890  
+  toxicity = 0, identity_any = 0  [n = 629]:	loss = 0.119  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 440]:	loss = 0.119  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.979  exp loss = 1.924  adjusted loss = 1.924  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 2.046  exp loss = 2.121  adjusted loss = 2.121  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.303  
+Average sample loss: 0.303  
+Average acc: 0.900  
+  toxicity = 0, identity_any = 0  [n = 681]:	loss = 0.109  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 0.999
+  toxicity = 0, identity_any = 1  [n = 400]:	loss = 0.109  exp loss = 0.102  adjusted loss = 0.102  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 44]:	loss = 2.086  exp loss = 1.979  adjusted loss = 1.979  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 75]:	loss = 2.062  exp loss = 2.052  adjusted loss = 2.052  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.342  
+Average sample loss: 0.342  
+Average acc: 0.882  
+  toxicity = 0, identity_any = 0  [n = 641]:	loss = 0.112  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 417]:	loss = 0.111  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.984  exp loss = 1.996  adjusted loss = 1.996  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 90]:	loss = 2.095  exp loss = 2.032  adjusted loss = 2.032  adv prob = 0.250000   acc = 0.011
+Average incurred loss: 0.332  
+Average sample loss: 0.332  
+Average acc: 0.886  
+  toxicity = 0, identity_any = 0  [n = 673]:	loss = 0.123  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 0.999
+  toxicity = 0, identity_any = 1  [n = 388]:	loss = 0.134  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 1.982  exp loss = 2.006  adjusted loss = 2.006  adv prob = 0.250000   acc = 0.019
+  toxicity = 1, identity_any = 1  [n = 86]:	loss = 1.843  exp loss = 1.918  adjusted loss = 1.918  adv prob = 0.250000   acc = 0.023
+Average incurred loss: 0.296  
+Average sample loss: 0.296  
+Average acc: 0.907  
+  toxicity = 0, identity_any = 0  [n = 622]:	loss = 0.106  exp loss = 0.102  adjusted loss = 0.102  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 466]:	loss = 0.110  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 38]:	loss = 2.038  exp loss = 2.069  adjusted loss = 2.069  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 2.174  exp loss = 2.149  adjusted loss = 2.149  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.350  
+Average sample loss: 0.350  
+Average acc: 0.877  
+  toxicity = 0, identity_any = 0  [n = 622]:	loss = 0.112  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 428]:	loss = 0.110  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 57]:	loss = 2.042  exp loss = 2.002  adjusted loss = 2.002  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 93]:	loss = 2.015  exp loss = 1.895  adjusted loss = 1.895  adv prob = 0.250000   acc = 0.032
+Average incurred loss: 0.329  
+Average sample loss: 0.329  
+Average acc: 0.887  
+  toxicity = 0, identity_any = 0  [n = 611]:	loss = 0.120  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 455]:	loss = 0.116  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 2.039  exp loss = 2.154  adjusted loss = 2.154  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 88]:	loss = 1.988  exp loss = 1.965  adjusted loss = 1.965  adv prob = 0.250000   acc = 0.011
+Average incurred loss: 0.335  
+Average sample loss: 0.335  
+Average acc: 0.878  
+  toxicity = 0, identity_any = 0  [n = 638]:	loss = 0.122  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 415]:	loss = 0.130  exp loss = 0.138  adjusted loss = 0.138  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 58]:	loss = 1.792  exp loss = 1.718  adjusted loss = 1.718  adv prob = 0.250000   acc = 0.052
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 1.869  exp loss = 1.886  adjusted loss = 1.886  adv prob = 0.250000   acc = 0.022
+Average incurred loss: 0.313  
+Average sample loss: 0.313  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 637]:	loss = 0.113  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 437]:	loss = 0.121  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 2.002  exp loss = 1.897  adjusted loss = 1.897  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 1.991  exp loss = 1.915  adjusted loss = 1.915  adv prob = 0.250000   acc = 0.000
+Average incurred loss: 0.333  
+Average sample loss: 0.333  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 627]:	loss = 0.112  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 429]:	loss = 0.121  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 48]:	loss = 1.982  exp loss = 2.026  adjusted loss = 2.026  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 96]:	loss = 1.903  exp loss = 1.956  adjusted loss = 1.956  adv prob = 0.250000   acc = 0.031
+Average incurred loss: 0.313  
+Average sample loss: 0.313  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 607]:	loss = 0.116  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 464]:	loss = 0.132  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 0.991
+  toxicity = 1, identity_any = 0  [n = 50]:	loss = 1.869  exp loss = 1.884  adjusted loss = 1.884  adv prob = 0.250000   acc = 0.040
+  toxicity = 1, identity_any = 1  [n = 79]:	loss = 1.901  exp loss = 1.991  adjusted loss = 1.991  adv prob = 0.250000   acc = 0.038
+Average incurred loss: 0.299  
+Average sample loss: 0.299  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 639]:	loss = 0.106  exp loss = 0.100  adjusted loss = 0.100  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 434]:	loss = 0.119  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 0.998
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 1.919  exp loss = 1.953  adjusted loss = 1.953  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 81]:	loss = 1.864  exp loss = 1.908  adjusted loss = 1.908  adv prob = 0.250000   acc = 0.037
+Average incurred loss: 0.313  
+Average sample loss: 0.313  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 645]:	loss = 0.107  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 420]:	loss = 0.121  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.919  exp loss = 1.754  adjusted loss = 1.754  adv prob = 0.250000   acc = 0.038
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 1.873  exp loss = 1.908  adjusted loss = 1.908  adv prob = 0.250000   acc = 0.024
+Average incurred loss: 0.290  
+Average sample loss: 0.290  
+Average acc: 0.898  
+  toxicity = 0, identity_any = 0  [n = 656]:	loss = 0.103  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 423]:	loss = 0.110  exp loss = 0.103  adjusted loss = 0.103  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.838  exp loss = 1.863  adjusted loss = 1.863  adv prob = 0.250000   acc = 0.022
+  toxicity = 1, identity_any = 1  [n = 76]:	loss = 1.979  exp loss = 1.967  adjusted loss = 1.967  adv prob = 0.250000   acc = 0.026
+Average incurred loss: 0.320  
+Average sample loss: 0.320  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 598]:	loss = 0.106  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 471]:	loss = 0.129  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.994
+  toxicity = 1, identity_any = 0  [n = 49]:	loss = 2.008  exp loss = 2.146  adjusted loss = 2.146  adv prob = 0.250000   acc = 0.041
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.966  exp loss = 1.962  adjusted loss = 1.962  adv prob = 0.250000   acc = 0.024
+Average incurred loss: 0.320  
+Average sample loss: 0.320  
+Average acc: 0.884  
+  toxicity = 0, identity_any = 0  [n = 645]:	loss = 0.106  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 416]:	loss = 0.120  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.947  exp loss = 1.978  adjusted loss = 1.978  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 87]:	loss = 1.884  exp loss = 1.631  adjusted loss = 1.631  adv prob = 0.250000   acc = 0.046
+Average incurred loss: 0.330  
+Average sample loss: 0.330  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 650]:	loss = 0.113  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 405]:	loss = 0.135  exp loss = 0.155  adjusted loss = 0.155  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.887  exp loss = 1.839  adjusted loss = 1.839  adv prob = 0.250000   acc = 0.036
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 1.822  exp loss = 1.824  adjusted loss = 1.824  adv prob = 0.250000   acc = 0.056
+Average incurred loss: 0.320  
+Average sample loss: 0.320  
+Average acc: 0.879  
+  toxicity = 0, identity_any = 0  [n = 655]:	loss = 0.118  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 408]:	loss = 0.137  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 0.983
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 1.814  exp loss = 1.934  adjusted loss = 1.934  adv prob = 0.250000   acc = 0.018
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.840  exp loss = 1.955  adjusted loss = 1.955  adv prob = 0.250000   acc = 0.037
+Average incurred loss: 0.321  
+Average sample loss: 0.321  
+Average acc: 0.882  
+  toxicity = 0, identity_any = 0  [n = 591]:	loss = 0.112  exp loss = 0.103  adjusted loss = 0.103  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 469]:	loss = 0.124  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 0.991
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 1.847  exp loss = 1.914  adjusted loss = 1.914  adv prob = 0.250000   acc = 0.038
+  toxicity = 1, identity_any = 1  [n = 87]:	loss = 1.877  exp loss = 1.960  adjusted loss = 1.960  adv prob = 0.250000   acc = 0.034
+Average incurred loss: 0.324  
+Average sample loss: 0.324  
+Average acc: 0.878  
+  toxicity = 0, identity_any = 0  [n = 627]:	loss = 0.114  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 428]:	loss = 0.136  exp loss = 0.155  adjusted loss = 0.155  adv prob = 0.250000   acc = 0.986
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 1.857  exp loss = 1.817  adjusted loss = 1.817  adv prob = 0.250000   acc = 0.017
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 1.742  exp loss = 1.608  adjusted loss = 1.608  adv prob = 0.250000   acc = 0.071
+Average incurred loss: 0.301  
+Average sample loss: 0.301  
+Average acc: 0.887  
+  toxicity = 0, identity_any = 0  [n = 633]:	loss = 0.109  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 430]:	loss = 0.140  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 0.984
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 1.792  exp loss = 1.835  adjusted loss = 1.835  adv prob = 0.250000   acc = 0.062
+  toxicity = 1, identity_any = 1  [n = 73]:	loss = 1.603  exp loss = 1.534  adjusted loss = 1.534  adv prob = 0.250000   acc = 0.096
+Average incurred loss: 0.320  
+Average sample loss: 0.320  
+Average acc: 0.886  
+  toxicity = 0, identity_any = 0  [n = 663]:	loss = 0.098  exp loss = 0.104  adjusted loss = 0.104  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 397]:	loss = 0.134  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 0.995
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 1.944  exp loss = 1.947  adjusted loss = 1.947  adv prob = 0.250000   acc = 0.050
+  toxicity = 1, identity_any = 1  [n = 80]:	loss = 1.857  exp loss = 1.995  adjusted loss = 1.995  adv prob = 0.250000   acc = 0.062
+Average incurred loss: 0.316  
+Average sample loss: 0.316  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 665]:	loss = 0.117  exp loss = 0.100  adjusted loss = 0.100  adv prob = 0.250000   acc = 0.989
+  toxicity = 0, identity_any = 1  [n = 389]:	loss = 0.137  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 0.985
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 1.698  exp loss = 1.692  adjusted loss = 1.692  adv prob = 0.250000   acc = 0.055
+  toxicity = 1, identity_any = 1  [n = 91]:	loss = 1.697  exp loss = 1.797  adjusted loss = 1.797  adv prob = 0.250000   acc = 0.143
+Average incurred loss: 0.291  
+Average sample loss: 0.291  
+Average acc: 0.892  
+  toxicity = 0, identity_any = 0  [n = 647]:	loss = 0.109  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.994
+  toxicity = 0, identity_any = 1  [n = 426]:	loss = 0.122  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 0.981
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.784  exp loss = 1.743  adjusted loss = 1.743  adv prob = 0.250000   acc = 0.067
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.793  exp loss = 1.928  adjusted loss = 1.928  adv prob = 0.250000   acc = 0.085
+Average incurred loss: 0.282  
+Average sample loss: 0.282  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.086  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 436]:	loss = 0.109  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 0.993
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 1.963  exp loss = 1.866  adjusted loss = 1.866  adv prob = 0.250000   acc = 0.022
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 1.956  exp loss = 1.932  adjusted loss = 1.932  adv prob = 0.250000   acc = 0.081
+Average incurred loss: 0.302  
+Average sample loss: 0.302  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 624]:	loss = 0.099  exp loss = 0.104  adjusted loss = 0.104  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 433]:	loss = 0.138  exp loss = 0.144  adjusted loss = 0.144  adv prob = 0.250000   acc = 0.979
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 1.767  exp loss = 1.643  adjusted loss = 1.643  adv prob = 0.250000   acc = 0.094
+  toxicity = 1, identity_any = 1  [n = 90]:	loss = 1.639  exp loss = 1.473  adjusted loss = 1.473  adv prob = 0.250000   acc = 0.167
+Average incurred loss: 0.307  
+Average sample loss: 0.307  
+Average acc: 0.878  
+  toxicity = 0, identity_any = 0  [n = 642]:	loss = 0.105  exp loss = 0.101  adjusted loss = 0.101  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.138  exp loss = 0.164  adjusted loss = 0.164  adv prob = 0.250000   acc = 0.978
+  toxicity = 1, identity_any = 0  [n = 49]:	loss = 1.639  exp loss = 1.654  adjusted loss = 1.654  adv prob = 0.250000   acc = 0.061
+  toxicity = 1, identity_any = 1  [n = 96]:	loss = 1.702  exp loss = 1.524  adjusted loss = 1.524  adv prob = 0.250000   acc = 0.104
+Average incurred loss: 0.298  
+Average sample loss: 0.298  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 645]:	loss = 0.109  exp loss = 0.092  adjusted loss = 0.092  adv prob = 0.250000   acc = 0.989
+  toxicity = 0, identity_any = 1  [n = 422]:	loss = 0.127  exp loss = 0.133  adjusted loss = 0.133  adv prob = 0.250000   acc = 0.991
+  toxicity = 1, identity_any = 0  [n = 50]:	loss = 1.685  exp loss = 1.826  adjusted loss = 1.826  adv prob = 0.250000   acc = 0.120
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 1.794  exp loss = 2.061  adjusted loss = 2.061  adv prob = 0.250000   acc = 0.120
+Average incurred loss: 0.306  
+Average sample loss: 0.306  
+Average acc: 0.887  
+  toxicity = 0, identity_any = 0  [n = 653]:	loss = 0.104  exp loss = 0.106  adjusted loss = 0.106  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 400]:	loss = 0.124  exp loss = 0.149  adjusted loss = 0.149  adv prob = 0.250000   acc = 0.990
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.822  exp loss = 1.757  adjusted loss = 1.757  adv prob = 0.250000   acc = 0.071
+  toxicity = 1, identity_any = 1  [n = 91]:	loss = 1.626  exp loss = 1.576  adjusted loss = 1.576  adv prob = 0.250000   acc = 0.176
+Average incurred loss: 0.302  
+Average sample loss: 0.302  
+Average acc: 0.884  
+  toxicity = 0, identity_any = 0  [n = 598]:	loss = 0.110  exp loss = 0.091  adjusted loss = 0.091  adv prob = 0.250000   acc = 0.983
+  toxicity = 0, identity_any = 1  [n = 467]:	loss = 0.124  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 0.979
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.818  exp loss = 2.032  adjusted loss = 2.032  adv prob = 0.250000   acc = 0.093
+  toxicity = 1, identity_any = 1  [n = 81]:	loss = 1.730  exp loss = 2.060  adjusted loss = 2.060  adv prob = 0.250000   acc = 0.136
+Average incurred loss: 0.271  
+Average sample loss: 0.271  
+Average acc: 0.902  
+  toxicity = 0, identity_any = 0  [n = 670]:	loss = 0.083  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 0.999
+  toxicity = 0, identity_any = 1  [n = 412]:	loss = 0.098  exp loss = 0.101  adjusted loss = 0.101  adv prob = 0.250000   acc = 0.993
+  toxicity = 1, identity_any = 0  [n = 48]:	loss = 2.003  exp loss = 1.965  adjusted loss = 1.965  adv prob = 0.250000   acc = 0.021
+  toxicity = 1, identity_any = 1  [n = 70]:	loss = 1.892  exp loss = 1.798  adjusted loss = 1.798  adv prob = 0.250000   acc = 0.043
+Average incurred loss: 0.291  
+Average sample loss: 0.291  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 617]:	loss = 0.100  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 460]:	loss = 0.128  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.978
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 1.806  exp loss = 1.891  adjusted loss = 1.891  adv prob = 0.250000   acc = 0.087
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 1.897  exp loss = 1.741  adjusted loss = 1.741  adv prob = 0.250000   acc = 0.065
+Average incurred loss: 0.357  
+Average sample loss: 0.357  
+Average acc: 0.854  
+  toxicity = 0, identity_any = 0  [n = 597]:	loss = 0.121  exp loss = 0.144  adjusted loss = 0.144  adv prob = 0.250000   acc = 0.982
+  toxicity = 0, identity_any = 1  [n = 435]:	loss = 0.165  exp loss = 0.200  adjusted loss = 0.200  adv prob = 0.250000   acc = 0.959
+  toxicity = 1, identity_any = 0  [n = 62]:	loss = 1.830  exp loss = 1.754  adjusted loss = 1.754  adv prob = 0.250000   acc = 0.129
+  toxicity = 1, identity_any = 1  [n = 106]:	loss = 1.607  exp loss = 1.472  adjusted loss = 1.472  adv prob = 0.250000   acc = 0.132
+Average incurred loss: 0.248  
+Average sample loss: 0.248  
+Average acc: 0.913  
+  toxicity = 0, identity_any = 0  [n = 652]:	loss = 0.083  exp loss = 0.075  adjusted loss = 0.075  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 444]:	loss = 0.112  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 0.989
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 1.893  exp loss = 1.816  adjusted loss = 1.816  adv prob = 0.250000   acc = 0.070
+  toxicity = 1, identity_any = 1  [n = 61]:	loss = 1.847  exp loss = 2.161  adjusted loss = 2.161  adv prob = 0.250000   acc = 0.033
+Average incurred loss: 0.273  
+Average sample loss: 0.273  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 637]:	loss = 0.094  exp loss = 0.098  adjusted loss = 0.098  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 433]:	loss = 0.113  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.993
+  toxicity = 1, identity_any = 0  [n = 67]:	loss = 1.670  exp loss = 1.676  adjusted loss = 1.676  adv prob = 0.250000   acc = 0.090
+  toxicity = 1, identity_any = 1  [n = 63]:	loss = 1.697  exp loss = 1.619  adjusted loss = 1.619  adv prob = 0.250000   acc = 0.095
+Average incurred loss: 0.288  
+Average sample loss: 0.288  
+Average acc: 0.896  
+  toxicity = 0, identity_any = 0  [n = 667]:	loss = 0.090  exp loss = 0.102  adjusted loss = 0.102  adv prob = 0.250000   acc = 0.996
+  toxicity = 0, identity_any = 1  [n = 408]:	loss = 0.129  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 0.980
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.913  exp loss = 2.076  adjusted loss = 2.076  adv prob = 0.250000   acc = 0.089
+  toxicity = 1, identity_any = 1  [n = 69]:	loss = 1.820  exp loss = 1.798  adjusted loss = 1.798  adv prob = 0.250000   acc = 0.087
+Average incurred loss: 0.258  
+Average sample loss: 0.258  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 638]:	loss = 0.079  exp loss = 0.091  adjusted loss = 0.091  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 447]:	loss = 0.106  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 0.987
+  toxicity = 1, identity_any = 0  [n = 39]:	loss = 1.848  exp loss = 1.930  adjusted loss = 1.930  adv prob = 0.250000   acc = 0.051
+  toxicity = 1, identity_any = 1  [n = 76]:	loss = 1.839  exp loss = 1.729  adjusted loss = 1.729  adv prob = 0.250000   acc = 0.066
+Average incurred loss: 0.331  
+Average sample loss: 0.331  
+Average acc: 0.869  
+  toxicity = 0, identity_any = 0  [n = 634]:	loss = 0.108  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 0.986
+  toxicity = 0, identity_any = 1  [n = 414]:	loss = 0.132  exp loss = 0.150  adjusted loss = 0.150  adv prob = 0.250000   acc = 0.978
+  toxicity = 1, identity_any = 0  [n = 69]:	loss = 1.839  exp loss = 1.815  adjusted loss = 1.815  adv prob = 0.250000   acc = 0.087
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 1.771  exp loss = 1.562  adjusted loss = 1.562  adv prob = 0.250000   acc = 0.084
+Average incurred loss: 0.324  
+Average sample loss: 0.324  
+Average acc: 0.870  
+  toxicity = 0, identity_any = 0  [n = 638]:	loss = 0.123  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 0.984
+  toxicity = 0, identity_any = 1  [n = 410]:	loss = 0.150  exp loss = 0.161  adjusted loss = 0.161  adv prob = 0.250000   acc = 0.973
+  toxicity = 1, identity_any = 0  [n = 47]:	loss = 1.758  exp loss = 1.946  adjusted loss = 1.946  adv prob = 0.250000   acc = 0.085
+  toxicity = 1, identity_any = 1  [n = 105]:	loss = 1.583  exp loss = 1.830  adjusted loss = 1.830  adv prob = 0.250000   acc = 0.124
+Average incurred loss: 0.309  
+Average sample loss: 0.309  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 664]:	loss = 0.103  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 0.991
+  toxicity = 0, identity_any = 1  [n = 390]:	loss = 0.153  exp loss = 0.175  adjusted loss = 0.175  adv prob = 0.250000   acc = 0.979
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.765  exp loss = 1.673  adjusted loss = 1.673  adv prob = 0.250000   acc = 0.111
+  toxicity = 1, identity_any = 1  [n = 92]:	loss = 1.606  exp loss = 1.615  adjusted loss = 1.615  adv prob = 0.250000   acc = 0.120
+Average incurred loss: 0.292  
+Average sample loss: 0.292  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 633]:	loss = 0.099  exp loss = 0.082  adjusted loss = 0.082  adv prob = 0.250000   acc = 0.991
+  toxicity = 0, identity_any = 1  [n = 438]:	loss = 0.132  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.982
+  toxicity = 1, identity_any = 0  [n = 57]:	loss = 1.653  exp loss = 1.882  adjusted loss = 1.882  adv prob = 0.250000   acc = 0.123
+  toxicity = 1, identity_any = 1  [n = 72]:	loss = 1.883  exp loss = 1.971  adjusted loss = 1.971  adv prob = 0.250000   acc = 0.042
+Average incurred loss: 0.291  
+Average sample loss: 0.291  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 632]:	loss = 0.082  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 437]:	loss = 0.116  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.989
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.937  exp loss = 1.885  adjusted loss = 1.885  adv prob = 0.250000   acc = 0.036
+  toxicity = 1, identity_any = 1  [n = 75]:	loss = 1.844  exp loss = 1.829  adjusted loss = 1.829  adv prob = 0.250000   acc = 0.067
+Average incurred loss: 0.301  
+Average sample loss: 0.301  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 651]:	loss = 0.104  exp loss = 0.105  adjusted loss = 0.105  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 413]:	loss = 0.135  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.983
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.705  exp loss = 1.711  adjusted loss = 1.711  adv prob = 0.250000   acc = 0.077
+  toxicity = 1, identity_any = 1  [n = 84]:	loss = 1.775  exp loss = 1.896  adjusted loss = 1.896  adv prob = 0.250000   acc = 0.095
+Average incurred loss: 0.311  
+Average sample loss: 0.311  
+Average acc: 0.872  
+  toxicity = 0, identity_any = 0  [n = 637]:	loss = 0.105  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 0.994
+  toxicity = 0, identity_any = 1  [n = 408]:	loss = 0.130  exp loss = 0.147  adjusted loss = 0.147  adv prob = 0.250000   acc = 0.980
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 1.741  exp loss = 1.539  adjusted loss = 1.539  adv prob = 0.250000   acc = 0.036
+  toxicity = 1, identity_any = 1  [n = 100]:	loss = 1.579  exp loss = 1.367  adjusted loss = 1.367  adv prob = 0.250000   acc = 0.120
+Average incurred loss: 0.268  
+Average sample loss: 0.268  
+Average acc: 0.907  
+  toxicity = 0, identity_any = 0  [n = 621]:	loss = 0.094  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 0.998
+  toxicity = 0, identity_any = 1  [n = 458]:	loss = 0.128  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 0.989
+  toxicity = 1, identity_any = 0  [n = 47]:	loss = 1.670  exp loss = 1.860  adjusted loss = 1.860  adv prob = 0.250000   acc = 0.106
+  toxicity = 1, identity_any = 1  [n = 74]:	loss = 1.714  exp loss = 1.816  adjusted loss = 1.816  adv prob = 0.250000   acc = 0.135
+Average incurred loss: 0.281  
+Average sample loss: 0.281  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 658]:	loss = 0.093  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 418]:	loss = 0.118  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 0.993
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.837  exp loss = 1.708  adjusted loss = 1.708  adv prob = 0.250000   acc = 0.096
+  toxicity = 1, identity_any = 1  [n = 72]:	loss = 1.825  exp loss = 1.862  adjusted loss = 1.862  adv prob = 0.250000   acc = 0.097
+Average incurred loss: 0.324  
+Average sample loss: 0.324  
+Average acc: 0.873  
+  toxicity = 0, identity_any = 0  [n = 641]:	loss = 0.093  exp loss = 0.097  adjusted loss = 0.097  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 402]:	loss = 0.136  exp loss = 0.150  adjusted loss = 0.150  adv prob = 0.250000   acc = 0.973
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 1.810  exp loss = 1.716  adjusted loss = 1.716  adv prob = 0.250000   acc = 0.095
+  toxicity = 1, identity_any = 1  [n = 94]:	loss = 1.703  exp loss = 1.523  adjusted loss = 1.523  adv prob = 0.250000   acc = 0.138
+Average incurred loss: 0.306  
+Average sample loss: 0.306  
+Average acc: 0.873  
+  toxicity = 0, identity_any = 0  [n = 643]:	loss = 0.111  exp loss = 0.103  adjusted loss = 0.103  adv prob = 0.250000   acc = 0.988
+  toxicity = 0, identity_any = 1  [n = 401]:	loss = 0.158  exp loss = 0.148  adjusted loss = 0.148  adv prob = 0.250000   acc = 0.970
+  toxicity = 1, identity_any = 0  [n = 67]:	loss = 1.485  exp loss = 1.502  adjusted loss = 1.502  adv prob = 0.250000   acc = 0.179
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 1.494  exp loss = 1.705  adjusted loss = 1.705  adv prob = 0.250000   acc = 0.135
+Average incurred loss: 0.304  
+Average sample loss: 0.304  
+Average acc: 0.885  
+  toxicity = 0, identity_any = 0  [n = 653]:	loss = 0.104  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 0.985
+  toxicity = 0, identity_any = 1  [n = 406]:	loss = 0.140  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.990
+  toxicity = 1, identity_any = 0  [n = 62]:	loss = 1.678  exp loss = 1.434  adjusted loss = 1.434  adv prob = 0.250000   acc = 0.161
+  toxicity = 1, identity_any = 1  [n = 79]:	loss = 1.710  exp loss = 1.717  adjusted loss = 1.717  adv prob = 0.250000   acc = 0.089
+Average incurred loss: 0.296  
+Average sample loss: 0.296  
+Average acc: 0.892  
+  toxicity = 0, identity_any = 0  [n = 650]:	loss = 0.097  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 417]:	loss = 0.132  exp loss = 0.140  adjusted loss = 0.140  adv prob = 0.250000   acc = 0.983
+  toxicity = 1, identity_any = 0  [n = 58]:	loss = 1.914  exp loss = 1.796  adjusted loss = 1.796  adv prob = 0.250000   acc = 0.086
+  toxicity = 1, identity_any = 1  [n = 75]:	loss = 1.685  exp loss = 1.640  adjusted loss = 1.640  adv prob = 0.250000   acc = 0.107
+Average incurred loss: 0.285  
+Average sample loss: 0.285  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 665]:	loss = 0.094  exp loss = 0.092  adjusted loss = 0.092  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 401]:	loss = 0.140  exp loss = 0.133  adjusted loss = 0.133  adv prob = 0.250000   acc = 0.980
+  toxicity = 1, identity_any = 0  [n = 43]:	loss = 1.650  exp loss = 1.589  adjusted loss = 1.589  adv prob = 0.250000   acc = 0.070
+  toxicity = 1, identity_any = 1  [n = 91]:	loss = 1.668  exp loss = 1.619  adjusted loss = 1.619  adv prob = 0.250000   acc = 0.143
+Average incurred loss: 0.314  
+Average sample loss: 0.314  
+Average acc: 0.881  
+  toxicity = 0, identity_any = 0  [n = 660]:	loss = 0.098  exp loss = 0.095  adjusted loss = 0.095  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 393]:	loss = 0.133  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 0.982
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 1.883  exp loss = 1.970  adjusted loss = 1.970  adv prob = 0.250000   acc = 0.047
+  toxicity = 1, identity_any = 1  [n = 83]:	loss = 1.679  exp loss = 1.744  adjusted loss = 1.744  adv prob = 0.250000   acc = 0.133
+Average incurred loss: 0.281  
+Average sample loss: 0.281  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 658]:	loss = 0.101  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 0.988
+  toxicity = 0, identity_any = 1  [n = 409]:	loss = 0.130  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 0.985
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.750  exp loss = 1.779  adjusted loss = 1.779  adv prob = 0.250000   acc = 0.111
+  toxicity = 1, identity_any = 1  [n = 79]:	loss = 1.554  exp loss = 1.555  adjusted loss = 1.555  adv prob = 0.250000   acc = 0.177
+Average incurred loss: 0.260  
+Average sample loss: 0.260  
+Average acc: 0.900  
+  toxicity = 0, identity_any = 0  [n = 648]:	loss = 0.089  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.133  exp loss = 0.131  adjusted loss = 0.131  adv prob = 0.250000   acc = 0.976
+  toxicity = 1, identity_any = 0  [n = 37]:	loss = 1.547  exp loss = 1.264  adjusted loss = 1.264  adv prob = 0.250000   acc = 0.162
+  toxicity = 1, identity_any = 1  [n = 90]:	loss = 1.557  exp loss = 1.504  adjusted loss = 1.504  adv prob = 0.250000   acc = 0.144
+Average incurred loss: 0.306  
+Average sample loss: 0.306  
+Average acc: 0.888  
+  toxicity = 0, identity_any = 0  [n = 656]:	loss = 0.092  exp loss = 0.100  adjusted loss = 0.100  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 399]:	loss = 0.136  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 0.977
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.909  exp loss = 1.753  adjusted loss = 1.753  adv prob = 0.250000   acc = 0.135
+  toxicity = 1, identity_any = 1  [n = 93]:	loss = 1.652  exp loss = 1.764  adjusted loss = 1.764  adv prob = 0.250000   acc = 0.183
+Average incurred loss: 0.311  
+Average sample loss: 0.311  
+Average acc: 0.876  
+  toxicity = 0, identity_any = 0  [n = 635]:	loss = 0.107  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.987
+  toxicity = 0, identity_any = 1  [n = 405]:	loss = 0.161  exp loss = 0.149  adjusted loss = 0.149  adv prob = 0.250000   acc = 0.973
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 1.613  exp loss = 1.779  adjusted loss = 1.779  adv prob = 0.250000   acc = 0.133
+  toxicity = 1, identity_any = 1  [n = 100]:	loss = 1.426  exp loss = 1.432  adjusted loss = 1.432  adv prob = 0.250000   acc = 0.220
+Average incurred loss: 0.295  
+Average sample loss: 0.295  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 656]:	loss = 0.100  exp loss = 0.098  adjusted loss = 0.098  adv prob = 0.250000   acc = 0.991
+  toxicity = 0, identity_any = 1  [n = 403]:	loss = 0.152  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 0.970
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 1.744  exp loss = 1.847  adjusted loss = 1.847  adv prob = 0.250000   acc = 0.196
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 1.527  exp loss = 1.394  adjusted loss = 1.394  adv prob = 0.250000   acc = 0.176
+Average incurred loss: 0.280  
+Average sample loss: 0.280  
+Average acc: 0.896  
+  toxicity = 0, identity_any = 0  [n = 636]:	loss = 0.088  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.994
+  toxicity = 0, identity_any = 1  [n = 428]:	loss = 0.131  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 0.984
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.729  exp loss = 1.766  adjusted loss = 1.766  adv prob = 0.250000   acc = 0.148
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.599  exp loss = 1.478  adjusted loss = 1.478  adv prob = 0.250000   acc = 0.171
+Average incurred loss: 0.270  
+Average sample loss: 0.270  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 628]:	loss = 0.084  exp loss = 0.087  adjusted loss = 0.087  adv prob = 0.250000   acc = 0.990
+  toxicity = 0, identity_any = 1  [n = 444]:	loss = 0.127  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 0.982
+  toxicity = 1, identity_any = 0  [n = 38]:	loss = 1.783  exp loss = 1.997  adjusted loss = 1.997  adv prob = 0.250000   acc = 0.079
+  toxicity = 1, identity_any = 1  [n = 90]:	loss = 1.629  exp loss = 1.478  adjusted loss = 1.478  adv prob = 0.250000   acc = 0.144
+Average incurred loss: 0.262  
+Average sample loss: 0.262  
+Average acc: 0.904  
+  toxicity = 0, identity_any = 0  [n = 652]:	loss = 0.091  exp loss = 0.095  adjusted loss = 0.095  adv prob = 0.250000   acc = 0.994
+  toxicity = 0, identity_any = 1  [n = 424]:	loss = 0.130  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 0.981
+  toxicity = 1, identity_any = 0  [n = 39]:	loss = 1.798  exp loss = 1.728  adjusted loss = 1.728  adv prob = 0.250000   acc = 0.128
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 1.522  exp loss = 1.354  adjusted loss = 1.354  adv prob = 0.250000   acc = 0.188
+Average incurred loss: 0.291  
+Average sample loss: 0.291  
+Average acc: 0.884  
+  toxicity = 0, identity_any = 0  [n = 648]:	loss = 0.090  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 409]:	loss = 0.137  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 0.971
+  toxicity = 1, identity_any = 0  [n = 61]:	loss = 1.677  exp loss = 1.740  adjusted loss = 1.740  adv prob = 0.250000   acc = 0.148
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.606  exp loss = 1.628  adjusted loss = 1.628  adv prob = 0.250000   acc = 0.146
+Average incurred loss: 0.277  
+Average sample loss: 0.277  
+Average acc: 0.891  
+  toxicity = 0, identity_any = 0  [n = 611]:	loss = 0.094  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 0.984
+  toxicity = 0, identity_any = 1  [n = 443]:	loss = 0.140  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 0.980
+  toxicity = 1, identity_any = 0  [n = 53]:	loss = 1.491  exp loss = 1.541  adjusted loss = 1.541  adv prob = 0.250000   acc = 0.245
+  toxicity = 1, identity_any = 1  [n = 93]:	loss = 1.438  exp loss = 1.523  adjusted loss = 1.523  adv prob = 0.250000   acc = 0.226
+Average incurred loss: 0.302  
+Average sample loss: 0.302  
+Average acc: 0.877  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.096  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 0.984
+  toxicity = 0, identity_any = 1  [n = 406]:	loss = 0.148  exp loss = 0.175  adjusted loss = 0.175  adv prob = 0.250000   acc = 0.970
+  toxicity = 1, identity_any = 0  [n = 61]:	loss = 1.772  exp loss = 1.534  adjusted loss = 1.534  adv prob = 0.250000   acc = 0.115
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 1.488  exp loss = 1.472  adjusted loss = 1.472  adv prob = 0.250000   acc = 0.191
+Average incurred loss: 0.277  
+Average sample loss: 0.277  
+Average acc: 0.891  
+  toxicity = 0, identity_any = 0  [n = 670]:	loss = 0.093  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 0.990
+  toxicity = 0, identity_any = 1  [n = 397]:	loss = 0.136  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 0.975
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 1.750  exp loss = 1.698  adjusted loss = 1.698  adv prob = 0.250000   acc = 0.137
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.543  exp loss = 1.535  adjusted loss = 1.535  adv prob = 0.250000   acc = 0.146
+Average incurred loss: 0.278  
+Average sample loss: 0.278  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 640]:	loss = 0.092  exp loss = 0.101  adjusted loss = 0.101  adv prob = 0.250000   acc = 0.991
+  toxicity = 0, identity_any = 1  [n = 432]:	loss = 0.133  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 0.977
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.821  exp loss = 1.807  adjusted loss = 1.807  adv prob = 0.250000   acc = 0.096
+  toxicity = 1, identity_any = 1  [n = 76]:	loss = 1.625  exp loss = 1.729  adjusted loss = 1.729  adv prob = 0.250000   acc = 0.158
+Average incurred loss: 0.290  
+Average sample loss: 0.290  
+Average acc: 0.890  
+  toxicity = 0, identity_any = 0  [n = 624]:	loss = 0.091  exp loss = 0.100  adjusted loss = 0.100  adv prob = 0.250000   acc = 0.997
+  toxicity = 0, identity_any = 1  [n = 432]:	loss = 0.140  exp loss = 0.186  adjusted loss = 0.186  adv prob = 0.250000   acc = 0.981
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.750  exp loss = 1.535  adjusted loss = 1.535  adv prob = 0.250000   acc = 0.154
+  toxicity = 1, identity_any = 1  [n = 92]:	loss = 1.513  exp loss = 1.400  adjusted loss = 1.400  adv prob = 0.250000   acc = 0.152
+Average incurred loss: 0.269  
+Average sample loss: 0.269  
+Average acc: 0.899  
+  toxicity = 0, identity_any = 0  [n = 648]:	loss = 0.091  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 0.991
+  toxicity = 0, identity_any = 1  [n = 419]:	loss = 0.135  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 0.981
+  toxicity = 1, identity_any = 0  [n = 51]:	loss = 1.525  exp loss = 1.590  adjusted loss = 1.590  adv prob = 0.250000   acc = 0.255
+  toxicity = 1, identity_any = 1  [n = 82]:	loss = 1.581  exp loss = 1.542  adjusted loss = 1.542  adv prob = 0.250000   acc = 0.159
+Average incurred loss: 0.251  
+Average sample loss: 0.251  
+Average acc: 0.902  
+  toxicity = 0, identity_any = 0  [n = 648]:	loss = 0.079  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 430]:	loss = 0.127  exp loss = 0.133  adjusted loss = 0.133  adv prob = 0.250000   acc = 0.979
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.798  exp loss = 1.790  adjusted loss = 1.790  adv prob = 0.250000   acc = 0.178
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 1.496  exp loss = 1.559  adjusted loss = 1.559  adv prob = 0.250000   acc = 0.143
+Average incurred loss: 0.283  
+Average sample loss: 0.283  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 618]:	loss = 0.089  exp loss = 0.080  adjusted loss = 0.080  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 445]:	loss = 0.141  exp loss = 0.141  adjusted loss = 0.141  adv prob = 0.250000   acc = 0.969
+  toxicity = 1, identity_any = 0  [n = 52]:	loss = 1.823  exp loss = 1.750  adjusted loss = 1.750  adv prob = 0.250000   acc = 0.192
+  toxicity = 1, identity_any = 1  [n = 85]:	loss = 1.494  exp loss = 1.621  adjusted loss = 1.621  adv prob = 0.250000   acc = 0.212
+Average incurred loss: 0.273  
+Average sample loss: 0.273  
+Average acc: 0.898  
+  toxicity = 0, identity_any = 0  [n = 652]:	loss = 0.083  exp loss = 0.078  adjusted loss = 0.078  adv prob = 0.250000   acc = 0.995
+  toxicity = 0, identity_any = 1  [n = 412]:	loss = 0.126  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 0.973
+  toxicity = 1, identity_any = 0  [n = 49]:	loss = 1.858  exp loss = 1.864  adjusted loss = 1.864  adv prob = 0.250000   acc = 0.082
+  toxicity = 1, identity_any = 1  [n = 87]:	loss = 1.505  exp loss = 1.376  adjusted loss = 1.376  adv prob = 0.250000   acc = 0.264
+Average incurred loss: 0.270  
+Average sample loss: 0.270  
+Average acc: 0.893  
+  toxicity = 0, identity_any = 0  [n = 662]:	loss = 0.091  exp loss = 0.068  adjusted loss = 0.068  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 415]:	loss = 0.133  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.976
+  toxicity = 1, identity_any = 0  [n = 46]:	loss = 1.842  exp loss = 1.914  adjusted loss = 1.914  adv prob = 0.250000   acc = 0.065
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 1.617  exp loss = 1.718  adjusted loss = 1.718  adv prob = 0.250000   acc = 0.091
+Average incurred loss: 0.260  
+Average sample loss: 0.260  
+Average acc: 0.901  
+  toxicity = 0, identity_any = 0  [n = 678]:	loss = 0.078  exp loss = 0.080  adjusted loss = 0.080  adv prob = 0.250000   acc = 0.996
+  toxicity = 0, identity_any = 1  [n = 397]:	loss = 0.126  exp loss = 0.139  adjusted loss = 0.139  adv prob = 0.250000   acc = 0.977
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.863  exp loss = 1.958  adjusted loss = 1.958  adv prob = 0.250000   acc = 0.133
+  toxicity = 1, identity_any = 1  [n = 80]:	loss = 1.569  exp loss = 1.865  adjusted loss = 1.865  adv prob = 0.250000   acc = 0.150
+Average incurred loss: 0.246  
+Average sample loss: 0.246  
+Average acc: 0.903  
+  toxicity = 0, identity_any = 0  [n = 646]:	loss = 0.083  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 0.992
+  toxicity = 0, identity_any = 1  [n = 432]:	loss = 0.126  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 0.984
+  toxicity = 1, identity_any = 0  [n = 45]:	loss = 1.642  exp loss = 1.558  adjusted loss = 1.558  adv prob = 0.250000   acc = 0.133
+  toxicity = 1, identity_any = 1  [n = 77]:	loss = 1.476  exp loss = 1.491  adjusted loss = 1.491  adv prob = 0.250000   acc = 0.143
+Average incurred loss: 0.283  
+Average sample loss: 0.283  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 644]:	loss = 0.078  exp loss = 0.094  adjusted loss = 0.094  adv prob = 0.250000   acc = 0.989
+  toxicity = 0, identity_any = 1  [n = 421]:	loss = 0.136  exp loss = 0.130  adjusted loss = 0.130  adv prob = 0.250000   acc = 0.969
+  toxicity = 1, identity_any = 0  [n = 64]:	loss = 1.834  exp loss = 1.710  adjusted loss = 1.710  adv prob = 0.250000   acc = 0.141
+  toxicity = 1, identity_any = 1  [n = 71]:	loss = 1.620  exp loss = 1.328  adjusted loss = 1.328  adv prob = 0.250000   acc = 0.183
+Average incurred loss: 0.281  
+Average sample loss: 0.281  
+Average acc: 0.889  
+  toxicity = 0, identity_any = 0  [n = 664]:	loss = 0.097  exp loss = 0.099  adjusted loss = 0.099  adv prob = 0.250000   acc = 0.986
+  toxicity = 0, identity_any = 1  [n = 393]:	loss = 0.148  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 0.975
+  toxicity = 1, identity_any = 0  [n = 54]:	loss = 1.638  exp loss = 1.624  adjusted loss = 1.624  adv prob = 0.250000   acc = 0.185
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 1.408  exp loss = 1.602  adjusted loss = 1.602  adv prob = 0.250000   acc = 0.213
+Exception in thread Thread-11:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib64/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/_utils/pin_memory.py", line 25, in _pin_memory_loop
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/usr/lib64/python3.6/multiprocessing/queues.py", line 113, in get
+    return _ForkingPickler.loads(res)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/multiprocessing/reductions.py", line 282, in rebuild_storage_fd
+    fd = df.detach()
+  File "/usr/lib64/python3.6/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/usr/lib64/python3.6/multiprocessing/resource_sharer.py", line 87, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/usr/lib64/python3.6/multiprocessing/connection.py", line 497, in Client
+    answer_challenge(c, authkey)
+  File "/usr/lib64/python3.6/multiprocessing/connection.py", line 736, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/usr/lib64/python3.6/multiprocessing/connection.py", line 220, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/usr/lib64/python3.6/multiprocessing/connection.py", line 411, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib64/python3.6/multiprocessing/connection.py", line 383, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+Traceback (most recent call last):
+  File "run_expt.py", line 321, in <module>
+    main(args)
+  File "run_expt.py", line 197, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/gaotang/jtt/train.py", line 272, in train
+    wandb=wandb,
+  File "/home/gaotang/jtt/train.py", line 121, in run_epoch
+    loss_main.backward()
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/tensor.py", line 245, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/autograd/__init__.py", line 147, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 91977) is killed by signal: Killed. 
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: | 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: / 0.001 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: - 0.001 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: \ 0.278 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: | 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: / 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: - 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: \ 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: | 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb: / 0.470 MB of 0.470 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                          batch_idx ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:                              epoch ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                      train/avg_acc ▁▅▃▆▃▅▅▅▅▂▄▃▄▂▃▃▄▄▅▃▃▄▃▅▄▃▅▄▄█▁▅▆▅▆▅▅▅▆▄
+wandb:              train/avg_acc_group:0 ███████████████▇█████▇▇▇▇▇▅▇▁▇▂█▇▆▇▅▁▇▆▃
+wandb:              train/avg_acc_group:1 ██████▇█████████▇█████▇▇▇▅▄▃▃▅▃▅▆▄▃▄▃▄▂▁
+wandb:              train/avg_acc_group:2 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▁▁▁▃▄▄▃▃▂▄▃▆▅█▅▃▅
+wandb:              train/avg_acc_group:3 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▃▃▅▅▂▃▃▄▄▅▆▇▅█▆
+wandb:              train/avg_actual_loss █▅▆▄▇▅▄▅▅▇▅▆▆▆▆▆▅▅▅▅▅▅▅▃▄▄▃▃▃▁▅▃▂▃▁▂▂▃▂▃
+wandb:             train/avg_loss_group:0 █▃▃▃▄▃▃▄▃▄▃▃▃▄▄▃▃▃▃▃▃▃▃▂▂▃▃▂▃▁▃▁▂▂▂▁▂▂▁▁
+wandb:             train/avg_loss_group:1 █▂▂▁▂▂▂▂▂▂▁▁▁▂▂▂▂▁▂▂▁▃▂▂▂▃▂▃▂▁▃▁▂▃▃▃▃▃▂▃
+wandb:             train/avg_loss_group:2 ▃████▇▇▇▇▆█▇▇▇▆▇▆▇▆▆▆▆▄▅▆▅▄▄▄▅▄▅▄▅▂▃▁▄▅▄
+wandb:             train/avg_loss_group:3 ▃▇█▇█▇▇▇▇▇█▇▇▇▆▇▇▇▆▆▆▄▅▅▅▄▄▃▃▄▄▄▄▃▂▂▁▂▂▃
+wandb:          train/avg_per_sample_loss █▅▆▄▇▅▄▅▅▇▅▆▆▆▆▆▅▅▅▅▅▅▅▃▄▄▃▃▃▁▅▃▂▃▁▂▂▃▂▃
+wandb:                        train/batch ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:                        train/epoch ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         train/exp_avg_loss_group:0 █▄▄▄▅▄▄▄▄▅▄▄▄▄▅▄▄▄▄▄▄▅▄▃▃▄▃▃▂▁▃▂▂▃▁▃▂▃▁▂
+wandb:         train/exp_avg_loss_group:1 █▂▂▁▂▂▂▃▂▃▁▂▁▂▃▂▃▂▃▂▂▃▄▂▃▅▂▄▂▁▅▂▂▄▃▂▃█▄▃
+wandb:         train/exp_avg_loss_group:2 ▅███▇▇█▇▇▆▇▇▇▇▆▆▆▇▇▅▆▆▄▆▆▅▄▄▇▅▅▅▄▅▁▅▃▃▅▄
+wandb:         train/exp_avg_loss_group:3 ▅▇█▇█▇▇▇█▇█▇▇▇▇█▇▇▇▆▆▅▅▅▃▃▅▂▆▇▃▅▅▃▂▂▂▂▁▁
+wandb:                train/model_norm_sq ▁▁▂▂▂▄▂▃▄▄▄▄▄▄▄▄▅▅▅▄▅▅▆▆▇▅▅▆▇█▇▆▆██▇▇▇▇█
+wandb: train/processed_data_count_group:0 ▆▄▄▆▄▅▆▂▆▃▄▄▂▄▄▆▅▇▆▄▄█▅▅▅▄▆▃▁▆▄▄▇▆▆▅▂▃▆▅
+wandb: train/processed_data_count_group:1 ▁▆▄▄▅▅▄█▄▄▅▅▇▄▅▃▄▃▄▅▄▁▄▅▄▅▅▅█▆▄▅▄▄▄▅▆▅▃▄
+wandb: train/processed_data_count_group:2 ▇▅▆▄▇▂▅▄▄▇▅▆▅▅▅▆▅▅▄▇▄▅▆▃▄▆▃▅▅▂█▅▄▆▁▅▅▄▄▇
+wandb: train/processed_data_count_group:3 █▃▅▃▅▆▃▄▅▇▅▅▅█▇▅▅▅▄▄▇▆▆▅▆▆▅▇▅▁▅▄▃▄▇▅▇▇▆▃
+wandb:                     train/reg_loss ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/update_batch_count_group:0 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/update_batch_count_group:1 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/update_batch_count_group:2 ▇▇█▃▇▃▅▆▆▇▆▅▆▅▅▆▆▆▃█▄▅▆▅▂▇▃▅▅▂▇▇▃▇▁▅█▅▆▇
+wandb:   train/update_batch_count_group:3 ▇▅▆▅▆▆▁▅▅▅▆▇▆▇▆▅▅▅▅▅▇▇▅▆▅▇▆▇▆▅▆▃▂█▆▇▇▆▅█
+wandb:    train/update_data_count_group:0 ▆▄▄▆▄▅▆▂▆▃▄▄▂▄▄▆▅▇▆▄▄█▅▅▅▄▆▃▁▆▄▄▇▆▆▅▂▃▆▅
+wandb:    train/update_data_count_group:1 ▁▆▄▄▅▅▄█▄▄▅▅▇▄▅▃▄▃▄▅▄▁▄▅▄▅▅▅█▆▄▅▄▄▄▅▆▅▃▄
+wandb:    train/update_data_count_group:2 ▇▅▆▄▇▂▅▄▄▇▅▆▅▅▅▆▅▅▄▇▄▅▆▃▄▆▃▅▅▂█▅▄▆▁▅▅▄▄▇
+wandb:    train/update_data_count_group:3 █▃▅▃▅▆▃▄▅▇▅▅▅█▇▅▅▅▄▄▇▆▆▅▆▆▅▇▅▁▅▄▃▄▇▅▇▇▆▃
+wandb: 
+wandb: Run summary:
+wandb:                          batch_idx 7649
+wandb:                              epoch 0
+wandb:                      train/avg_acc 0.88917
+wandb:              train/avg_acc_group:0 0.98645
+wandb:              train/avg_acc_group:1 0.97455
+wandb:              train/avg_acc_group:2 0.18519
+wandb:              train/avg_acc_group:3 0.21348
+wandb:              train/avg_actual_loss 0.2806
+wandb:             train/avg_loss_group:0 0.09729
+wandb:             train/avg_loss_group:1 0.14847
+wandb:             train/avg_loss_group:2 1.63763
+wandb:             train/avg_loss_group:3 1.40836
+wandb:          train/avg_per_sample_loss 0.2806
+wandb:                        train/batch 7649
+wandb:                        train/epoch 0
+wandb:         train/exp_avg_loss_group:0 0.09945
+wandb:         train/exp_avg_loss_group:1 0.11855
+wandb:         train/exp_avg_loss_group:2 1.62392
+wandb:         train/exp_avg_loss_group:3 1.60177
+wandb:                train/model_norm_sq 204177.26562
+wandb: train/processed_data_count_group:0 664.0
+wandb: train/processed_data_count_group:1 393.0
+wandb: train/processed_data_count_group:2 54.0
+wandb: train/processed_data_count_group:3 89.0
+wandb:                     train/reg_loss 0.0
+wandb:   train/update_batch_count_group:0 50.0
+wandb:   train/update_batch_count_group:1 50.0
+wandb:   train/update_batch_count_group:2 34.0
+wandb:   train/update_batch_count_group:3 42.0
+wandb:    train/update_data_count_group:0 664.0
+wandb:    train/update_data_count_group:1 393.0
+wandb:    train/update_data_count_group:2 54.0
+wandb:    train/update_data_count_group:3 89.0
+wandb: 
+wandb: Synced royal-smoke-18: https://wandb.ai/gaotang/spurious_jigsaw/runs/126rzae8
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220620_233536-126rzae8/logs
+Done
+Traceback (most recent call last):
+  File "process_training.py", line 140, in <module>
+    main(args)
+  File "process_training.py", line 31, in main
+    train_df = pd.read_csv(os.path.join(data_dir, f"output_train_epoch_{final_epoch}.csv"))
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 686, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 452, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 936, in __init__
+    self._make_engine(self.engine)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1168, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1998, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: 'results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs/output_train_epoch_2.csv'
+bash: results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_6_epochs_3_lr_1e-05_weight_decay_0.01/job.sh: No such file or directory
+Traceback (most recent call last):
+  File "analysis.py", line 227, in <module>
+    folder for folder in os.listdir(args.training_output_dir)
+FileNotFoundError: [Errno 2] No such file or directory: 'results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/'
+slurmstepd: error: Detected 4 oom-kill event(s) in StepId=38380069.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

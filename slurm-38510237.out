@@ -1,0 +1,137 @@
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 24 --root_dir ./jigsaw --n_epochs 3 --aug_col None --log_dir results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/metadata_aug.csv --lr 2e-05 --weight_decay 0.0 --up_weight 0 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 0 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/job.sh
+
+
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ WARNING, Using bert-base-uncased without using BERT HYPER-PARAMS 
+
+
+
+
+
+
+
+WARNING: You are using 'all_data_with_identities.csv' instead of the default 'metadata.csv'.
+
+
+wandb: wandb version 0.12.19 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run woven-wave-53
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_jigsaw
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_jigsaw/runs/3hml6on8
+wandb: Run data is saved locally in wandb/run-20220625_135558-3hml6on8
+wandb: Run `wandb off` to turn off syncing.
+Dataset: jigsaw
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: toxicity
+Confounder names: ['identity_any']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./jigsaw
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert-base-uncased
+Train from scratch: False
+N epochs: 3
+Batch size: 24
+Lr: 2e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: all_data_with_identities.csv
+Fold: None
+Metadata path: results/jigsaw/jigsaw_sample_exp/metadata_aug.csv
+Aug col: None
+
+metadata_csv_name: all_data_with_identities.csv
+length of train_data:  269038
+length of test_data:  133782
+length of val_data:  45180
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Training Data...
+    toxicity = 0, identity_any = 0: n = 143628
+    toxicity = 0, identity_any = 1: n = 94895
+    toxicity = 1, identity_any = 0: n = 11940
+    toxicity = 1, identity_any = 1: n = 18575
+Validation Data...
+    toxicity = 0, identity_any = 0: n = 24366
+    toxicity = 0, identity_any = 1: n = 15759
+    toxicity = 1, identity_any = 0: n = 1967
+    toxicity = 1, identity_any = 1: n = 3088
+Test Data...
+    toxicity = 0, identity_any = 0: n = 72373
+    toxicity = 0, identity_any = 1: n = 46185
+    toxicity = 1, identity_any = 0: n = 6063
+    toxicity = 1, identity_any = 1: n = 9161
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+n_classes = 2
+
+Epoch [0]:
+Training:
+length of data:  11210
+randomly fetched:  11210
+Traceback (most recent call last):
+  File "run_expt.py", line 327, in <module>
+    main(args)
+  File "run_expt.py", line 203, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/gaotang/jtt/train.py", line 310, in train
+    wandb=wandb,
+  File "/home/gaotang/jtt/train.py", line 74, in run_epoch
+    print("loader[200]: ", prog_bar_loader[200])
+TypeError: 'DataLoader' object does not support indexing
+wandb: Waiting for W&B process to finish, PID 166532
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.01MB of 0.01MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: wandb/run-20220625_135558-3hml6on8/logs/debug.log
+wandb: Find internal logs for this run at: wandb/run-20220625_135558-3hml6on8/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: 
+wandb: Synced woven-wave-53: https://wandb.ai/gaotang/spurious_jigsaw/runs/3hml6on8
+
+Done

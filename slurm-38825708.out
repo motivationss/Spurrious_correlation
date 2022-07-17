@@ -1,0 +1,101 @@
+python run_expt.py -s confounder -d CUB -t waterbird_complete95 -c forest2water2 --batch_size 64 --root_dir ./cub --n_epochs 300 --aug_col None --log_dir results/CUB/CUB_sample_exp/ERM_upweight_0_epochs_300_lr_1e-05_weight_decay_1.0/model_outputs --metadata_path results/CUB/CUB_sample_exp/metadata_aug.csv --lr 1e-05 --weight_decay 1.0 --up_weight 0 --metadata_csv_name metadata.csv  --model resnet50 --use_bert_params 0 --loss_type erm
+
+saved in results/CUB/CUB_sample_exp/ERM_upweight_0_epochs_300_lr_1e-05_weight_decay_1.0/job.sh
+
+
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+wandb: wandb version 0.12.20 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run rural-dragon-4
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_CUB
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_CUB/runs/3a4z5l0l
+wandb: Run data is saved locally in wandb/run-20220702_212937-3a4z5l0l
+wandb: Run `wandb off` to turn off syncing.
+Dataset: CUB
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: waterbird_complete95
+Confounder names: ['forest2water2']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./cub
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: resnet50
+Train from scratch: False
+N epochs: 300
+Batch size: 64
+Lr: 1e-05
+Scheduler: False
+Weight decay: 1.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/CUB/CUB_sample_exp/ERM_upweight_0_epochs_300_lr_1e-05_weight_decay_1.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/CUB/CUB_sample_exp/metadata_aug.csv
+Aug col: None
+
+Reading './cub/data/waterbird_complete95_forest2water2/metadata.csv'
+length of train_data:  4795
+length of test_data:  5794
+length of val_data:  1199
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 3498
+    waterbird_complete95 = 0, forest2water2 = 1: n = 184
+    waterbird_complete95 = 1, forest2water2 = 0: n = 56
+    waterbird_complete95 = 1, forest2water2 = 1: n = 1057
+Validation Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 467
+    waterbird_complete95 = 0, forest2water2 = 1: n = 466
+    waterbird_complete95 = 1, forest2water2 = 0: n = 133
+    waterbird_complete95 = 1, forest2water2 = 1: n = 133
+Test Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 2255
+    waterbird_complete95 = 0, forest2water2 = 1: n = 2255
+    waterbird_complete95 = 1, forest2water2 = 0: n = 642
+    waterbird_complete95 = 1, forest2water2 = 1: n = 642
+
+Epoch [0]:
+Training:
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:795: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Average incurred loss: 0.606  
+Average sample loss: 0.606  
+Average acc: 0.738  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2322]:	loss = 0.477  exp loss = 0.418  adjusted loss = 0.418  adv prob = 0.250000   acc = 0.957
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 129]:	loss = 0.419  exp loss = 0.375  adjusted loss = 0.375  adv prob = 0.250000   acc = 0.984
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 35]:	loss = 0.956  exp loss = 0.968  adjusted loss = 0.968  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 714]:	loss = 1.044  exp loss = 1.132  adjusted loss = 1.132  adv prob = 0.250000   acc = 0.017
+slurmstepd: error: *** JOB 38825708 ON gl1513 CANCELLED AT 2022-07-02T21:30:11 ***

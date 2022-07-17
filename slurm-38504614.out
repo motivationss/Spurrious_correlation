@@ -1,0 +1,371 @@
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 24 --root_dir ./jigsaw --n_epochs 3 --aug_col None --log_dir results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/metadata_aug.csv --lr 2e-05 --weight_decay 0.0 --up_weight 0 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 0 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/job.sh
+
+
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ WARNING, Using bert-base-uncased without using BERT HYPER-PARAMS 
+
+
+
+
+
+
+
+WARNING: You are using 'all_data_with_identities.csv' instead of the default 'metadata.csv'.
+
+
+wandb: wandb version 0.12.19 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run lunar-wood-39
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_jigsaw
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_jigsaw/runs/1mcotyj1
+wandb: Run data is saved locally in wandb/run-20220625_002649-1mcotyj1
+wandb: Run `wandb off` to turn off syncing.
+Dataset: jigsaw
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: toxicity
+Confounder names: ['identity_any']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./jigsaw
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert-base-uncased
+Train from scratch: False
+N epochs: 3
+Batch size: 24
+Lr: 2e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: all_data_with_identities.csv
+Fold: None
+Metadata path: results/jigsaw/jigsaw_sample_exp/metadata_aug.csv
+Aug col: None
+
+metadata_csv_name: all_data_with_identities.csv
+
+
+WARNING: aug_col is not being used.
+
+
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Training Data...
+    toxicity = 0, identity_any = 0: n = 143628
+    toxicity = 0, identity_any = 1: n = 94895
+    toxicity = 1, identity_any = 0: n = 11940
+    toxicity = 1, identity_any = 1: n = 18575
+Validation Data...
+    toxicity = 0, identity_any = 0: n = 24366
+    toxicity = 0, identity_any = 1: n = 15759
+    toxicity = 1, identity_any = 0: n = 1967
+    toxicity = 1, identity_any = 1: n = 3088
+Test Data...
+    toxicity = 0, identity_any = 0: n = 72373
+    toxicity = 0, identity_any = 1: n = 46185
+    toxicity = 1, identity_any = 0: n = 6063
+    toxicity = 1, identity_any = 1: n = 9161
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+n_classes = 2
+
+Epoch [0]:
+Training:
+length of data:  11210
+4
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:760: UserWarning: Using non-full backward hooks on a Module that does not return a single Tensor or a tuple of Tensors is deprecated and will be removed in future versions. This hook will be missing some of the grad_output. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using non-full backward hooks on a Module that does not return a "
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:795: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+Average incurred loss: 0.609  
+Average sample loss: 0.609  
+Average acc: 0.656  
+  toxicity = 0, identity_any = 0  [n = 636]:	loss = 0.561  exp loss = 0.359  adjusted loss = 0.359  adv prob = 0.250000   acc = 0.717
+  toxicity = 0, identity_any = 1  [n = 419]:	loss = 0.571  exp loss = 0.352  adjusted loss = 0.352  adv prob = 0.250000   acc = 0.675
+  toxicity = 1, identity_any = 0  [n = 56]:	loss = 0.946  exp loss = 1.291  adjusted loss = 1.291  adv prob = 0.250000   acc = 0.304
+  toxicity = 1, identity_any = 1  [n = 89]:	loss = 0.917  exp loss = 1.208  adjusted loss = 1.208  adv prob = 0.250000   acc = 0.348
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+Average incurred loss: 0.411  
+Average sample loss: 0.411  
+Average acc: 0.867  
+  toxicity = 0, identity_any = 0  [n = 656]:	loss = 0.211  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 384]:	loss = 0.205  exp loss = 0.185  adjusted loss = 0.185  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 63]:	loss = 1.725  exp loss = 1.806  adjusted loss = 1.806  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 97]:	loss = 1.723  exp loss = 1.843  adjusted loss = 1.843  adv prob = 0.250000   acc = 0.000
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+Average incurred loss: 0.348  
+Average sample loss: 0.348  
+Average acc: 0.895  
+  toxicity = 0, identity_any = 0  [n = 649]:	loss = 0.154  exp loss = 0.141  adjusted loss = 0.141  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 425]:	loss = 0.146  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 60]:	loss = 1.989  exp loss = 2.062  adjusted loss = 2.062  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 66]:	loss = 2.065  exp loss = 2.216  adjusted loss = 2.216  adv prob = 0.250000   acc = 0.000
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+Average incurred loss: 0.341  
+Average sample loss: 0.341  
+Average acc: 0.894  
+  toxicity = 0, identity_any = 0  [n = 625]:	loss = 0.125  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  toxicity = 0, identity_any = 1  [n = 448]:	loss = 0.121  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  toxicity = 1, identity_any = 0  [n = 55]:	loss = 2.199  exp loss = 2.186  adjusted loss = 2.186  adv prob = 0.250000   acc = 0.000
+  toxicity = 1, identity_any = 1  [n = 72]:	loss = 2.158  exp loss = 2.158  adjusted loss = 2.158  adv prob = 0.250000   acc = 0.000
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+slurmstepd: error: *** JOB 38504614 ON gl1502 CANCELLED AT 2022-06-25T00:27:40 ***

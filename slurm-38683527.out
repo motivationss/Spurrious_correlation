@@ -1,0 +1,25 @@
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 20 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 50 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 100 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+Total wrong 61219 Total points 206175
+Number of spurious 59019
+Number of our spurious:  23723
+Number of our nonspurious: 37496
+python generate_downstream.py --exp_name MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2 --lr 1e-05 --weight_decay 0.1 --method JTT --dataset MultiNLI --aug_col wrong_1_times
+bash: results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_5_lr_2e-05_weight_decay_0/job.sh: No such file or directory
+
+
+problem with metadata_aug.csv
+(<class 'NotADirectoryError'>, NotADirectoryError(20, 'Not a directory'), <traceback object at 0x2b2d68c3c988>)

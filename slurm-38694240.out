@@ -1,0 +1,182 @@
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 20 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 50 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col wrong_1_times --log_dir results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.1 --up_weight 100 --metadata_csv_name metadata.csv  --model bert --use_bert_params 1 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_5_lr_1e-05_weight_decay_0.1/job.sh
+
+
+Total wrong 61219 Total points 206175
+Number of spurious 59019
+Number of our spurious:  23723
+Number of our nonspurious: 37496
+python generate_downstream.py --exp_name MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2 --lr 1e-05 --weight_decay 0.1 --method JTT --dataset MultiNLI --aug_col wrong_1_times
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ Using bert params 
+
+
+
+
+
+wandb: wandb version 0.12.20 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run bumbling-dawn-8
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_MultiNLI
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_MultiNLI/runs/rw91ut8e
+wandb: Run data is saved locally in wandb/run-20220701_143143-rw91ut8e
+wandb: Run `wandb off` to turn off syncing.
+Dataset: MultiNLI
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: gold_label_random
+Confounder names: ['sentence2_has_negation']
+Up weight: 20
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert
+Train from scratch: False
+N epochs: 5
+Batch size: 32
+Lr: 1e-05
+Scheduler: False
+Weight decay: 0.1
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_5_lr_1e-05_weight_decay_0.1/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 1
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv
+Aug col: wrong_1_times
+Max grad norm: 1.0
+Adam epsilon: 1e-08
+Warmup steps: 0
+
+length of train_data:  206175
+length of test_data:  123712
+length of val_data:  82462
+args fold:  None
+len 206175 61219
+Up-weight factor: 20
+Training Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 521898
+    gold_label_random = 0, sentence2_has_negation = 1: n = 22918
+    gold_label_random = 1, sentence2_has_negation = 0: n = 358636
+    gold_label_random = 1, sentence2_has_negation = 1: n = 11581
+    gold_label_random = 2, sentence2_has_negation = 0: n = 486850
+    gold_label_random = 2, sentence2_has_negation = 1: n = 28672
+Validation Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 22814
+    gold_label_random = 0, sentence2_has_negation = 1: n = 4634
+    gold_label_random = 1, sentence2_has_negation = 0: n = 26949
+    gold_label_random = 1, sentence2_has_negation = 1: n = 613
+    gold_label_random = 2, sentence2_has_negation = 0: n = 26655
+    gold_label_random = 2, sentence2_has_negation = 1: n = 797
+Test Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 34597
+    gold_label_random = 0, sentence2_has_negation = 1: n = 6655
+    gold_label_random = 1, sentence2_has_negation = 0: n = 40496
+    gold_label_random = 1, sentence2_has_negation = 1: n = 886
+    gold_label_random = 2, sentence2_has_negation = 0: n = 39930
+    gold_label_random = 2, sentence2_has_negation = 1: n = 1148
+
+t_total is 223525
+
+
+Epoch [0]:
+Training:
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:785: UserWarning: Using a non-full backward hook when outputs are generated by different autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_output. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when outputs are generated by different autograd Nodes "
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:795: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/pytorch_transformers/optimization.py:166: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:1005.)
+  exp_avg.mul_(beta1).add_(1.0 - beta1, grad)
+Average incurred loss: 1.107  
+Average sample loss: 1.107  
+Average acc: 0.351  
+  gold_label_random = 0, sentence2_has_negation = 0  [n = 623]:	loss = 1.116  exp loss = 0.963  adjusted loss = 0.963  adv prob = 0.166667   acc = 0.316
+  gold_label_random = 0, sentence2_has_negation = 1  [n = 25]:	loss = 1.126  exp loss = 1.105  adjusted loss = 1.105  adv prob = 0.166667   acc = 0.240
+  gold_label_random = 1, sentence2_has_negation = 0  [n = 374]:	loss = 1.336  exp loss = 1.411  adjusted loss = 1.411  adv prob = 0.166667   acc = 0.016
+  gold_label_random = 1, sentence2_has_negation = 1  [n = 11]:	loss = 1.361  exp loss = 1.294  adjusted loss = 1.294  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 2, sentence2_has_negation = 0  [n = 536]:	loss = 0.940  exp loss = 1.024  adjusted loss = 1.024  adv prob = 0.166667   acc = 0.619
+  gold_label_random = 2, sentence2_has_negation = 1  [n = 31]:	loss = 0.941  exp loss = 0.984  adjusted loss = 0.984  adv prob = 0.166667   acc = 0.645
+Average incurred loss: 1.079  
+Average sample loss: 1.079  
+Average acc: 0.391  
+  gold_label_random = 0, sentence2_has_negation = 0  [n = 570]:	loss = 0.938  exp loss = 0.990  adjusted loss = 0.990  adv prob = 0.166667   acc = 0.619
+  gold_label_random = 0, sentence2_has_negation = 1  [n = 41]:	loss = 0.944  exp loss = 0.988  adjusted loss = 0.988  adv prob = 0.166667   acc = 0.634
+  gold_label_random = 1, sentence2_has_negation = 0  [n = 371]:	loss = 1.423  exp loss = 1.425  adjusted loss = 1.425  adv prob = 0.166667   acc = 0.008
+  gold_label_random = 1, sentence2_has_negation = 1  [n = 8]:	loss = 1.383  exp loss = 1.329  adjusted loss = 1.329  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 2, sentence2_has_negation = 0  [n = 574]:	loss = 1.006  exp loss = 0.947  adjusted loss = 0.947  adv prob = 0.166667   acc = 0.406
+  gold_label_random = 2, sentence2_has_negation = 1  [n = 36]:	loss = 1.033  exp loss = 0.999  adjusted loss = 0.999  adv prob = 0.166667   acc = 0.306
+Average incurred loss: 1.088  
+Average sample loss: 1.088  
+Average acc: 0.389  
+  gold_label_random = 0, sentence2_has_negation = 0  [n = 600]:	loss = 0.980  exp loss = 0.924  adjusted loss = 0.924  adv prob = 0.166667   acc = 0.477
+  gold_label_random = 0, sentence2_has_negation = 1  [n = 26]:	loss = 0.983  exp loss = 0.962  adjusted loss = 0.962  adv prob = 0.166667   acc = 0.462
+  gold_label_random = 1, sentence2_has_negation = 0  [n = 386]:	loss = 1.442  exp loss = 1.410  adjusted loss = 1.410  adv prob = 0.166667   acc = 0.003
+  gold_label_random = 1, sentence2_has_negation = 1  [n = 9]:	loss = 1.474  exp loss = 1.424  adjusted loss = 1.424  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 2, sentence2_has_negation = 0  [n = 546]:	loss = 0.962  exp loss = 1.038  adjusted loss = 1.038  adv prob = 0.166667   acc = 0.560
+  gold_label_random = 2, sentence2_has_negation = 1  [n = 33]:	loss = 0.974  exp loss = 1.014  adjusted loss = 1.014  adv prob = 0.166667   acc = 0.545
+Average incurred loss: 1.086  
+Average sample loss: 1.086  
+Average acc: 0.403  
+  gold_label_random = 0, sentence2_has_negation = 0  [n = 592]:	loss = 0.887  exp loss = 0.956  adjusted loss = 0.956  adv prob = 0.166667   acc = 0.802
+  gold_label_random = 0, sentence2_has_negation = 1  [n = 23]:	loss = 0.848  exp loss = 0.901  adjusted loss = 0.901  adv prob = 0.166667   acc = 0.913
+  gold_label_random = 1, sentence2_has_negation = 0  [n = 384]:	loss = 1.438  exp loss = 1.449  adjusted loss = 1.449  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 1, sentence2_has_negation = 1  [n = 11]:	loss = 1.520  exp loss = 1.481  adjusted loss = 1.481  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 2, sentence2_has_negation = 0  [n = 559]:	loss = 1.059  exp loss = 0.969  adjusted loss = 0.969  adv prob = 0.166667   acc = 0.252
+  gold_label_random = 2, sentence2_has_negation = 1  [n = 31]:	loss = 1.052  exp loss = 1.021  adjusted loss = 1.021  adv prob = 0.166667   acc = 0.226
+Average incurred loss: 1.081  
+Average sample loss: 1.081  
+Average acc: 0.390  
+  gold_label_random = 0, sentence2_has_negation = 0  [n = 577]:	loss = 1.031  exp loss = 1.000  adjusted loss = 1.000  adv prob = 0.166667   acc = 0.357
+  gold_label_random = 0, sentence2_has_negation = 1  [n = 27]:	loss = 1.087  exp loss = 1.043  adjusted loss = 1.043  adv prob = 0.166667   acc = 0.148
+  gold_label_random = 1, sentence2_has_negation = 0  [n = 384]:	loss = 1.375  exp loss = 1.346  adjusted loss = 1.346  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 1, sentence2_has_negation = 1  [n = 9]:	loss = 1.382  exp loss = 1.407  adjusted loss = 1.407  adv prob = 0.166667   acc = 0.000
+  gold_label_random = 2, sentence2_has_negation = 0  [n = 570]:	loss = 0.938  exp loss = 0.985  adjusted loss = 0.985  adv prob = 0.166667   acc = 0.682
+  gold_label_random = 2, sentence2_has_negation = 1  [n = 33]:	loss = 0.920  exp loss = 0.972  adjusted loss = 0.972  adv prob = 0.166667   acc = 0.758
+slurmstepd: error: *** JOB 38694240 ON gl1501 CANCELLED AT 2022-07-01T14:33:26 ***

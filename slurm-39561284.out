@@ -1,0 +1,5 @@
+bash: results/CUB/CUB_sample_exp/train_downstream_ERM_upweight_0_epochs_74_lr_1e-05_weight_decay_0.0/final_epoch31/JTT_upweight_20_epochs_80_lr_1e-05_weight_decay_1.0/job.sh: No such file or directory
+Traceback (most recent call last):
+  File "analysis.py", line 227, in <module>
+    folder for folder in os.listdir(args.training_output_dir)
+FileNotFoundError: [Errno 2] No such file or directory: 'results/CUB/CUB_sample_exp/train_downstream_ERM_upweight_0_epochs_74_lr_1e-05_weight_decay_0.0/final_epoch31/'

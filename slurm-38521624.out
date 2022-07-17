@@ -1,0 +1,150 @@
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 16 --root_dir ./jigsaw --n_epochs 3 --aug_col wrong_1_times --log_dir results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_3_lr_1e-05_weight_decay_0.01/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.01 --up_weight 20 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 1 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_20_epochs_3_lr_1e-05_weight_decay_0.01/job.sh
+
+
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 16 --root_dir ./jigsaw --n_epochs 3 --aug_col wrong_1_times --log_dir results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_3_lr_1e-05_weight_decay_0.01/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.01 --up_weight 50 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 1 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_50_epochs_3_lr_1e-05_weight_decay_0.01/job.sh
+
+
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 16 --root_dir ./jigsaw --n_epochs 3 --aug_col wrong_1_times --log_dir results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_3_lr_1e-05_weight_decay_0.01/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv --lr 1e-05 --weight_decay 0.01 --up_weight 100 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 1 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_3_lr_1e-05_weight_decay_0.01/job.sh
+
+
+Total wrong 22101 Total points 269038
+Number of spurious 0
+Number of our spurious:  0
+Number of our nonspurious: 0
+python generate_downstream.py --exp_name jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2 --lr 1e-05 --weight_decay 0.01 --method JTT --dataset jigsaw --aug_col wrong_1_times --batch_size 16
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ Using bert params 
+
+
+
+
+
+
+
+WARNING: You are using 'all_data_with_identities.csv' instead of the default 'metadata.csv'.
+
+
+wandb: wandb version 0.12.19 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run sage-spaceship-81
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_jigsaw
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_jigsaw/runs/2l53uzoz
+wandb: Run data is saved locally in wandb/run-20220626_213102-2l53uzoz
+wandb: Run `wandb off` to turn off syncing.
+Dataset: jigsaw
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: toxicity
+Confounder names: ['identity_any']
+Up weight: 100
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./jigsaw
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert-base-uncased
+Train from scratch: False
+N epochs: 3
+Batch size: 16
+Lr: 1e-05
+Scheduler: False
+Weight decay: 0.01
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_100_epochs_3_lr_1e-05_weight_decay_0.01/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 1
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: all_data_with_identities.csv
+Fold: None
+Metadata path: results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/metadata_aug.csv
+Aug col: wrong_1_times
+Max grad norm: 1.0
+Adam epsilon: 1e-08
+Warmup steps: 0
+
+metadata_csv_name: all_data_with_identities.csv
+length of train_data:  269038
+length of test_data:  133782
+length of val_data:  45180
+args fold:  None
+len 0 0
+Up-weight factor: 100
+Training Data...
+    toxicity = 0, identity_any = 0: n = 143628
+    toxicity = 0, identity_any = 1: n = 94895
+    toxicity = 1, identity_any = 0: n = 11940
+    toxicity = 1, identity_any = 1: n = 18575
+Validation Data...
+    toxicity = 0, identity_any = 0: n = 24366
+    toxicity = 0, identity_any = 1: n = 15759
+    toxicity = 1, identity_any = 0: n = 1967
+    toxicity = 1, identity_any = 1: n = 3088
+Test Data...
+    toxicity = 0, identity_any = 0: n = 72373
+    toxicity = 0, identity_any = 1: n = 46185
+    toxicity = 1, identity_any = 0: n = 6063
+    toxicity = 1, identity_any = 1: n = 9161
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+n_classes = 2
+
+t_total is 50445
+
+Traceback (most recent call last):
+  File "run_expt.py", line 327, in <module>
+    main(args)
+  File "run_expt.py", line 203, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/gaotang/jtt/train.py", line 284, in train
+    for epoch in range(epoch_offset, epoch_offset + args.n_epoch):
+AttributeError: 'Namespace' object has no attribute 'n_epoch'
+wandb: Waiting for W&B process to finish, PID 170706
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.01MB of 0.01MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: wandb/run-20220626_213102-2l53uzoz/logs/debug.log
+wandb: Find internal logs for this run at: wandb/run-20220626_213102-2l53uzoz/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: 
+wandb: Synced sage-spaceship-81: https://wandb.ai/gaotang/spurious_jigsaw/runs/2l53uzoz
+
+Done
+usage: civil_comments_analysis.py [-h] --exp_name EXP_NAME
+                                  [--metadata_path METADATA_PATH]
+                                  [--n_epochs N_EPOCHS] [--split SPLIT]
+civil_comments_analysis.py: error: unrecognized arguments: --dataset jigsaw

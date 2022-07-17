@@ -1,0 +1,156 @@
+python run_expt.py -s confounder -d MultiNLI -t gold_label_random -c sentence2_has_negation --batch_size 32 --root_dir ./ --n_epochs 5 --aug_col None --log_dir results/MultiNLI/MultiNLI_sample_exp/ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/model_outputs --metadata_path results/MultiNLI/MultiNLI_sample_exp/metadata_aug.csv --lr 2e-05 --weight_decay 0.0 --up_weight 0 --metadata_csv_name metadata.csv  --model bert --use_bert_params 0 --loss_type erm
+
+saved in results/MultiNLI/MultiNLI_sample_exp/ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/job.sh
+
+
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ WARNING, Using bert without using BERT HYPER-PARAMS 
+
+
+
+
+
+wandb: wandb version 0.12.20 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run crisp-shadow-3
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_MultiNLI
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_MultiNLI/runs/2eds8ph0
+wandb: Run data is saved locally in wandb/run-20220630_211440-2eds8ph0
+wandb: Run `wandb off` to turn off syncing.
+Dataset: MultiNLI
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: gold_label_random
+Confounder names: ['sentence2_has_negation']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert
+Train from scratch: False
+N epochs: 5
+Batch size: 32
+Lr: 2e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/MultiNLI/MultiNLI_sample_exp/ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/MultiNLI/MultiNLI_sample_exp/metadata_aug.csv
+Aug col: None
+
+length of train_data:  206175
+length of test_data:  123712
+length of val_data:  82462
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 57498
+    gold_label_random = 0, sentence2_has_negation = 1: n = 11158
+    gold_label_random = 1, sentence2_has_negation = 0: n = 67376
+    gold_label_random = 1, sentence2_has_negation = 1: n = 1521
+    gold_label_random = 2, sentence2_has_negation = 0: n = 66630
+    gold_label_random = 2, sentence2_has_negation = 1: n = 1992
+Validation Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 22814
+    gold_label_random = 0, sentence2_has_negation = 1: n = 4634
+    gold_label_random = 1, sentence2_has_negation = 0: n = 26949
+    gold_label_random = 1, sentence2_has_negation = 1: n = 613
+    gold_label_random = 2, sentence2_has_negation = 0: n = 26655
+    gold_label_random = 2, sentence2_has_negation = 1: n = 797
+Test Data...
+    gold_label_random = 0, sentence2_has_negation = 0: n = 34597
+    gold_label_random = 0, sentence2_has_negation = 1: n = 6655
+    gold_label_random = 1, sentence2_has_negation = 0: n = 40496
+    gold_label_random = 1, sentence2_has_negation = 1: n = 886
+    gold_label_random = 2, sentence2_has_negation = 0: n = 39930
+    gold_label_random = 2, sentence2_has_negation = 1: n = 1148
+  0%|          | 0/433 [00:00<?, ?B/s]100%|██████████| 433/433 [00:00<00:00, 344356.02B/s]
+  0%|          | 0/440473133 [00:00<?, ?B/s]  0%|          | 279552/440473133 [00:00<02:37, 2795036.20B/s]  1%|          | 3946496/440473133 [00:00<01:52, 3864717.25B/s]  3%|▎         | 11898880/440473133 [00:00<01:19, 5408379.25B/s]  5%|▍         | 19904512/440473133 [00:00<00:56, 7508840.83B/s]  6%|▋         | 27886592/440473133 [00:00<00:40, 10311181.04B/s]  8%|▊         | 33543168/440473133 [00:00<00:30, 13375303.74B/s]  9%|▉         | 40299520/440473133 [00:00<00:22, 17613112.62B/s] 11%|█         | 47710208/440473133 [00:00<00:17, 22835459.61B/s] 12%|█▏        | 54547456/440473133 [00:00<00:13, 28537214.28B/s] 14%|█▍        | 60950528/440473133 [00:01<00:11, 31763687.52B/s] 16%|█▌        | 68876288/440473133 [00:01<00:09, 38724367.11B/s] 17%|█▋        | 76933120/440473133 [00:01<00:07, 45871166.89B/s] 19%|█▉        | 85009408/440473133 [00:01<00:06, 52701299.13B/s] 21%|██        | 92270592/440473133 [00:01<00:06, 56450320.02B/s] 23%|██▎       | 99384320/440473133 [00:01<00:10, 33330676.59B/s] 24%|██▍       | 107431936/440473133 [00:02<00:08, 40436138.70B/s] 26%|██▌       | 115605504/440473133 [00:02<00:06, 47660264.45B/s] 28%|██▊       | 123816960/440473133 [00:02<00:05, 54522565.18B/s] 30%|██▉       | 132039680/440473133 [00:02<00:05, 60652194.16B/s] 32%|███▏      | 140281856/440473133 [00:02<00:04, 65870379.20B/s] 34%|███▎      | 148543488/440473133 [00:02<00:04, 70132706.76B/s] 36%|███▌      | 156446720/440473133 [00:02<00:06, 42701259.24B/s] 37%|███▋      | 164378624/440473133 [00:02<00:05, 49564708.90B/s] 39%|███▉      | 171386880/440473133 [00:03<00:04, 54335859.73B/s] 41%|████      | 179602432/440473133 [00:03<00:04, 60478725.13B/s] 43%|████▎     | 187864064/440473133 [00:03<00:03, 65764188.69B/s] 44%|████▍     | 195402752/440473133 [00:03<00:05, 45151108.08B/s] 46%|████▌     | 201462784/440473133 [00:03<00:06, 35739734.08B/s] 48%|████▊     | 209596416/440473133 [00:03<00:05, 42964081.45B/s] 49%|████▉     | 217795584/440473133 [00:03<00:04, 50119406.23B/s] 51%|█████     | 225235968/440473133 [00:04<00:03, 55227513.52B/s] 53%|█████▎    | 232029184/440473133 [00:04<00:05, 37795297.94B/s] 54%|█████▍    | 237437952/440473133 [00:04<00:05, 39571791.55B/s] 55%|█████▌    | 243261440/440473133 [00:04<00:04, 42144365.27B/s] 57%|█████▋    | 251238400/440473133 [00:04<00:03, 49090204.52B/s] 58%|█████▊    | 257183744/440473133 [00:04<00:04, 45817347.74B/s] 60%|█████▉    | 262535168/440473133 [00:05<00:06, 27559947.68B/s] 61%|██████    | 268425216/440473133 [00:05<00:06, 27587848.70B/s] 63%|██████▎   | 276531200/440473133 [00:05<00:04, 34394317.04B/s] 64%|██████▍   | 282546176/440473133 [00:05<00:04, 39461695.11B/s] 66%|██████▌   | 288647168/440473133 [00:05<00:03, 44137625.82B/s] 67%|██████▋   | 294218752/440473133 [00:05<00:03, 40975184.06B/s] 69%|██████▊   | 301976576/440473133 [00:06<00:03, 45841508.59B/s] 70%|███████   | 309799936/440473133 [00:06<00:02, 52342873.80B/s] 72%|███████▏  | 315906048/440473133 [00:06<00:02, 51297494.53B/s] 73%|███████▎  | 321650688/440473133 [00:06<00:02, 50135173.99B/s] 74%|███████▍  | 327100416/440473133 [00:06<00:02, 45435430.07B/s] 75%|███████▌  | 332034048/440473133 [00:06<00:02, 42885601.02B/s] 76%|███████▋  | 336625664/440473133 [00:06<00:02, 38762232.94B/s] 77%|███████▋  | 340962304/440473133 [00:06<00:02, 40036697.66B/s] 78%|███████▊  | 345178112/440473133 [00:07<00:02, 36291677.61B/s] 80%|███████▉  | 352305152/440473133 [00:07<00:02, 40329136.97B/s] 82%|████████▏ | 360449024/440473133 [00:07<00:01, 47525890.51B/s] 84%|████████▎ | 368543744/440473133 [00:07<00:01, 54242509.46B/s] 85%|████████▌ | 374801408/440473133 [00:07<00:01, 53973966.89B/s] 86%|████████▋ | 380782592/440473133 [00:07<00:01, 50396139.57B/s] 88%|████████▊ | 388642816/440473133 [00:07<00:00, 56475948.85B/s] 90%|████████▉ | 395552768/440473133 [00:07<00:00, 59748997.22B/s] 91%|█████████▏| 402641920/440473133 [00:07<00:00, 58403726.78B/s] 93%|█████████▎| 410725376/440473133 [00:08<00:00, 63706753.05B/s] 95%|█████████▌| 418969600/440473133 [00:08<00:00, 68367666.26B/s] 97%|█████████▋| 426351616/440473133 [00:08<00:00, 69915664.45B/s] 98%|█████████▊| 433597440/440473133 [00:08<00:00, 60115137.78B/s]100%|█████████▉| 440029184/440473133 [00:08<00:00, 34264778.92B/s]100%|██████████| 440473133/440473133 [00:08<00:00, 49847438.70B/s]
+
+Epoch [0]:
+Training:
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:785: UserWarning: Using a non-full backward hook when outputs are generated by different autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_output. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when outputs are generated by different autograd Nodes "
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:795: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Traceback (most recent call last):
+  File "run_expt.py", line 327, in <module>
+    main(args)
+  File "run_expt.py", line 203, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/gaotang/jtt/train.py", line 307, in train
+    wandb=wandb,
+  File "/home/gaotang/jtt/train.py", line 93, in run_epoch
+    outputs[idx] += model.b[i] * lamd
+RuntimeError: The size of tensor a (3) must match the size of tensor b (2) at non-singleton dimension 0
+wandb: Waiting for W&B process to finish, PID 93483
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.01MB of 0.01MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: wandb/run-20220630_211440-2eds8ph0/logs/debug.log
+wandb: Find internal logs for this run at: wandb/run-20220630_211440-2eds8ph0/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: 
+wandb: Synced crisp-shadow-3: https://wandb.ai/gaotang/spurious_MultiNLI/runs/2eds8ph0
+
+Done
+Traceback (most recent call last):
+  File "process_training.py", line 140, in <module>
+    main(args)
+  File "process_training.py", line 31, in main
+    train_df = pd.read_csv(os.path.join(data_dir, f"output_train_epoch_{final_epoch}.csv"))
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 686, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 452, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 936, in __init__
+    self._make_engine(self.engine)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1168, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1998, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: 'results/MultiNLI/MultiNLI_sample_exp/ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0_nobert/model_outputs/output_train_epoch_2.csv'
+bash: results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_4_epochs_5_lr_2e-05_weight_decay_0/job.sh: No such file or directory
+Traceback (most recent call last):
+  File "analysis.py", line 227, in <module>
+    folder for folder in os.listdir(args.training_output_dir)
+FileNotFoundError: [Errno 2] No such file or directory: 'results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/'

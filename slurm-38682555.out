@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "process_training.py", line 140, in <module>
+    main(args)
+  File "process_training.py", line 31, in main
+    train_df = pd.read_csv(os.path.join(data_dir, f"output_train_epoch_{final_epoch}.csv"))
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 686, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 452, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 936, in __init__
+    self._make_engine(self.engine)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1168, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/gaotang/jtt/venv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1998, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: 'results/MultiNLI/MultiNLI_sample_exp/ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0_nobert/model_outputs/output_train_epoch_2.csv'
+bash: results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/JTT_upweight_4_epochs_5_lr_2e-05_weight_decay_0/job.sh: No such file or directory
+Traceback (most recent call last):
+  File "analysis.py", line 227, in <module>
+    folder for folder in os.listdir(args.training_output_dir)
+FileNotFoundError: [Errno 2] No such file or directory: 'results/MultiNLI/MultiNLI_sample_exp/train_downstream_ERM_upweight_0_epochs_5_lr_2e-05_weight_decay_0.0/final_epoch2/'

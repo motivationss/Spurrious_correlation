@@ -1,0 +1,2512 @@
+python run_expt.py -s confounder -d jigsaw -t toxicity -c identity_any --batch_size 24 --root_dir ./jigsaw --n_epochs 3 --aug_col None --log_dir results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs --metadata_path results/jigsaw/jigsaw_sample_exp/metadata_aug.csv --lr 2e-05 --weight_decay 0.0 --up_weight 0 --metadata_csv_name all_data_with_identities.csv  --model bert-base-uncased --use_bert_params 0 --loss_type erm
+
+saved in results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/job.sh
+
+
+wandb: Currently logged in as: gaotang (use `wandb login --relogin` to force relogin)
+
+
+
+
+
+ WARNING, Using bert-base-uncased without using BERT HYPER-PARAMS 
+
+
+
+
+
+
+
+WARNING: You are using 'all_data_with_identities.csv' instead of the default 'metadata.csv'.
+
+
+wandb: wandb version 0.12.19 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.10.8
+wandb: Syncing run exalted-eon-47
+wandb: ⭐️ View project at https://wandb.ai/gaotang/spurious_jigsaw
+wandb: 🚀 View run at https://wandb.ai/gaotang/spurious_jigsaw/runs/1gkizcfk
+wandb: Run data is saved locally in wandb/run-20220625_014232-1gkizcfk
+wandb: Run `wandb off` to turn off syncing.
+Dataset: jigsaw
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: toxicity
+Confounder names: ['identity_any']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./jigsaw
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: bert-base-uncased
+Train from scratch: False
+N epochs: 3
+Batch size: 24
+Lr: 2e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/jigsaw/jigsaw_sample_exp/ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 0
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: all_data_with_identities.csv
+Fold: None
+Metadata path: results/jigsaw/jigsaw_sample_exp/metadata_aug.csv
+Aug col: None
+
+metadata_csv_name: all_data_with_identities.csv
+
+
+WARNING: aug_col is not being used.
+
+
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Training Data...
+    toxicity = 0, identity_any = 0: n = 143628
+    toxicity = 0, identity_any = 1: n = 94895
+    toxicity = 1, identity_any = 0: n = 11940
+    toxicity = 1, identity_any = 1: n = 18575
+Validation Data...
+    toxicity = 0, identity_any = 0: n = 24366
+    toxicity = 0, identity_any = 1: n = 15759
+    toxicity = 1, identity_any = 0: n = 1967
+    toxicity = 1, identity_any = 1: n = 3088
+Test Data...
+    toxicity = 0, identity_any = 0: n = 72373
+    toxicity = 0, identity_any = 1: n = 46185
+    toxicity = 1, identity_any = 0: n = 6063
+    toxicity = 1, identity_any = 1: n = 9161
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+n_classes = 2
+
+Epoch [0]:
+Training:
+length of data:  11210
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  248452
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  103612
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  136846
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  251377
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  225296
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  75792
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  81516
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  201512
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  263193
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  254272
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  247240
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  34530
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  116430
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  19689
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  84798
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  77041
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  81469
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  149947
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  75560
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  159817
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  78161
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  89845
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  6495
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  267528
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  142045
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  156619
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  211767
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  90065
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  212945
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  93615
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  27742
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  18937
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  88020
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  196667
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  249977
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  134360
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  80269
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  254353
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  243422
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  261352
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  184746
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  190690
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  144132
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  2828
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  76737
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  259345
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  140410
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  80535
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  88884
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  185920
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  164816
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  67162
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  25157
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  69234
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  113464
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset: 
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  201994
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  182119
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  71893
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  160622
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  160359
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  136629
+
+
+
+
+
+
+
+ <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  4760
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  172768
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  211679
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  77304
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  253353
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  2455
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  22535
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  190125
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  121709
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  256153
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  85459
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  51267
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  6843
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  27420
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  99439
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  191957
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  241796
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  32525
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  131141
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  139841
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  93204
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  23715
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  241831
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  138334
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  30338
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  217611
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  98190
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  29110
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  90448
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  7145
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  84803
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  174683
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  55394
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  174451
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  160369
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  216548
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  192618
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  50265
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  85106
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  3009
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  93574
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  184163
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  118842
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  65381
+
+
+
+
+
+
+
+
+current idx:  97069
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  172836
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  33229
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  144551
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  162073
+
+
+
+
+
+
+
+
+dataset type:  
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  166424
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  148321
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  209033
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  248815
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  167946
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  119324
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  164924
+
+
+
+
+data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  91354
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  109009
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  259205
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  57991
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  46331
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  128174
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  12172
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+
+dataset:  dataset type: <data.folds.Subset object at 0x2b28b3cf42e8>
+ current idx: data.folds.Subset 267185
+
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  66217
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  190600
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  158438
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  191342
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  60237
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  7173
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  221966
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  197246
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  197574
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  119499
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  189217
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  50927
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  23369
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  218794
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  133564
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  11707
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  143185
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  30012
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  222604
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  211577
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  128996
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  209861
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  13968
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  260105
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  84007
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  201399
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  248470
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  151244
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  171437
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  115370
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  231702
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  248784
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  212259
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  243156
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  2447
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  138203
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  107417
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  262755
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  222375
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  156848
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  44081
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  220849
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  78076
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  166269
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset: 
+
+
+ <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  157788
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  256851
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  77169
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  198937
+
+dataset type: 
+
+
+ 
+data.folds.Subset
+
+
+
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  88534
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  76038
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  18906
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  204297
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  87503
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  90336
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  195708
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  63672
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  82349
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  5419
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  119528
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  88393
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  204149
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  191553
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  6467
+
+
+
+
+dataset type: 
+
+
+
+ data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  101729
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  244521
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  151332
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  151298
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  161093
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  25822
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  85952
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  233936
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  263988
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  120137
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  121710
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  252892
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  138188
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  185032
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  245820
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  136767
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  86601
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  126633
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  38554
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  51726
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  180605
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  123743
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  244352
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  244285
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  106410
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  112901
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  180692
+
+
+
+
+
+
+
+
+dataset type:  data.folds.Subset
+dataset:  <data.folds.Subset object at 0x2b28b3cf42e8>
+current idx:  54063
+
+
+
+
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:760: UserWarning: Using non-full backward hooks on a Module that does not return a single Tensor or a tuple of Tensors is deprecated and will be removed in future versions. This hook will be missing some of the grad_output. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using non-full backward hooks on a Module that does not return a "
+/home/gaotang/jtt/venv/lib/python3.6/site-packages/torch/nn/modules/module.py:795: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Traceback (most recent call last):
+  File "run_expt.py", line 321, in <module>
+    main(args)
+  File "run_expt.py", line 197, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/gaotang/jtt/train.py", line 309, in train
+    wandb=wandb,
+  File "/home/gaotang/jtt/train.py", line 107, in run_epoch
+    outputs[idx] += b[i]
+IndexError: index 248452 is out of bounds for dimension 0 with size 11210
+wandb: Waiting for W&B process to finish, PID 107408
+wandb: Program failed with code 1.  Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Find user logs for this run at: wandb/run-20220625_014232-1gkizcfk/logs/debug.log
+wandb: Find internal logs for this run at: wandb/run-20220625_014232-1gkizcfk/logs/debug-internal.log
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: 
+wandb: Synced exalted-eon-47: https://wandb.ai/gaotang/spurious_jigsaw/runs/1gkizcfk
+
+Done
