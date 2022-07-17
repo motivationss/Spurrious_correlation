@@ -246,7 +246,7 @@ class LossComputer:
         logger.write(f"Average acc: {self.avg_acc.item():.3f}  \n")
 
         curr_group_acc = []
-
+        curr_group_size = []
         for group_idx in range(self.n_groups):
             logger.write(
                 f"  {self.group_str(group_idx)}  "
@@ -256,11 +256,17 @@ class LossComputer:
                 f"adjusted loss = {self.exp_avg_loss[group_idx] + self.adj[group_idx]/torch.sqrt(self.group_counts)[group_idx]:.3f}  "
                 f"adv prob = {self.adv_probs[group_idx]:3f}   "
                 f"acc = {self.avg_group_acc[group_idx]:.3f}\n")
-    
+            curr_group_size.append(int(self.processed_data_counts[group_idx]))
             curr_group_acc.append(self.avg_group_acc[group_idx])
         
         # this only suitable for CUB
+        # curr_group_acc[0] * majority1_weight
+        # majority1_weight = size1 
         spurious_score = (curr_group_acc[0] + curr_group_acc[3]) / (curr_group_acc[1] + curr_group_acc[2])
+        spurious_score_with_size_weight = (curr_group_acc[0] * curr_group_size[0] + 
+        curr_group_acc[3] * curr_group_size[3]) / (curr_group_acc[1] * curr_group_size[1] + 
+        curr_group_acc[2] * curr_group_size[2])
         if not is_training:
             logger.write(f"Spurious Score = {spurious_score:.3f}\n")
+            logger.write(f"Weighted Spurious Score = {spurious_score_with_size_weight:.3f}\n")
         logger.flush()
