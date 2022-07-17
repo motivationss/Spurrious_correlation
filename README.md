@@ -120,3 +120,4 @@ bash results/jigsaw/jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_l
 
 python analysis.py --exp_name jigsaw_sample_exp/train_downstream_ERM_upweight_0_epochs_3_lr_2e-05_weight_decay_0.0/final_epoch2/ --dataset jigsaw
 ```
+
