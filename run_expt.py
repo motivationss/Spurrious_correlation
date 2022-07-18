@@ -157,7 +157,7 @@ def main(args):
         resume=resume,
         n_classes=train_data.n_classes,
         dataset=args.dataset,
-        log_dir=args.log_dir,
+        log_dir=args.log_dir
     )
     if args.wandb:
         wandb.watch(model)
@@ -274,6 +274,9 @@ if __name__ == "__main__":
     parser.add_argument("--train_from_scratch",
                         action="store_true",
                         default=False)
+    parser.add_argument('--aux_lambda', type=float, default=None)
+    # Method
+    parser.add_argument("--method", type=str, default="JTT")
     # Optimization
     parser.add_argument("--n_epochs", type=int, default=4)
     parser.add_argument("--batch_size", type=int, default=32)

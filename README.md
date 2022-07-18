@@ -1,3 +1,13 @@
+# AUX
+
+## Experiment Command Line
+Currently, AUX is only test on the Waterbird dataset.
+```
+python generate_downstream.py --exp_name CUB_sample_exp --dataset CUB --n_epochs 50 --lr 1e-5 --weight_decay 0.0 --method AUX1 --aux_lambda 0.1
+bash results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_50_lr_1e-05_weight_decay_0.0/job.sh
+```
+
+
 # Just Train Twice: Improving Group Robustness without Training Group Information
 
 This code implements the following paper: 

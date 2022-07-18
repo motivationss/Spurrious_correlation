@@ -75,6 +75,8 @@ def generate_downstream_commands(args):
     if args.method == "all":
         methods = [
             "JTT",
+            "AUX1",
+            "AUX2",
             "GROUP_DRO",
             "ERM",
             "UPSAMPLE_TRUE_POINTS",
@@ -87,6 +89,16 @@ def generate_downstream_commands(args):
         if method == "JTT":
             up_weights = [20, 50, 100] 
             loss_type = "erm"
+            aug_col = args.aug_col
+            confounder_name = args.confounder_name
+        elif method == 'AUX2':
+            up_weights = [100]
+            loss_type = 'erm'
+            aug_col = args.aug_col
+            confounder_name = args.confounder_name
+        elif method == 'AUX1':
+            up_weights = [0]
+            loss_type = 'erm'
             aug_col = args.aug_col
             confounder_name = args.confounder_name
         elif method == "ERM":
@@ -118,7 +130,10 @@ def generate_downstream_commands(args):
             continue
 
         for up_weight in up_weights:
-            sub_exp_name = f"{method}_upweight_{up_weight}_epochs_{args.n_epochs}_lr_{args.lr}_weight_decay_{args.weight_decay}"
+            if args.method == 'AUX1':
+                sub_exp_name = f"{method}_upweight_{up_weight}_epochs_{args.n_epochs}_lr_{args.lr}_weight_decay_{args.weight_decay}_aux_lambda_{args.aux_lambda}"
+            else:
+                sub_exp_name = f"{method}_upweight_{up_weight}_epochs_{args.n_epochs}_lr_{args.lr}_weight_decay_{args.weight_decay}"
             # sub_exp_dir: results/dataset/exp_name/sub_exp_name
             sub_exp_dir = join(exp_dir, sub_exp_name)
             # job_script_path: results/dataset/exp_name/sub_exp_name/job.sh
@@ -141,22 +156,24 @@ def generate_downstream_commands(args):
                     + f" --aug_col {aug_col} --log_dir {training_output_dir}"
                     + f" --metadata_path {metadata_path}"
                     + f" --lr {args.lr} --weight_decay {args.weight_decay} --up_weight {up_weight}"
-                    + f" --metadata_csv_name {args.metadata_csv_name}  --model {args.model} --use_bert_params {args.use_bert_params}"
-                    # + (" --wandb" if not args.no_wandb else "")
+                    + f" --metadata_csv_name {args.metadata_csv_name}  --model {args.model} --use_bert_params {args.use_bert_params} --method {args.method}"
+                    + (" --wandb" if not args.no_wandb else "")
                     + (f" --loss_type {loss_type}")
                     + (" --reweight_groups" if loss_type == "group_dro" else "")
                     + (f" --joint_dro_alpha {joint_dro_alpha}" if loss_type == "joint_dro" else "")
+                    + (f" --aux_lambda {args.aux_lambda}" if args.aux_lambda is not None else "")
                 )
 
                 file.write(
                     f"python run_expt.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
                     + f" --batch_size {args.batch_size} --root_dir {args.root_dir} --n_epochs {args.n_epochs}"
                     + f" --aug_col {aug_col} --log_dir {training_output_dir} --metadata_path {metadata_path}"
-                    + f" --lr {args.lr} --weight_decay {args.weight_decay} --up_weight {up_weight} --metadata_csv_name {args.metadata_csv_name} --model {args.model} --use_bert_params {args.use_bert_params}"
+                    + f" --lr {args.lr} --weight_decay {args.weight_decay} --up_weight {up_weight} --metadata_csv_name {args.metadata_csv_name} --model {args.model} --use_bert_params {args.use_bert_params} --method {args.method}"
                     + (" --wandb" if not args.no_wandb else "")
                     + (f" --loss_type {loss_type}")
                     + (" --reweight_groups" if loss_type == "group_dro" else "")
                     + (f" --joint_dro_alpha {joint_dro_alpha}" if loss_type == "joint_dro" else "")
+                    + (f" --aux_lambda {args.aux_lambda}" if args.aux_lambda is not None else "")
                 )
                 
                 file.write("\n")
@@ -173,6 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--method", type=str, default="JTT")
 
     # parser.add_argument("--up_weight", type=int, default=0)
+    parser.add_argument('--aux_lambda', type=float, default=None)
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--n_epochs", type=int, default=300)
     parser.add_argument("--use_bert_params", type=int, default=1)
@@ -244,17 +262,17 @@ if __name__ == "__main__":
         args.model = "resnet50"
         args.batch_size = 64
         # args.n_epochs = 300
-        args.n_epochs = 100
+        # args.n_epochs = 100
         # args.n_epochs = 304 #aux 100
-        args.memory = 30 if not args.memory else args.memory
+        # args.memory = 30 if not args.memory else args.memory
         args.metadata_csv_name = "metadata.csv" if not args.metadata_csv_name else args.metadata_csv_name
     elif args.dataset == "CelebA":
         args.root_dir = "./"
         args.target = "Blond_Hair"
         args.confounder_name = "Male"
-        args.n_epochs = 50
+        # args.n_epochs = 50
         args.model = "resnet50"
-        args.memory = 30 if not args.memory else args.memory
+        # args.memory = 30 if not args.memory else args.memory
         args.metadata_csv_name = "metadata.csv" if not args.metadata_csv_name else args.metadata_csv_name
     elif args.dataset == "MultiNLI":
         args.root_dir = "./"
@@ -264,8 +282,8 @@ if __name__ == "__main__":
 #         args.weight_decay = 0
         args.batch_size = 32
         args.model = "bert"
-        args.memory = 30 if not args.memory else args.memory
-        args.n_epochs = 5
+        # args.memory = 30 if not args.memory else args.memory
+        # args.n_epochs = 5
         args.metadata_csv_name = "metadata.csv" if not args.metadata_csv_name else args.metadata_csv_name
     elif args.dataset == "jigsaw":
         args.root_dir = "./jigsaw"
@@ -275,9 +293,9 @@ if __name__ == "__main__":
 #         args.weight_decay = 0.01 # no-bert-param: 0.0
 #         args.batch_size = 16 # no-bert-param: 24
         # args.n_epochs = 3
-        args.n_epochs = 100
+        # args.n_epochs = 100
         args.model = "bert-base-uncased"
-        args.memory = 60 if not args.memory else args.memory
+        # args.memory = 60 if not args.memory else args.memory
         args.final_epoch = 0
         args.metadata_csv_name = "all_data_with_identities.csv" if not args.metadata_csv_name else args.metadata_csv_name
     else:

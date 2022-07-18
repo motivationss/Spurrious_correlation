@@ -54,10 +54,6 @@ def run_epoch(
         prog_bar_loader = loader
 
     with torch.set_grad_enabled(is_training):
-        
-        # len_data = len(prog_bar_loader)
-        # print("length of data: ", len_data)
-        # b = torch.nn.parameter.Parameter(torch.ones(len_data, 2))
 
         for batch_idx, batch in enumerate(prog_bar_loader):
             
@@ -97,9 +93,9 @@ def run_epoch(
                 # outputs.shape: (batch_size, num_classes)
                 outputs = model(x)
             
-            # if is_training:
-            #     for idx, i in enumerate(data_idx.detach().tolist()):
-            #         outputs[idx] += model.b[i] * 8
+            if is_training and args.method == 'AUX1':
+                for idx, i in enumerate(data_idx.detach().tolist()):
+                    outputs[idx] += model.b[i] * args.aux_lambda
             
                 
             output_df = pd.DataFrame()
@@ -183,10 +179,10 @@ def run_epoch(
 
             csv_logger.log(epoch, batch_idx, run_stats)
             csv_logger.flush()
-            loss_computer.log_stats(logger, is_training)
+            spurious_score = loss_computer.log_stats(logger, is_training)
             if is_training:
                 loss_computer.reset_stats()
-
+            return spurious_score
 
 def train(
     model,
@@ -203,8 +199,8 @@ def train(
 ):
     
     # model.b = torch.nn.parameter.Parameter(torch.zeros(448000, 2))  #Jigsaw
-    
-    # model.b = torch.nn.parameter.Parameter(torch.zeros(11788, 2)) # CUB 4795 train, 11788 total
+    if args.method == 'AUX1':
+        model.b = torch.nn.parameter.Parameter(torch.zeros(len(dataset['train_loader'])+len(dataset['val_loader'])+len(dataset['test_loader']), 2)) # CUB 4795 train, 11788 total
     
     model = model.to(device)
 
@@ -279,18 +275,16 @@ def train(
             )
         else:
             scheduler = None
-
-    # AUX METHOD PARAMETERS
-    # b = torch.nn.parameter.Parameter(torch.ones(448000, 2))
-    # b = torch.tensor(torch.ones(448000, 2), requires_grad = True)
-    # lambd = 0.05
-    # b = b.to(device)
     
 
     best_val_acc = 0
     # args.n_epoch = 13
     # print("args.n_epoch: ", args.n_epoch)
-    for epoch in range(epoch_offset, epoch_offset + args.n_epochs):
+    # for epoch in range(epoch_offset, epoch_offset + args.n_epochs):
+    epoch = epoch_offset
+    if args.method == 'AUX1':
+        best_epoch, spurious_score_history = 0, 0
+    while True:
         
         # print("epoch range: ", epoch_offset)
         # print("epoch range: ", epoch_offset + 13)
@@ -330,7 +324,7 @@ def train(
             min_var_weight=args.minimum_variational_weight,
             joint_dro_alpha=args.joint_dro_alpha,
         )
-        run_epoch(
+        spurious_score_cur = run_epoch(
             epoch,
             model,
             optimizer,
@@ -344,6 +338,16 @@ def train(
             wandb_group="val",
             wandb=wandb,
         )
+
+        if args.method == 'AUX1':
+            if spurious_score_cur > spurious_score_history:
+                spurious_score_history = spurious_score_cur
+                torch.save(model, os.path.join(args.log_dir,
+                                            "AUX1_best_model.pth" % epoch))
+                best_epoch = epoch
+            logger.write(f'Current best spurious score epoch: {best_epoch}')
+
+
 
         # Test set; don't print to avoid peeking
         if dataset["test_data"] is not None:
@@ -394,7 +398,6 @@ def train(
         if epoch % args.save_step == 0:
             torch.save(model, os.path.join(args.log_dir,
                                            "%d_model.pth" % epoch))
-
         if args.save_last:
             torch.save(model, os.path.join(args.log_dir, "last_model.pth"))
 
@@ -420,3 +423,7 @@ def train(
                     f"  {train_loss_computer.get_group_name(group_idx)}:\t"
                     f"adj = {train_loss_computer.adj[group_idx]:.3f}\n")
         logger.write("\n")
+
+        epoch += 1
+        if epoch >= epoch_offset + args.n_epochs:
+            break

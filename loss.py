@@ -262,11 +262,12 @@ class LossComputer:
         # this only suitable for CUB
         # curr_group_acc[0] * majority1_weight
         # majority1_weight = size1 
-        spurious_score = (curr_group_acc[0] + curr_group_acc[3]) / (curr_group_acc[1] + curr_group_acc[2])
-        spurious_score_with_size_weight = (curr_group_acc[0] * curr_group_size[0] + 
+        self.spurious_score = (curr_group_acc[0] + curr_group_acc[3]) / (curr_group_acc[1] + curr_group_acc[2])
+        self.spurious_score_with_size_weight = (curr_group_acc[0] * curr_group_size[0] + 
         curr_group_acc[3] * curr_group_size[3]) / (curr_group_acc[1] * curr_group_size[1] + 
         curr_group_acc[2] * curr_group_size[2])
         if not is_training:
-            logger.write(f"Spurious Score = {spurious_score:.3f}\n")
-            logger.write(f"Weighted Spurious Score = {spurious_score_with_size_weight:.3f}\n")
+            logger.write(f"Spurious Score = {self.spurious_score:.3f}\n")
+            logger.write(f"Weighted Spurious Score = {self.spurious_score_with_size_weight:.3f}\n")
         logger.flush()
+        return self.spurious_score_with_size_weight
