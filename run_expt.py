@@ -157,8 +157,9 @@ def main(args):
         resume=resume,
         n_classes=train_data.n_classes,
         dataset=args.dataset,
-        log_dir=args.log_dir,
-        args=args
+        log_dir=args.log_dir_old,
+        args=args,
+        loader_len=len(data['train_data'])+len(data['val_data'])+len(data['test_data']) if args.method == 'AUX2' else None
     )
     if args.wandb:
         wandb.watch(model)
@@ -290,6 +291,7 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--show_progress", default=False, action="store_true")
     parser.add_argument("--log_dir", default="./logs")
+    parser.add_argument("--log_dir_old", type=str, default=None)
     parser.add_argument("--log_every", default=50, type=int)
     parser.add_argument("--save_step", type=int, default=10)
     parser.add_argument("--save_best", action="store_true", default=False)

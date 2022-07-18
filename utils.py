@@ -140,7 +140,7 @@ def hinge_loss(yhat, y):
     return torch_loss(yhat[:, 1], yhat[:, 0], y)
 
 
-def get_model(model, pretrained, resume, n_classes, dataset, log_dir, args):
+def get_model(model, pretrained, resume, n_classes, dataset, log_dir, args, loader_len=None):
     if resume:
         model = torch.load(os.path.join(log_dir, "last_model.pth"))
         d = train_data.input_size()[0]
@@ -193,7 +193,8 @@ def get_model(model, pretrained, resume, n_classes, dataset, log_dir, args):
         raise ValueError(f"{model} Model not recognized.")
 
     if args.method == 'AUX2':
-        model.b = torch.nn.parameter.Parameter(torch.zeros(len(dataset['train_data'])+len(dataset['val_data'])+len(dataset['test_data']), 2))
-        checkpoint = torch.load(os.path.join(args.log_dir, "AUX1_best_model.pth"))
-        model.load_state_dict(checkpoint)
+        # model.b = torch.nn.parameter.Parameter(torch.zeros(loader_len, 2))
+        # checkpoint = torch.load(os.path.join(log_dir, "model_outputs/AUX1_best_model.pth"))
+        # model.load_state_dict(checkpoint)
+        model = torch.load(os.path.join(log_dir, "model_outputs/AUX1_best_model.pth"))
     return model

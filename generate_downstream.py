@@ -162,6 +162,7 @@ def generate_downstream_commands(args):
                     + (" --reweight_groups" if loss_type == "group_dro" else "")
                     + (f" --joint_dro_alpha {joint_dro_alpha}" if loss_type == "joint_dro" else "")
                     + (f" --aux_lambda {args.aux_lambda}" if args.aux_lambda is not None else "")
+                    + (f" --log_dir_old {args.log_dir_old}" if args.log_dir_old is not None else "")
                 )
 
                 file.write(
@@ -174,6 +175,7 @@ def generate_downstream_commands(args):
                     + (" --reweight_groups" if loss_type == "group_dro" else "")
                     + (f" --joint_dro_alpha {joint_dro_alpha}" if loss_type == "joint_dro" else "")
                     + (f" --aux_lambda {args.aux_lambda}" if args.aux_lambda is not None else "")
+                    + (f" --log_dir_old {args.log_dir_old}" if args.log_dir_old is not None else "")
                 )
                 
                 file.write("\n")
@@ -242,6 +244,11 @@ if __name__ == "__main__":
         type=int,
         default=None,
         help="last epoch in training",
+    )
+    parser.add_argument(
+        "--log_dir_old",
+        type=str,
+        default=None
     )
 
     args = parser.parse_args()

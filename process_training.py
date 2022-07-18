@@ -8,6 +8,9 @@ import subprocess
 
 
 def main(args):
+    if args.final_epoch is None:
+        with open(os.path.join(args.log_dir_root, args.folder_name, 'model_outputs/best_epoch.txt'), 'r') as file:
+            args.final_epoch = int(float(file.read()))
 
     final_epoch = args.final_epoch
     dataset = args.dataset
@@ -36,7 +39,8 @@ def main(args):
     # Merge with original features (could be optional)
     original_df = pd.read_csv(metadata_path)
     original_train_df = original_df[original_df["split"] == 0]
-    if dataset == "CelebA" or dataset == "jigsaw" or dataset == "MultiNLI":
+    if dataset == "jigsaw" or dataset == "MultiNLI":
+    # if dataset == "CelebA" or dataset == "jigsaw" or dataset == "MultiNLI":
         original_train_df = original_train_df.drop(['Unnamed: 0'], axis=1)
 
     merged_csv = original_train_df.join(train_df.set_index(f"indices_None_epoch_{final_epoch}_val"))
@@ -69,14 +73,14 @@ def main(args):
     train_probs_df= merged_csv.fillna(0)
     
     # Output spurious recall and precision
-    # spur_precision = np.sum(
-    #         (merged_csv[f"wrong_1_times"] == 1) & (merged_csv["spurious"] == 1)
-    #     ) / np.sum((merged_csv[f"wrong_1_times"] == 1))
-    # print("Spurious precision", spur_precision)
-    # spur_recall = np.sum(
-    #     (merged_csv[f"wrong_1_times"] == 1) & (merged_csv["spurious"] == 1)
-    # ) / np.sum((merged_csv["spurious"] == 1))
-    # print("Spurious recall", spur_recall)
+    spur_precision = np.sum(
+            (merged_csv[f"wrong_1_times"] == 1) & (merged_csv["spurious"] == 1)
+        ) / np.sum((merged_csv[f"wrong_1_times"] == 1))
+    print("Spurious precision", spur_precision)
+    spur_recall = np.sum(
+        (merged_csv[f"wrong_1_times"] == 1) & (merged_csv["spurious"] == 1)
+    ) / np.sum((merged_csv["spurious"] == 1))
+    print("Spurious recall", spur_recall)
     
     # Find confidence (just in case doing threshold)
     if dataset == "MultiNLI":
@@ -109,7 +113,9 @@ def main(args):
     root = f"{exp_name}/train_downstream_{folder_name}/final_epoch{final_epoch}"
     
     sbatch_command = (
-            f"python generate_downstream.py --exp_name {root} --lr {args.lr} --weight_decay {args.weight_decay} --method JTT --dataset {args.dataset} --aug_col {args.aug_col}" + (f" --batch_size {args.batch_size}" if args.batch_size else "")
+            f"python generate_downstream.py --exp_name {root} --lr {args.lr} --n_epochs {args.n_epochs} --weight_decay {args.weight_decay} --method JTT --dataset {args.dataset} --aug_col {args.aug_col} --log_dir_old {str(os.path.join(args.log_dir_root, args.folder_name))}" 
+            + (f" --batch_size {args.batch_size}" if args.batch_size else "")
+            + (f" --method {args.method}" if args.method else "")
         )
     print(sbatch_command)
     if args.deploy:
@@ -124,7 +130,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--final_epoch",
         type=int,
-        default=5,
+        default=None,
         help="last epoch in training",
     )
     parser.add_argument("--lr", type=float, default=1e-5)
@@ -134,8 +140,10 @@ if __name__ == "__main__":
     parser.add_argument("--aug_col", type=str, default='wrong_1_times')
     parser.add_argument("--exp_name", type=str, required=True)
     parser.add_argument("--folder_name", type=str, required=True)
+    parser.add_argument("--log_dir_root", type=str, default=None)
     parser.add_argument("--batch_size", type=int, default=None)
-
+    parser.add_argument("--method", type=str, default=None)
+    parser.add_argument("--n_epochs", type=int, default=None)
     args = parser.parse_args()
     main(args)
     

@@ -429,3 +429,7 @@ def train(
         epoch += 1
         if epoch >= epoch_offset + args.n_epochs:
             break
+    
+    if args.method == 'AUX1':
+        with open(os.path.join(args.log_dir, 'best_epoch.txt'), 'w') as file:
+            file.write(str(best_epoch))

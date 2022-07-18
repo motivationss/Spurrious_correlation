@@ -267,7 +267,7 @@ class LossComputer:
         curr_group_acc[3] * curr_group_size[3]) / (curr_group_acc[1] * curr_group_size[1] + 
         curr_group_acc[2] * curr_group_size[2])
         if not is_training:
-            logger.write(f"Spurious Score = {self.spurious_score:.3f}\n")
-            logger.write(f"Weighted Spurious Score = {self.spurious_score_with_size_weight:.3f}\n")
+            logger.write(f"Spurious Score = {self.spurious_score:.6f}\n")
+            logger.write(f"Weighted Spurious Score = {self.spurious_score_with_size_weight:.6f}\n")
         logger.flush()
         return self.spurious_score_with_size_weight

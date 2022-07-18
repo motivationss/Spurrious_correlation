@@ -17,4 +17,5 @@ source ~/.bashrc
 conda activate jtt
 nvidia-smi
 
-bash results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/job.sh
+# bash results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/job.sh
+bash results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/job.sh
