@@ -1,0 +1,141 @@
+no change     /home/ljrjerry/anaconda3/condabin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda-env
+no change     /home/ljrjerry/anaconda3/bin/activate
+no change     /home/ljrjerry/anaconda3/bin/deactivate
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.sh
+no change     /home/ljrjerry/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/ljrjerry/anaconda3/shell/condabin/Conda.psm1
+no change     /home/ljrjerry/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/ljrjerry/anaconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.csh
+no change     /home/ljrjerry/.bashrc
+No action taken.
+Sun Jul 17 23:40:57 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 495.44       Driver Version: 495.44       CUDA Version: 11.5     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:20:00.0 Off |                    0 |
+|  0%   25C    P8    21W / 300W |      0MiB / 45634MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+wandb: Currently logged in as: jiaruiliu. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.12.21 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.20
+wandb: Run data is saved locally in /home/ljrjerry/Spurrious_correlation/wandb/run-20220717_234102-26b0gzci
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run revived-smoke-2
+wandb: ⭐️ View project at https://wandb.ai/jiaruiliu/spurious_CUB
+wandb: 🚀 View run at https://wandb.ai/jiaruiliu/spurious_CUB/runs/26b0gzci
+Dataset: CUB
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: waterbird_complete95
+Confounder names: ['forest2water2']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./cub
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: resnet50
+Train from scratch: False
+Aux lambda: 0.1
+Method: AUX1
+N epochs: 5
+Batch size: 64
+Lr: 1e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 1
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/CUB/CUB_sample_exp/metadata_aug.csv
+Aug col: wrong_1_times
+
+Reading './cub/data/waterbird_complete95_forest2water2/metadata.csv'
+length of train_data:  4795
+length of test_data:  5794
+length of val_data:  1199
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 3498
+    waterbird_complete95 = 0, forest2water2 = 1: n = 184
+    waterbird_complete95 = 1, forest2water2 = 0: n = 56
+    waterbird_complete95 = 1, forest2water2 = 1: n = 1057
+Validation Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 467
+    waterbird_complete95 = 0, forest2water2 = 1: n = 466
+    waterbird_complete95 = 1, forest2water2 = 0: n = 133
+    waterbird_complete95 = 1, forest2water2 = 1: n = 133
+Test Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 2255
+    waterbird_complete95 = 0, forest2water2 = 1: n = 2255
+    waterbird_complete95 = 1, forest2water2 = 0: n = 642
+    waterbird_complete95 = 1, forest2water2 = 1: n = 642
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:209: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  f"The parameter '{pretrained_param}' is deprecated since 0.13 and will be removed in 0.15, "
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+Epoch [0]:
+Training:
+Traceback (most recent call last):
+  File "run_expt.py", line 330, in <module>
+    main(args)
+  File "run_expt.py", line 203, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/ljrjerry/Spurrious_correlation/train.py", line 310, in train
+    wandb=wandb,
+  File "/home/ljrjerry/Spurrious_correlation/train.py", line 98, in run_epoch
+    outputs[idx] += model.b[i] * args.aux_lambda
+IndexError: index 8249 is out of bounds for dimension 0 with size 185
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: - 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: \ 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: | 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: / 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: - 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: \ 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb: | 0.011 MB of 0.011 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced revived-smoke-2: https://wandb.ai/jiaruiliu/spurious_CUB/runs/26b0gzci
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220717_234102-26b0gzci/logs
+Done

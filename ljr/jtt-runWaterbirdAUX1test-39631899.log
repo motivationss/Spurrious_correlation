@@ -1,0 +1,297 @@
+no change     /home/ljrjerry/anaconda3/condabin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda-env
+no change     /home/ljrjerry/anaconda3/bin/activate
+no change     /home/ljrjerry/anaconda3/bin/deactivate
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.sh
+no change     /home/ljrjerry/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/ljrjerry/anaconda3/shell/condabin/Conda.psm1
+no change     /home/ljrjerry/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/ljrjerry/anaconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.csh
+no change     /home/ljrjerry/.bashrc
+No action taken.
+Mon Jul 18 00:03:48 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 495.44       Driver Version: 495.44       CUDA Version: 11.5     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:21:00.0 Off |                    0 |
+|  0%   26C    P8    21W / 300W |      0MiB / 45634MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+wandb: Currently logged in as: jiaruiliu. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.12.21 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.20
+wandb: Run data is saved locally in /home/ljrjerry/Spurrious_correlation/wandb/run-20220718_000352-38lz3jdu
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run clean-valley-4
+wandb: ⭐️ View project at https://wandb.ai/jiaruiliu/spurious_CUB
+wandb: 🚀 View run at https://wandb.ai/jiaruiliu/spurious_CUB/runs/38lz3jdu
+Dataset: CUB
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: waterbird_complete95
+Confounder names: ['forest2water2']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./cub
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: resnet50
+Train from scratch: False
+Aux lambda: 0.1
+Method: AUX1
+N epochs: 5
+Batch size: 64
+Lr: 1e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 1
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/CUB/CUB_sample_exp/metadata_aug.csv
+Aug col: wrong_1_times
+
+Reading './cub/data/waterbird_complete95_forest2water2/metadata.csv'
+length of train_data:  4795
+length of test_data:  5794
+length of val_data:  1199
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 3498
+    waterbird_complete95 = 0, forest2water2 = 1: n = 184
+    waterbird_complete95 = 1, forest2water2 = 0: n = 56
+    waterbird_complete95 = 1, forest2water2 = 1: n = 1057
+Validation Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 467
+    waterbird_complete95 = 0, forest2water2 = 1: n = 466
+    waterbird_complete95 = 1, forest2water2 = 0: n = 133
+    waterbird_complete95 = 1, forest2water2 = 1: n = 133
+Test Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 2255
+    waterbird_complete95 = 0, forest2water2 = 1: n = 2255
+    waterbird_complete95 = 1, forest2water2 = 0: n = 642
+    waterbird_complete95 = 1, forest2water2 = 1: n = 642
+
+Epoch [0]:
+Training:
+Average incurred loss: 0.604  
+Average sample loss: 0.604  
+Average acc: 0.739  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2324]:	loss = 0.476  exp loss = 0.415  adjusted loss = 0.415  adv prob = 0.250000   acc = 0.955
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 132]:	loss = 0.411  exp loss = 0.379  adjusted loss = 0.379  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 45]:	loss = 0.968  exp loss = 1.020  adjusted loss = 1.020  adv prob = 0.250000   acc = 0.044
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 699]:	loss = 1.042  exp loss = 1.133  adjusted loss = 1.133  adv prob = 0.250000   acc = 0.019
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_0.csv
+logged to wandb
+Average incurred loss: 0.558  
+Average sample loss: 0.558  
+Average acc: 0.769  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1174]:	loss = 0.359  exp loss = 0.353  adjusted loss = 0.353  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 52]:	loss = 0.332  exp loss = 0.343  adjusted loss = 0.343  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 11]:	loss = 1.210  exp loss = 1.163  adjusted loss = 1.163  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 358]:	loss = 1.226  exp loss = 1.238  adjusted loss = 1.238  adv prob = 0.250000   acc = 0.003
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_0.csv
+logged to wandb
+Average incurred loss: 0.520  
+Average sample loss: 0.517  
+Average acc: 0.779  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.338  exp loss = 0.329  adjusted loss = 0.329  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.309  exp loss = 0.306  adjusted loss = 0.306  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.189  exp loss = 1.230  adjusted loss = 1.230  adv prob = 0.250000   acc = 0.008
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.230  exp loss = 1.238  adjusted loss = 1.238  adv prob = 0.250000   acc = 0.000
+Spurious Score = 0.993
+Weighted Spurious Score = 1.000
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:209: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  f"The parameter '{pretrained_param}' is deprecated since 0.13 and will be removed in 0.15, "
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "run_expt.py", line 330, in <module>
+    main(args)
+  File "run_expt.py", line 203, in main
+    wandb=wandb if args.wandb else None,
+  File "/home/ljrjerry/Spurrious_correlation/train.py", line 348, in train
+    "AUX1_best_model.pth" % epoch))
+TypeError: not all arguments converted during string formatting
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: / 0.013 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: - 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: \ 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: | 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: / 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: - 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: \ 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                          batch_idx ▅█▁
+wandb:                              epoch ▁▁▁
+wandb:                      train/avg_acc ▁█
+wandb:              train/avg_acc_group:0 ▁█
+wandb:              train/avg_acc_group:1 ▁▁
+wandb:              train/avg_acc_group:2 █▁
+wandb:              train/avg_acc_group:3 █▁
+wandb:              train/avg_actual_loss █▁
+wandb:             train/avg_loss_group:0 █▁
+wandb:             train/avg_loss_group:1 █▁
+wandb:             train/avg_loss_group:2 ▁█
+wandb:             train/avg_loss_group:3 ▁█
+wandb:          train/avg_per_sample_loss █▁
+wandb:                        train/batch ▁
+wandb:                        train/epoch ▁
+wandb:         train/exp_avg_loss_group:0 █▁
+wandb:         train/exp_avg_loss_group:1 █▁
+wandb:         train/exp_avg_loss_group:2 ▁█
+wandb:         train/exp_avg_loss_group:3 ▁█
+wandb:                train/model_norm_sq ▁█
+wandb: train/processed_data_count_group:0 █▁
+wandb: train/processed_data_count_group:1 █▁
+wandb: train/processed_data_count_group:2 █▁
+wandb: train/processed_data_count_group:3 █▁
+wandb:                     train/reg_loss ▁▁
+wandb:   train/update_batch_count_group:0 █▁
+wandb:   train/update_batch_count_group:1 █▁
+wandb:   train/update_batch_count_group:2 █▁
+wandb:   train/update_batch_count_group:3 █▁
+wandb:    train/update_data_count_group:0 █▁
+wandb:    train/update_data_count_group:1 █▁
+wandb:    train/update_data_count_group:2 █▁
+wandb:    train/update_data_count_group:3 █▁
+wandb:                        val/avg_acc ▁
+wandb:                val/avg_acc_group:0 ▁
+wandb:                val/avg_acc_group:1 ▁
+wandb:                val/avg_acc_group:2 ▁
+wandb:                val/avg_acc_group:3 ▁
+wandb:                val/avg_actual_loss ▁
+wandb:               val/avg_loss_group:0 ▁
+wandb:               val/avg_loss_group:1 ▁
+wandb:               val/avg_loss_group:2 ▁
+wandb:               val/avg_loss_group:3 ▁
+wandb:            val/avg_per_sample_loss ▁
+wandb:           val/exp_avg_loss_group:0 ▁
+wandb:           val/exp_avg_loss_group:1 ▁
+wandb:           val/exp_avg_loss_group:2 ▁
+wandb:           val/exp_avg_loss_group:3 ▁
+wandb:                  val/model_norm_sq ▁
+wandb:   val/processed_data_count_group:0 ▁
+wandb:   val/processed_data_count_group:1 ▁
+wandb:   val/processed_data_count_group:2 ▁
+wandb:   val/processed_data_count_group:3 ▁
+wandb:                       val/reg_loss ▁
+wandb:     val/update_batch_count_group:0 ▁
+wandb:     val/update_batch_count_group:1 ▁
+wandb:     val/update_batch_count_group:2 ▁
+wandb:     val/update_batch_count_group:3 ▁
+wandb:      val/update_data_count_group:0 ▁
+wandb:      val/update_data_count_group:1 ▁
+wandb:      val/update_data_count_group:2 ▁
+wandb:      val/update_data_count_group:3 ▁
+wandb: 
+wandb: Run summary:
+wandb:                          batch_idx 18
+wandb:                              epoch 0
+wandb:                      train/avg_acc 0.76928
+wandb:              train/avg_acc_group:0 1.0
+wandb:              train/avg_acc_group:1 1.0
+wandb:              train/avg_acc_group:2 0.0
+wandb:              train/avg_acc_group:3 0.00279
+wandb:              train/avg_actual_loss 0.55831
+wandb:             train/avg_loss_group:0 0.35868
+wandb:             train/avg_loss_group:1 0.33202
+wandb:             train/avg_loss_group:2 1.21009
+wandb:             train/avg_loss_group:3 1.22627
+wandb:          train/avg_per_sample_loss 0.55841
+wandb:                        train/batch 49
+wandb:                        train/epoch 0
+wandb:         train/exp_avg_loss_group:0 0.35284
+wandb:         train/exp_avg_loss_group:1 0.34303
+wandb:         train/exp_avg_loss_group:2 1.16318
+wandb:         train/exp_avg_loss_group:3 1.2379
+wandb:                train/model_norm_sq 8431.93848
+wandb: train/processed_data_count_group:0 1174.0
+wandb: train/processed_data_count_group:1 52.0
+wandb: train/processed_data_count_group:2 11.0
+wandb: train/processed_data_count_group:3 358.0
+wandb:                     train/reg_loss 0.0
+wandb:   train/update_batch_count_group:0 25.0
+wandb:   train/update_batch_count_group:1 21.0
+wandb:   train/update_batch_count_group:2 10.0
+wandb:   train/update_batch_count_group:3 25.0
+wandb:    train/update_data_count_group:0 1174.0
+wandb:    train/update_data_count_group:1 52.0
+wandb:    train/update_data_count_group:2 11.0
+wandb:    train/update_data_count_group:3 358.0
+wandb:                        val/avg_acc 0.77898
+wandb:                val/avg_acc_group:0 1.0
+wandb:                val/avg_acc_group:1 1.0
+wandb:                val/avg_acc_group:2 0.00752
+wandb:                val/avg_acc_group:3 0.0
+wandb:                val/avg_actual_loss 0.51657
+wandb:               val/avg_loss_group:0 0.33757
+wandb:               val/avg_loss_group:1 0.30851
+wandb:               val/avg_loss_group:2 1.18939
+wandb:               val/avg_loss_group:3 1.23022
+wandb:            val/avg_per_sample_loss 0.51978
+wandb:           val/exp_avg_loss_group:0 0.32863
+wandb:           val/exp_avg_loss_group:1 0.30637
+wandb:           val/exp_avg_loss_group:2 1.22982
+wandb:           val/exp_avg_loss_group:3 1.23836
+wandb:                  val/model_norm_sq 8431.93848
+wandb:   val/processed_data_count_group:0 467.0
+wandb:   val/processed_data_count_group:1 466.0
+wandb:   val/processed_data_count_group:2 133.0
+wandb:   val/processed_data_count_group:3 133.0
+wandb:                       val/reg_loss 0.0
+wandb:     val/update_batch_count_group:0 19.0
+wandb:     val/update_batch_count_group:1 19.0
+wandb:     val/update_batch_count_group:2 12.0
+wandb:     val/update_batch_count_group:3 12.0
+wandb:      val/update_data_count_group:0 467.0
+wandb:      val/update_data_count_group:1 466.0
+wandb:      val/update_data_count_group:2 133.0
+wandb:      val/update_data_count_group:3 133.0
+wandb: 
+wandb: Synced clean-valley-4: https://wandb.ai/jiaruiliu/spurious_CUB/runs/38lz3jdu
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220718_000352-38lz3jdu/logs
+Done

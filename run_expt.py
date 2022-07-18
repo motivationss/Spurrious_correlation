@@ -157,7 +157,8 @@ def main(args):
         resume=resume,
         n_classes=train_data.n_classes,
         dataset=args.dataset,
-        log_dir=args.log_dir
+        log_dir=args.log_dir,
+        args=args
     )
     if args.wandb:
         wandb.watch(model)

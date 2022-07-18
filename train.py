@@ -197,10 +197,12 @@ def train(
     csv_name=None,
     wandb=None,
 ):
-    
+    # print(len(dataset['train_loader']))
+    # print(len(dataset['val_loader']))
+    # print(len(dataset['test_loader']))
     # model.b = torch.nn.parameter.Parameter(torch.zeros(448000, 2))  #Jigsaw
     if args.method == 'AUX1':
-        model.b = torch.nn.parameter.Parameter(torch.zeros(len(dataset['train_loader'])+len(dataset['val_loader'])+len(dataset['test_loader']), 2)) # CUB 4795 train, 11788 total
+        model.b = torch.nn.parameter.Parameter(torch.zeros(len(dataset['train_data'])+len(dataset['val_data'])+len(dataset['test_data']), 2)) # CUB 4795 train, 11788 total
     
     model = model.to(device)
 
@@ -343,7 +345,7 @@ def train(
             if spurious_score_cur > spurious_score_history:
                 spurious_score_history = spurious_score_cur
                 torch.save(model, os.path.join(args.log_dir,
-                                            "AUX1_best_model.pth" % epoch))
+                                            "AUX1_best_model.pth"))
                 best_epoch = epoch
             logger.write(f'Current best spurious score epoch: {best_epoch}')
 

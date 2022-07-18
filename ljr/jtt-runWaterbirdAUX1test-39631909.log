@@ -1,0 +1,306 @@
+no change     /home/ljrjerry/anaconda3/condabin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda-env
+no change     /home/ljrjerry/anaconda3/bin/activate
+no change     /home/ljrjerry/anaconda3/bin/deactivate
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.sh
+no change     /home/ljrjerry/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/ljrjerry/anaconda3/shell/condabin/Conda.psm1
+no change     /home/ljrjerry/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/ljrjerry/anaconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.csh
+no change     /home/ljrjerry/.bashrc
+No action taken.
+Mon Jul 18 00:08:15 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 495.44       Driver Version: 495.44       CUDA Version: 11.5     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:21:00.0 Off |                    0 |
+|  0%   33C    P8    21W / 300W |      0MiB / 45634MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+wandb: Currently logged in as: jiaruiliu. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.12.21 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.20
+wandb: Run data is saved locally in /home/ljrjerry/Spurrious_correlation/wandb/run-20220718_000819-29ick77n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run apricot-bush-5
+wandb: ⭐️ View project at https://wandb.ai/jiaruiliu/spurious_CUB
+wandb: 🚀 View run at https://wandb.ai/jiaruiliu/spurious_CUB/runs/29ick77n
+Dataset: CUB
+Shift type: confounder
+Wandb: True
+Project name: spurious
+Target name: waterbird_complete95
+Confounder names: ['forest2water2']
+Up weight: 0
+Resume: False
+Minority fraction: None
+Imbalance ratio: None
+Fraction: 1.0
+Root dir: ./cub
+Reweight groups: False
+Augment data: False
+Val fraction: 0.1
+Loss type: erm
+Alpha: 0.2
+Generalization adjustment: 0.0
+Automatic adjustment: False
+Robust step size: 0.01
+Joint dro alpha: 1
+Use normalized loss: False
+Btl: False
+Hinge: False
+Model: resnet50
+Train from scratch: False
+Aux lambda: 0.1
+Method: AUX1
+N epochs: 5
+Batch size: 64
+Lr: 1e-05
+Scheduler: False
+Weight decay: 0.0
+Gamma: 0.1
+Minimum variational weight: 0
+Seed: 0
+Show progress: False
+Log dir: results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs
+Log every: 50
+Save step: 10
+Save best: False
+Save last: False
+Use bert params: 1
+Num folds per sweep: 5
+Num sweeps: 4
+Q: 0.7
+Metadata csv name: metadata.csv
+Fold: None
+Metadata path: results/CUB/CUB_sample_exp/metadata_aug.csv
+Aug col: wrong_1_times
+
+Reading './cub/data/waterbird_complete95_forest2water2/metadata.csv'
+length of train_data:  4795
+length of test_data:  5794
+length of val_data:  1199
+args fold:  None
+
+
+WARNING: aug_col is not being used.
+
+
+Training Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 3498
+    waterbird_complete95 = 0, forest2water2 = 1: n = 184
+    waterbird_complete95 = 1, forest2water2 = 0: n = 56
+    waterbird_complete95 = 1, forest2water2 = 1: n = 1057
+Validation Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 467
+    waterbird_complete95 = 0, forest2water2 = 1: n = 466
+    waterbird_complete95 = 1, forest2water2 = 0: n = 133
+    waterbird_complete95 = 1, forest2water2 = 1: n = 133
+Test Data...
+    waterbird_complete95 = 0, forest2water2 = 0: n = 2255
+    waterbird_complete95 = 0, forest2water2 = 1: n = 2255
+    waterbird_complete95 = 1, forest2water2 = 0: n = 642
+    waterbird_complete95 = 1, forest2water2 = 1: n = 642
+
+Epoch [0]:
+Training:
+Average incurred loss: 0.604  
+Average sample loss: 0.604  
+Average acc: 0.739  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2324]:	loss = 0.476  exp loss = 0.415  adjusted loss = 0.415  adv prob = 0.250000   acc = 0.955
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 132]:	loss = 0.411  exp loss = 0.379  adjusted loss = 0.379  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 45]:	loss = 0.968  exp loss = 1.020  adjusted loss = 1.020  adv prob = 0.250000   acc = 0.044
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 699]:	loss = 1.042  exp loss = 1.133  adjusted loss = 1.133  adv prob = 0.250000   acc = 0.019
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_0.csv
+logged to wandb
+Average incurred loss: 0.558  
+Average sample loss: 0.558  
+Average acc: 0.769  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1174]:	loss = 0.359  exp loss = 0.353  adjusted loss = 0.353  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 52]:	loss = 0.332  exp loss = 0.343  adjusted loss = 0.343  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 11]:	loss = 1.210  exp loss = 1.163  adjusted loss = 1.163  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 358]:	loss = 1.226  exp loss = 1.238  adjusted loss = 1.238  adv prob = 0.250000   acc = 0.003
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_0.csv
+logged to wandb
+Average incurred loss: 0.520  
+Average sample loss: 0.517  
+Average acc: 0.779  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.338  exp loss = 0.329  adjusted loss = 0.329  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.309  exp loss = 0.306  adjusted loss = 0.306  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.189  exp loss = 1.230  adjusted loss = 1.230  adv prob = 0.250000   acc = 0.008
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.230  exp loss = 1.238  adjusted loss = 1.238  adv prob = 0.250000   acc = 0.000
+Spurious Score = 0.993
+Weighted Spurious Score = 1.000
+Current best spurious score epoch: 0Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_test_epoch_0.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [1]:
+Training:
+Average incurred loss: 0.536  
+Average sample loss: 0.536  
+Average acc: 0.764  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2319]:	loss = 0.313  exp loss = 0.303  adjusted loss = 0.303  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 124]:	loss = 0.304  exp loss = 0.308  adjusted loss = 0.308  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 38]:	loss = 1.261  exp loss = 1.257  adjusted loss = 1.257  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 719]:	loss = 1.257  exp loss = 1.244  adjusted loss = 1.244  adv prob = 0.250000   acc = 0.001
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_1.csv
+logged to wandb
+Average incurred loss: 0.507  
+Average sample loss: 0.507  
+Average acc: 0.777  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1179]:	loss = 0.290  exp loss = 0.289  adjusted loss = 0.289  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 60]:	loss = 0.288  exp loss = 0.290  adjusted loss = 0.290  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 18]:	loss = 1.300  exp loss = 1.307  adjusted loss = 1.307  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 338]:	loss = 1.261  exp loss = 1.248  adjusted loss = 1.248  adv prob = 0.250000   acc = 0.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_1.csv
+logged to wandb
+Average incurred loss: 0.503  
+Average sample loss: 0.499  
+Average acc: 0.778  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.283  exp loss = 0.275  adjusted loss = 0.275  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.291  exp loss = 0.288  adjusted loss = 0.288  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.282  exp loss = 1.327  adjusted loss = 1.327  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.235  exp loss = 1.247  adjusted loss = 1.247  adv prob = 0.250000   acc = 0.000
+Spurious Score = 1.000
+Weighted Spurious Score = 1.002
+Current best spurious score epoch: 1Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_test_epoch_1.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [2]:
+Training:
+Average incurred loss: 0.501  
+Average sample loss: 0.501  
+Average acc: 0.765  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2317]:	loss = 0.272  exp loss = 0.269  adjusted loss = 0.269  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 130]:	loss = 0.292  exp loss = 0.311  adjusted loss = 0.311  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 41]:	loss = 1.329  exp loss = 1.328  adjusted loss = 1.328  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 712]:	loss = 1.237  exp loss = 1.220  adjusted loss = 1.220  adv prob = 0.250000   acc = 0.000
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_2.csv
+logged to wandb
+Average incurred loss: 0.478  
+Average sample loss: 0.477  
+Average acc: 0.775  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1181]:	loss = 0.262  exp loss = 0.261  adjusted loss = 0.261  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 54]:	loss = 0.310  exp loss = 0.305  adjusted loss = 0.305  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 15]:	loss = 1.301  exp loss = 1.323  adjusted loss = 1.323  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 345]:	loss = 1.204  exp loss = 1.192  adjusted loss = 1.192  adv prob = 0.250000   acc = 0.003
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_2.csv
+logged to wandb
+Average incurred loss: 0.493  
+Average sample loss: 0.489  
+Average acc: 0.778  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.258  exp loss = 0.249  adjusted loss = 0.249  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.297  exp loss = 0.294  adjusted loss = 0.294  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.314  exp loss = 1.364  adjusted loss = 1.364  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.180  exp loss = 1.196  adjusted loss = 1.196  adv prob = 0.250000   acc = 0.000
+Spurious Score = 1.000
+Weighted Spurious Score = 1.002
+Current best spurious score epoch: 1Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_test_epoch_2.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [3]:
+Training:
+Average incurred loss: 0.471  
+Average sample loss: 0.471  
+Average acc: 0.767  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2330]:	loss = 0.252  exp loss = 0.249  adjusted loss = 0.249  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 120]:	loss = 0.306  exp loss = 0.295  adjusted loss = 0.295  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 39]:	loss = 1.337  exp loss = 1.326  adjusted loss = 1.326  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 711]:	loss = 1.169  exp loss = 1.138  adjusted loss = 1.138  adv prob = 0.250000   acc = 0.004
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_3.csv
+logged to wandb
+Average incurred loss: 0.449  
+Average sample loss: 0.449  
+Average acc: 0.774  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1168]:	loss = 0.246  exp loss = 0.246  adjusted loss = 0.246  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 64]:	loss = 0.319  exp loss = 0.317  adjusted loss = 0.317  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 17]:	loss = 1.349  exp loss = 1.299  adjusted loss = 1.299  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 346]:	loss = 1.114  exp loss = 1.106  adjusted loss = 1.106  adv prob = 0.250000   acc = 0.006
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_3.csv
+logged to wandb
+Average incurred loss: 0.486  
+Average sample loss: 0.482  
+Average acc: 0.778  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.244  exp loss = 0.236  adjusted loss = 0.236  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.315  exp loss = 0.311  adjusted loss = 0.311  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.315  exp loss = 1.364  adjusted loss = 1.364  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.102  exp loss = 1.119  adjusted loss = 1.119  adv prob = 0.250000   acc = 0.000
+Spurious Score = 1.000
+Weighted Spurious Score = 1.002
+Current best spurious score epoch: 1Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_test_epoch_3.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [4]:
+Training:
+Average incurred loss: 0.444  
+Average sample loss: 0.444  
+Average acc: 0.770  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 2327]:	loss = 0.239  exp loss = 0.237  adjusted loss = 0.237  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 122]:	loss = 0.334  exp loss = 0.345  adjusted loss = 0.345  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 38]:	loss = 1.333  exp loss = 1.356  adjusted loss = 1.356  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 713]:	loss = 1.084  exp loss = 1.041  adjusted loss = 1.041  adv prob = 0.250000   acc = 0.020
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_train_epoch_4.csv
+logged to wandb
+Average incurred loss: 0.426  
+Average sample loss: 0.426  
+Average acc: 0.777  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 1171]:	loss = 0.234  exp loss = 0.232  adjusted loss = 0.232  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 62]:	loss = 0.334  exp loss = 0.345  adjusted loss = 0.345  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 18]:	loss = 1.308  exp loss = 1.309  adjusted loss = 1.309  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 344]:	loss = 1.051  exp loss = 1.035  adjusted loss = 1.035  adv prob = 0.250000   acc = 0.020
+
+Validation:
+Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_val_epoch_4.csv
+logged to wandb
+Average incurred loss: 0.481  
+Average sample loss: 0.477  
+Average acc: 0.776  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 0.234  exp loss = 0.225  adjusted loss = 0.225  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 0.339  exp loss = 0.334  adjusted loss = 0.334  adv prob = 0.250000   acc = 0.994
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 1.307  exp loss = 1.358  adjusted loss = 1.358  adv prob = 0.250000   acc = 0.008
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 1.018  exp loss = 1.036  adjusted loss = 1.036  adv prob = 0.250000   acc = 0.000
+Spurious Score = 0.999
+Weighted Spurious Score = 1.006
+Current best spurious score epoch: 4Saved results/CUB/CUB_sample_exp/AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/model_outputs/output_test_epoch_4.csv
+logged to wandb
+Current lr: 0.000010
+
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:209: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  f"The parameter '{pretrained_param}' is deprecated since 0.13 and will be removed in 0.15, "
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: ERROR Problem finishing run
+/home/ljrjerry/anaconda3/envs/jtt/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 6 leaked semaphores to clean up at shutdown
+  len(cache))
+Done

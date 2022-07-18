@@ -1,0 +1,38 @@
+no change     /home/ljrjerry/anaconda3/condabin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda
+no change     /home/ljrjerry/anaconda3/bin/conda-env
+no change     /home/ljrjerry/anaconda3/bin/activate
+no change     /home/ljrjerry/anaconda3/bin/deactivate
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.sh
+no change     /home/ljrjerry/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/ljrjerry/anaconda3/shell/condabin/Conda.psm1
+no change     /home/ljrjerry/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/ljrjerry/anaconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/ljrjerry/anaconda3/etc/profile.d/conda.csh
+no change     /home/ljrjerry/.bashrc
+No action taken.
+Sun Jul 17 23:38:01 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 495.44       Driver Version: 495.44       CUDA Version: 11.5     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:20:00.0 Off |                    0 |
+|  0%   25C    P8    21W / 300W |      0MiB / 45634MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Traceback (most recent call last):
+  File "run_expt.py", line 13, in <module>
+    from data.data import dataset_attributes, shift_types, prepare_data, log_data
+ModuleNotFoundError: No module named 'data'
+Done
