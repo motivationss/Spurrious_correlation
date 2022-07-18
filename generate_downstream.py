@@ -92,7 +92,7 @@ def generate_downstream_commands(args):
             aug_col = args.aug_col
             confounder_name = args.confounder_name
         elif method == 'AUX2':
-            up_weights = [100]
+            up_weights = [20, 50, 100]
             loss_type = 'erm'
             aug_col = args.aug_col
             confounder_name = args.confounder_name
@@ -192,7 +192,7 @@ if __name__ == "__main__":
     # parser.add_argument("--up_weight", type=int, default=0)
     parser.add_argument('--aux_lambda', type=float, default=None)
     parser.add_argument("--batch_size", type=int, default=64)
-    parser.add_argument("--n_epochs", type=int, default=300)
+    parser.add_argument("--n_epochs", type=int, default=3)
     parser.add_argument("--use_bert_params", type=int, default=1)
     parser.add_argument(
         "--aug_col",
