@@ -384,3 +384,1385 @@ Average acc: 0.222
   waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.037  exp loss = 0.037  adjusted loss = 0.037  adv prob = 0.250000   acc = 1.000
 Spurious Score = 1.000000
 Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_0.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [1]:
+Training:
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 2.307  exp loss = 2.291  adjusted loss = 2.291  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.967  exp loss = 2.886  adjusted loss = 2.886  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 163]:	loss = 0.077  exp loss = 0.074  adjusted loss = 0.074  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.039  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.128  
+Average sample loss: 0.128  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 118]:	loss = 2.305  exp loss = 2.348  adjusted loss = 2.348  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.619  exp loss = 2.793  adjusted loss = 2.793  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 169]:	loss = 0.072  exp loss = 0.070  adjusted loss = 0.070  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2908]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 2.230  exp loss = 2.138  adjusted loss = 2.138  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.972  exp loss = 2.822  adjusted loss = 2.822  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 145]:	loss = 0.073  exp loss = 0.074  adjusted loss = 0.074  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2956]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 89]:	loss = 2.235  exp loss = 2.183  adjusted loss = 2.183  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.781  exp loss = 2.769  adjusted loss = 2.769  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.073  exp loss = 0.071  adjusted loss = 0.071  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2948]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.127  
+Average sample loss: 0.127  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 117]:	loss = 2.263  exp loss = 2.215  adjusted loss = 2.215  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 3.103  exp loss = 2.927  adjusted loss = 2.927  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 148]:	loss = 0.078  exp loss = 0.080  adjusted loss = 0.080  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.117  
+Average sample loss: 0.117  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 105]:	loss = 2.192  exp loss = 2.101  adjusted loss = 2.101  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.831  exp loss = 2.899  adjusted loss = 2.899  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.080  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2925]:	loss = 0.040  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.100  
+Average sample loss: 0.100  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 82]:	loss = 2.162  exp loss = 2.103  adjusted loss = 2.103  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.905  exp loss = 2.919  adjusted loss = 2.919  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 151]:	loss = 0.078  exp loss = 0.091  adjusted loss = 0.091  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2963]:	loss = 0.040  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 2.216  exp loss = 2.206  adjusted loss = 2.206  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 3.064  exp loss = 2.964  adjusted loss = 2.964  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.075  exp loss = 0.075  adjusted loss = 0.075  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2935]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 2.184  exp loss = 2.156  adjusted loss = 2.156  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 1]:	loss = 3.235  exp loss = 2.991  adjusted loss = 2.991  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.076  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.124  
+Average sample loss: 0.124  
+Average acc: 0.961  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 123]:	loss = 2.132  exp loss = 2.064  adjusted loss = 2.064  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.275  exp loss = 2.804  adjusted loss = 2.804  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 153]:	loss = 0.078  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2921]:	loss = 0.039  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 2.210  exp loss = 2.182  adjusted loss = 2.182  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.664  exp loss = 2.778  adjusted loss = 2.778  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.084  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2949]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 2.190  exp loss = 2.175  adjusted loss = 2.175  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.566  exp loss = 2.642  adjusted loss = 2.642  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 149]:	loss = 0.077  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2950]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 2.160  exp loss = 2.148  adjusted loss = 2.148  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 3.196  exp loss = 2.826  adjusted loss = 2.826  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 177]:	loss = 0.080  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2922]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 2.101  exp loss = 2.084  adjusted loss = 2.084  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 9]:	loss = 2.885  exp loss = 2.839  adjusted loss = 2.839  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.079  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 2.148  exp loss = 2.207  adjusted loss = 2.207  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.562  exp loss = 2.694  adjusted loss = 2.694  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 186]:	loss = 0.082  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2911]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 2.106  exp loss = 2.127  adjusted loss = 2.127  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 11]:	loss = 2.681  exp loss = 2.691  adjusted loss = 2.691  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.080  exp loss = 0.080  adjusted loss = 0.080  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2940]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.124  
+Average sample loss: 0.124  
+Average acc: 0.961  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 117]:	loss = 2.121  exp loss = 2.061  adjusted loss = 2.061  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.735  exp loss = 2.678  adjusted loss = 2.678  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 157]:	loss = 0.077  exp loss = 0.075  adjusted loss = 0.075  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2918]:	loss = 0.040  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.099  
+Average sample loss: 0.099  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 81]:	loss = 2.101  exp loss = 2.084  adjusted loss = 2.084  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 3.050  exp loss = 2.846  adjusted loss = 2.846  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 172]:	loss = 0.078  exp loss = 0.077  adjusted loss = 0.077  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2942]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 96]:	loss = 2.121  exp loss = 2.075  adjusted loss = 2.075  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 1]:	loss = 2.257  exp loss = 2.787  adjusted loss = 2.787  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 153]:	loss = 0.078  exp loss = 0.077  adjusted loss = 0.077  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2950]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 2.162  exp loss = 2.220  adjusted loss = 2.220  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.787  exp loss = 2.773  adjusted loss = 2.773  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 145]:	loss = 0.083  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2948]:	loss = 0.040  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 2.064  exp loss = 2.095  adjusted loss = 2.095  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.865  exp loss = 2.796  adjusted loss = 2.796  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.082  exp loss = 0.070  adjusted loss = 0.070  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.117  
+Average sample loss: 0.117  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 2.148  exp loss = 2.130  adjusted loss = 2.130  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.872  exp loss = 2.845  adjusted loss = 2.845  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.083  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2924]:	loss = 0.040  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.098  
+Average sample loss: 0.098  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 2.091  exp loss = 2.098  adjusted loss = 2.098  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 1]:	loss = 2.437  exp loss = 2.804  adjusted loss = 2.804  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 159]:	loss = 0.082  exp loss = 0.074  adjusted loss = 0.074  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2954]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 93]:	loss = 2.095  exp loss = 2.025  adjusted loss = 2.025  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.586  exp loss = 2.693  adjusted loss = 2.693  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 130]:	loss = 0.080  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2972]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 88]:	loss = 2.130  exp loss = 2.091  adjusted loss = 2.091  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 10]:	loss = 2.878  exp loss = 2.793  adjusted loss = 2.793  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.085  exp loss = 0.085  adjusted loss = 0.085  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2941]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.100  
+Average sample loss: 0.100  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 2.047  exp loss = 2.078  adjusted loss = 2.078  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.636  exp loss = 2.724  adjusted loss = 2.724  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 154]:	loss = 0.079  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2954]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 110]:	loss = 2.058  exp loss = 2.070  adjusted loss = 2.070  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.579  exp loss = 2.666  adjusted loss = 2.666  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.086  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2924]:	loss = 0.039  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 2.126  exp loss = 2.152  adjusted loss = 2.152  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.682  exp loss = 2.671  adjusted loss = 2.671  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 159]:	loss = 0.088  exp loss = 0.085  adjusted loss = 0.085  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 2.094  exp loss = 2.068  adjusted loss = 2.068  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.851  exp loss = 2.750  adjusted loss = 2.750  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 176]:	loss = 0.085  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2923]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 100]:	loss = 2.116  exp loss = 2.073  adjusted loss = 2.073  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 3.020  exp loss = 2.828  adjusted loss = 2.828  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.085  exp loss = 0.087  adjusted loss = 0.087  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2929]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 2.054  exp loss = 2.061  adjusted loss = 2.061  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.911  exp loss = 2.857  adjusted loss = 2.857  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.085  exp loss = 0.088  adjusted loss = 0.088  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2941]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 2.056  exp loss = 2.055  adjusted loss = 2.055  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.790  exp loss = 2.834  adjusted loss = 2.834  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 157]:	loss = 0.086  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.040  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 2.030  exp loss = 2.039  adjusted loss = 2.039  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.774  exp loss = 2.804  adjusted loss = 2.804  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.088  exp loss = 0.095  adjusted loss = 0.095  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2947]:	loss = 0.040  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.102  
+Average sample loss: 0.102  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 2.017  exp loss = 2.020  adjusted loss = 2.020  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 3.104  exp loss = 2.901  adjusted loss = 2.901  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.083  exp loss = 0.083  adjusted loss = 0.083  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.040  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 2.019  exp loss = 1.906  adjusted loss = 1.906  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 3.553  exp loss = 3.078  adjusted loss = 3.078  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 153]:	loss = 0.087  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.040  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_train_epoch_1.csv
+logged to wandb
+Average incurred loss: 0.119  
+Average sample loss: 0.117  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 72]:	loss = 2.093  exp loss = 2.043  adjusted loss = 2.043  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.952  exp loss = 3.048  adjusted loss = 3.048  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 109]:	loss = 0.084  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1812]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_val_epoch_1.csv
+logged to wandb
+Average incurred loss: 1.883  
+Average sample loss: 1.888  
+Average acc: 0.222  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 2.032  exp loss = 2.049  adjusted loss = 2.049  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 2.772  exp loss = 2.773  adjusted loss = 2.773  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 0.089  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.038  exp loss = 0.039  adjusted loss = 0.039  adv prob = 0.250000   acc = 1.000
+Spurious Score = 1.000000
+Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_1.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [2]:
+Training:
+Average incurred loss: 0.099  
+Average sample loss: 0.099  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 84]:	loss = 2.035  exp loss = 2.036  adjusted loss = 2.036  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.833  exp loss = 2.986  adjusted loss = 2.986  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.090  exp loss = 0.085  adjusted loss = 0.085  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2952]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 89]:	loss = 2.065  exp loss = 2.023  adjusted loss = 2.023  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.479  exp loss = 2.751  adjusted loss = 2.751  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 173]:	loss = 0.091  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2932]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 2.026  exp loss = 2.009  adjusted loss = 2.009  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.590  exp loss = 2.706  adjusted loss = 2.706  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.084  exp loss = 0.083  adjusted loss = 0.083  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2947]:	loss = 0.040  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.099  
+Average sample loss: 0.099  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 88]:	loss = 2.017  exp loss = 2.042  adjusted loss = 2.042  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.401  exp loss = 2.620  adjusted loss = 2.620  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 136]:	loss = 0.093  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2973]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 109]:	loss = 2.000  exp loss = 2.037  adjusted loss = 2.037  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 3.042  exp loss = 2.806  adjusted loss = 2.806  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 141]:	loss = 0.093  exp loss = 0.094  adjusted loss = 0.094  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2944]:	loss = 0.040  exp loss = 0.040  adjusted loss = 0.040  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 111]:	loss = 2.084  exp loss = 2.136  adjusted loss = 2.136  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.723  exp loss = 2.795  adjusted loss = 2.795  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 151]:	loss = 0.088  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2936]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 110]:	loss = 1.971  exp loss = 2.136  adjusted loss = 2.136  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.795  exp loss = 2.824  adjusted loss = 2.824  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 149]:	loss = 0.093  exp loss = 0.088  adjusted loss = 0.088  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.041  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 1.981  exp loss = 2.007  adjusted loss = 2.007  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 9]:	loss = 2.863  exp loss = 2.802  adjusted loss = 2.802  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 157]:	loss = 0.088  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2947]:	loss = 0.041  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 102]:	loss = 2.019  exp loss = 1.933  adjusted loss = 1.933  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.862  exp loss = 2.849  adjusted loss = 2.849  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 145]:	loss = 0.092  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2946]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.944  exp loss = 1.953  adjusted loss = 1.953  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.785  exp loss = 2.819  adjusted loss = 2.819  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.096  exp loss = 0.097  adjusted loss = 0.097  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2924]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.098  
+Average sample loss: 0.098  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 83]:	loss = 1.939  exp loss = 1.901  adjusted loss = 1.901  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.728  exp loss = 2.788  adjusted loss = 2.788  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 190]:	loss = 0.093  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2922]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.103  
+Average sample loss: 0.103  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 88]:	loss = 1.986  exp loss = 2.034  adjusted loss = 2.034  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.701  exp loss = 2.743  adjusted loss = 2.743  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.093  exp loss = 0.094  adjusted loss = 0.094  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.041  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.103  
+Average sample loss: 0.103  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 85]:	loss = 1.991  exp loss = 1.944  adjusted loss = 1.944  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 9]:	loss = 2.662  exp loss = 2.686  adjusted loss = 2.686  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.090  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2951]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.101  
+Average sample loss: 0.101  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 2.002  exp loss = 2.006  adjusted loss = 2.006  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.854  exp loss = 2.751  adjusted loss = 2.751  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 175]:	loss = 0.091  exp loss = 0.087  adjusted loss = 0.087  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.101  
+Average sample loss: 0.101  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.882  exp loss = 1.904  adjusted loss = 1.904  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.764  exp loss = 2.803  adjusted loss = 2.803  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 142]:	loss = 0.089  exp loss = 0.093  adjusted loss = 0.093  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2962]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.963  exp loss = 2.002  adjusted loss = 2.002  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.862  exp loss = 2.846  adjusted loss = 2.846  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 147]:	loss = 0.098  exp loss = 0.105  adjusted loss = 0.105  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2955]:	loss = 0.041  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.094  
+Average sample loss: 0.094  
+Average acc: 0.974  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 81]:	loss = 1.953  exp loss = 1.993  adjusted loss = 1.993  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.555  exp loss = 2.794  adjusted loss = 2.794  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.091  exp loss = 0.087  adjusted loss = 0.087  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2949]:	loss = 0.042  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 102]:	loss = 1.996  exp loss = 1.934  adjusted loss = 1.934  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.755  exp loss = 2.789  adjusted loss = 2.789  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 140]:	loss = 0.094  exp loss = 0.092  adjusted loss = 0.092  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2953]:	loss = 0.041  exp loss = 0.041  adjusted loss = 0.041  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 91]:	loss = 1.975  exp loss = 1.932  adjusted loss = 1.932  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.394  exp loss = 2.620  adjusted loss = 2.620  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.096  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2951]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.121  
+Average sample loss: 0.121  
+Average acc: 0.960  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 126]:	loss = 1.950  exp loss = 1.912  adjusted loss = 1.912  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.230  exp loss = 2.517  adjusted loss = 2.517  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 172]:	loss = 0.095  exp loss = 0.090  adjusted loss = 0.090  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2899]:	loss = 0.041  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 1.936  exp loss = 1.943  adjusted loss = 1.943  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.812  exp loss = 2.621  adjusted loss = 2.621  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.092  exp loss = 0.085  adjusted loss = 0.085  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2932]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 1.854  exp loss = 1.825  adjusted loss = 1.825  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.891  exp loss = 2.765  adjusted loss = 2.765  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.098  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2940]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.938  exp loss = 1.915  adjusted loss = 1.915  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.719  exp loss = 2.758  adjusted loss = 2.758  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.087  exp loss = 0.092  adjusted loss = 0.092  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2921]:	loss = 0.042  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.102  
+Average sample loss: 0.102  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 1.882  exp loss = 1.909  adjusted loss = 1.909  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.654  exp loss = 2.741  adjusted loss = 2.741  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 144]:	loss = 0.095  exp loss = 0.092  adjusted loss = 0.092  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2959]:	loss = 0.043  exp loss = 0.043  adjusted loss = 0.043  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 105]:	loss = 1.896  exp loss = 1.798  adjusted loss = 1.798  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.644  exp loss = 2.711  adjusted loss = 2.711  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 150]:	loss = 0.099  exp loss = 0.106  adjusted loss = 0.106  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2941]:	loss = 0.043  exp loss = 0.043  adjusted loss = 0.043  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 1.897  exp loss = 1.842  adjusted loss = 1.842  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 3.167  exp loss = 2.800  adjusted loss = 2.800  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 144]:	loss = 0.098  exp loss = 0.094  adjusted loss = 0.094  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2950]:	loss = 0.043  exp loss = 0.042  adjusted loss = 0.042  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.117  
+Average sample loss: 0.117  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 112]:	loss = 1.886  exp loss = 1.861  adjusted loss = 1.861  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 10]:	loss = 2.418  exp loss = 2.594  adjusted loss = 2.594  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 150]:	loss = 0.097  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2928]:	loss = 0.043  exp loss = 0.043  adjusted loss = 0.043  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 118]:	loss = 1.874  exp loss = 1.844  adjusted loss = 1.844  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.500  exp loss = 2.572  adjusted loss = 2.572  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.103  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2923]:	loss = 0.043  exp loss = 0.043  adjusted loss = 0.043  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.112  
+Average sample loss: 0.112  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.895  exp loss = 1.774  adjusted loss = 1.774  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.325  exp loss = 2.455  adjusted loss = 2.455  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 172]:	loss = 0.103  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2917]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 1.873  exp loss = 1.902  adjusted loss = 1.902  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.808  exp loss = 2.584  adjusted loss = 2.584  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.101  exp loss = 0.102  adjusted loss = 0.102  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2949]:	loss = 0.044  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 91]:	loss = 1.915  exp loss = 1.811  adjusted loss = 1.811  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.755  exp loss = 2.667  adjusted loss = 2.667  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 186]:	loss = 0.103  exp loss = 0.102  adjusted loss = 0.102  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2915]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.099  
+Average sample loss: 0.099  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 1.864  exp loss = 1.834  adjusted loss = 1.834  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.666  exp loss = 2.672  adjusted loss = 2.672  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 167]:	loss = 0.100  exp loss = 0.097  adjusted loss = 0.097  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.045  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.869  exp loss = 1.939  adjusted loss = 1.939  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.786  exp loss = 2.701  adjusted loss = 2.701  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 157]:	loss = 0.110  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2937]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.784  exp loss = 1.740  adjusted loss = 1.740  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.575  exp loss = 2.655  adjusted loss = 2.655  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 175]:	loss = 0.098  exp loss = 0.098  adjusted loss = 0.098  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2915]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 112]:	loss = 1.832  exp loss = 1.755  adjusted loss = 1.755  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.644  exp loss = 2.645  adjusted loss = 2.645  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 179]:	loss = 0.108  exp loss = 0.107  adjusted loss = 0.107  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2904]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_train_epoch_2.csv
+logged to wandb
+Average incurred loss: 0.110  
+Average sample loss: 0.114  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 64]:	loss = 1.831  exp loss = 1.874  adjusted loss = 1.874  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.376  exp loss = 2.554  adjusted loss = 2.554  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 100]:	loss = 0.102  exp loss = 0.100  adjusted loss = 0.100  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1827]:	loss = 0.045  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_val_epoch_2.csv
+logged to wandb
+Average incurred loss: 1.736  
+Average sample loss: 1.741  
+Average acc: 0.222  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 1.811  exp loss = 1.828  adjusted loss = 1.828  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 2.608  exp loss = 2.610  adjusted loss = 2.610  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 0.111  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.044  exp loss = 0.044  adjusted loss = 0.044  adv prob = 0.250000   acc = 1.000
+Spurious Score = 1.000000
+Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_2.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [3]:
+Training:
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 112]:	loss = 1.871  exp loss = 1.827  adjusted loss = 1.827  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.445  exp loss = 2.535  adjusted loss = 2.535  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 153]:	loss = 0.108  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.045  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 1.799  exp loss = 1.674  adjusted loss = 1.674  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.409  exp loss = 2.489  adjusted loss = 2.489  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.113  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2946]:	loss = 0.045  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 1.768  exp loss = 1.740  adjusted loss = 1.740  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 10]:	loss = 2.468  exp loss = 2.457  adjusted loss = 2.457  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.111  exp loss = 0.111  adjusted loss = 0.111  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2925]:	loss = 0.045  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.101  
+Average sample loss: 0.101  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 85]:	loss = 1.869  exp loss = 1.824  adjusted loss = 1.824  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.458  exp loss = 2.477  adjusted loss = 2.477  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.117  exp loss = 0.123  adjusted loss = 0.123  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2951]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 1.836  exp loss = 1.779  adjusted loss = 1.779  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.492  exp loss = 2.516  adjusted loss = 2.516  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 163]:	loss = 0.107  exp loss = 0.104  adjusted loss = 0.104  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2931]:	loss = 0.045  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.101  
+Average sample loss: 0.101  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.797  exp loss = 1.857  adjusted loss = 1.857  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.586  exp loss = 2.538  adjusted loss = 2.538  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.107  exp loss = 0.107  adjusted loss = 0.107  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 1.846  exp loss = 1.946  adjusted loss = 1.946  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.691  exp loss = 2.568  adjusted loss = 2.568  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 151]:	loss = 0.107  exp loss = 0.109  adjusted loss = 0.109  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2948]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 1.761  exp loss = 1.755  adjusted loss = 1.755  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.489  exp loss = 2.546  adjusted loss = 2.546  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.114  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 1.778  exp loss = 1.770  adjusted loss = 1.770  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.824  exp loss = 2.625  adjusted loss = 2.625  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 159]:	loss = 0.117  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2937]:	loss = 0.046  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.798  exp loss = 1.722  adjusted loss = 1.722  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.507  exp loss = 2.536  adjusted loss = 2.536  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.105  exp loss = 0.114  adjusted loss = 0.114  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.046  exp loss = 0.045  adjusted loss = 0.045  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 93]:	loss = 1.828  exp loss = 1.831  adjusted loss = 1.831  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.636  exp loss = 2.562  adjusted loss = 2.562  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 166]:	loss = 0.110  exp loss = 0.107  adjusted loss = 0.107  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.101  
+Average sample loss: 0.101  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 88]:	loss = 1.773  exp loss = 1.859  adjusted loss = 1.859  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.454  exp loss = 2.517  adjusted loss = 2.517  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 169]:	loss = 0.108  exp loss = 0.103  adjusted loss = 0.103  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 116]:	loss = 1.816  exp loss = 1.848  adjusted loss = 1.848  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.647  exp loss = 2.553  adjusted loss = 2.553  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 167]:	loss = 0.110  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2914]:	loss = 0.046  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.809  exp loss = 1.767  adjusted loss = 1.767  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.599  exp loss = 2.587  adjusted loss = 2.587  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.115  exp loss = 0.113  adjusted loss = 0.113  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2932]:	loss = 0.047  exp loss = 0.046  adjusted loss = 0.046  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 91]:	loss = 1.711  exp loss = 1.732  adjusted loss = 1.732  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.779  exp loss = 2.728  adjusted loss = 2.728  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 135]:	loss = 0.111  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2966]:	loss = 0.048  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 96]:	loss = 1.723  exp loss = 1.768  adjusted loss = 1.768  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.723  exp loss = 2.712  adjusted loss = 2.712  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 153]:	loss = 0.109  exp loss = 0.110  adjusted loss = 0.110  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2946]:	loss = 0.047  exp loss = 0.047  adjusted loss = 0.047  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.112  
+Average sample loss: 0.112  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.729  exp loss = 1.745  adjusted loss = 1.745  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.586  exp loss = 2.660  adjusted loss = 2.660  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 144]:	loss = 0.116  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.047  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 96]:	loss = 1.753  exp loss = 1.750  adjusted loss = 1.750  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.622  exp loss = 2.639  adjusted loss = 2.639  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.114  exp loss = 0.117  adjusted loss = 0.117  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.048  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.098  
+Average sample loss: 0.098  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 84]:	loss = 1.719  exp loss = 1.741  adjusted loss = 1.741  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 1.973  exp loss = 2.406  adjusted loss = 2.406  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 147]:	loss = 0.119  exp loss = 0.121  adjusted loss = 0.121  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2964]:	loss = 0.048  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 101]:	loss = 1.654  exp loss = 1.641  adjusted loss = 1.641  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.767  exp loss = 2.508  adjusted loss = 2.508  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.116  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2931]:	loss = 0.047  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 1.688  exp loss = 1.673  adjusted loss = 1.673  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.710  exp loss = 2.612  adjusted loss = 2.612  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 146]:	loss = 0.111  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2946]:	loss = 0.048  exp loss = 0.048  adjusted loss = 0.048  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.755  exp loss = 1.803  adjusted loss = 1.803  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 9]:	loss = 2.644  exp loss = 2.663  adjusted loss = 2.663  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 174]:	loss = 0.110  exp loss = 0.107  adjusted loss = 0.107  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2911]:	loss = 0.048  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.104  
+Average sample loss: 0.104  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.662  exp loss = 1.657  adjusted loss = 1.657  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.709  exp loss = 2.675  adjusted loss = 2.675  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.116  exp loss = 0.108  adjusted loss = 0.108  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2940]:	loss = 0.049  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 1.680  exp loss = 1.724  adjusted loss = 1.724  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.208  exp loss = 2.531  adjusted loss = 2.531  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 126]:	loss = 0.124  exp loss = 0.125  adjusted loss = 0.125  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2965]:	loss = 0.049  exp loss = 0.050  adjusted loss = 0.050  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.688  exp loss = 1.682  adjusted loss = 1.682  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.384  exp loss = 2.455  adjusted loss = 2.455  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 172]:	loss = 0.117  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2922]:	loss = 0.049  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.099  
+Average sample loss: 0.099  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 1.687  exp loss = 1.702  adjusted loss = 1.702  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.641  exp loss = 2.496  adjusted loss = 2.496  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 154]:	loss = 0.121  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2958]:	loss = 0.050  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 114]:	loss = 1.702  exp loss = 1.668  adjusted loss = 1.668  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.720  exp loss = 2.557  adjusted loss = 2.557  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 170]:	loss = 0.121  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2913]:	loss = 0.049  exp loss = 0.050  adjusted loss = 0.050  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 98]:	loss = 1.669  exp loss = 1.626  adjusted loss = 1.626  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.762  exp loss = 2.644  adjusted loss = 2.644  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 171]:	loss = 0.120  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2926]:	loss = 0.050  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 1.752  exp loss = 1.763  adjusted loss = 1.763  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.840  exp loss = 2.719  adjusted loss = 2.719  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.119  exp loss = 0.116  adjusted loss = 0.116  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2947]:	loss = 0.051  exp loss = 0.051  adjusted loss = 0.051  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.103  
+Average sample loss: 0.103  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 96]:	loss = 1.643  exp loss = 1.653  adjusted loss = 1.653  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.482  exp loss = 2.672  adjusted loss = 2.672  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.125  exp loss = 0.122  adjusted loss = 0.122  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.050  exp loss = 0.049  adjusted loss = 0.049  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 98]:	loss = 1.614  exp loss = 1.553  adjusted loss = 1.553  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.396  exp loss = 2.576  adjusted loss = 2.576  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 174]:	loss = 0.123  exp loss = 0.119  adjusted loss = 0.119  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2923]:	loss = 0.050  exp loss = 0.050  adjusted loss = 0.050  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 1.716  exp loss = 1.699  adjusted loss = 1.699  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.295  exp loss = 2.395  adjusted loss = 2.395  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 143]:	loss = 0.122  exp loss = 0.134  adjusted loss = 0.134  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2946]:	loss = 0.051  exp loss = 0.050  adjusted loss = 0.050  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 93]:	loss = 1.732  exp loss = 1.649  adjusted loss = 1.649  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 9]:	loss = 2.757  exp loss = 2.511  adjusted loss = 2.511  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 150]:	loss = 0.121  exp loss = 0.120  adjusted loss = 0.120  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2948]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.107  
+Average sample loss: 0.107  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.658  exp loss = 1.596  adjusted loss = 1.596  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.291  exp loss = 2.389  adjusted loss = 2.389  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.132  exp loss = 0.129  adjusted loss = 0.129  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.051  exp loss = 0.050  adjusted loss = 0.050  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.658  exp loss = 1.636  adjusted loss = 1.636  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.619  exp loss = 2.470  adjusted loss = 2.470  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.119  exp loss = 0.112  adjusted loss = 0.112  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2937]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_train_epoch_3.csv
+logged to wandb
+Average incurred loss: 0.111  
+Average sample loss: 0.109  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 66]:	loss = 1.670  exp loss = 1.700  adjusted loss = 1.700  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.321  exp loss = 2.443  adjusted loss = 2.443  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 104]:	loss = 0.115  exp loss = 0.115  adjusted loss = 0.115  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1823]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_val_epoch_3.csv
+logged to wandb
+Average incurred loss: 1.590  
+Average sample loss: 1.594  
+Average acc: 0.222  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 1.610  exp loss = 1.625  adjusted loss = 1.625  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 2.422  exp loss = 2.424  adjusted loss = 2.424  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 0.139  exp loss = 0.140  adjusted loss = 0.140  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.052  exp loss = 0.053  adjusted loss = 0.053  adv prob = 0.250000   acc = 1.000
+Spurious Score = 1.000000
+Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_3.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [4]:
+Training:
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 1.633  exp loss = 1.593  adjusted loss = 1.593  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.499  exp loss = 2.481  adjusted loss = 2.481  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 163]:	loss = 0.123  exp loss = 0.128  adjusted loss = 0.128  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2928]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 115]:	loss = 1.673  exp loss = 1.661  adjusted loss = 1.661  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.241  exp loss = 2.438  adjusted loss = 2.438  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 171]:	loss = 0.133  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2912]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.113  
+Average sample loss: 0.113  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 105]:	loss = 1.610  exp loss = 1.597  adjusted loss = 1.597  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.370  exp loss = 2.429  adjusted loss = 2.429  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 176]:	loss = 0.126  exp loss = 0.126  adjusted loss = 0.126  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2911]:	loss = 0.052  exp loss = 0.052  adjusted loss = 0.052  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 95]:	loss = 1.618  exp loss = 1.564  adjusted loss = 1.564  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.359  exp loss = 2.396  adjusted loss = 2.396  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 176]:	loss = 0.128  exp loss = 0.132  adjusted loss = 0.132  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2922]:	loss = 0.053  exp loss = 0.053  adjusted loss = 0.053  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 1.595  exp loss = 1.526  adjusted loss = 1.526  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.650  exp loss = 2.506  adjusted loss = 2.506  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 136]:	loss = 0.139  exp loss = 0.141  adjusted loss = 0.141  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2956]:	loss = 0.054  exp loss = 0.054  adjusted loss = 0.054  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.103  
+Average sample loss: 0.103  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 82]:	loss = 1.612  exp loss = 1.640  adjusted loss = 1.640  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.555  exp loss = 2.496  adjusted loss = 2.496  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 151]:	loss = 0.132  exp loss = 0.133  adjusted loss = 0.133  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2960]:	loss = 0.054  exp loss = 0.053  adjusted loss = 0.053  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.098  
+Average sample loss: 0.098  
+Average acc: 0.975  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 76]:	loss = 1.590  exp loss = 1.501  adjusted loss = 1.501  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.294  exp loss = 2.434  adjusted loss = 2.434  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.136  exp loss = 0.143  adjusted loss = 0.143  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2960]:	loss = 0.054  exp loss = 0.054  adjusted loss = 0.054  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 89]:	loss = 1.590  exp loss = 1.597  adjusted loss = 1.597  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.345  exp loss = 2.361  adjusted loss = 2.361  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.137  exp loss = 0.124  adjusted loss = 0.124  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2940]:	loss = 0.054  exp loss = 0.053  adjusted loss = 0.053  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.112  
+Average sample loss: 0.112  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.616  exp loss = 1.571  adjusted loss = 1.571  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.588  exp loss = 2.399  adjusted loss = 2.399  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 137]:	loss = 0.133  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2954]:	loss = 0.055  exp loss = 0.054  adjusted loss = 0.054  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.100  
+Average sample loss: 0.100  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 83]:	loss = 1.565  exp loss = 1.579  adjusted loss = 1.579  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.045  exp loss = 2.287  adjusted loss = 2.287  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 183]:	loss = 0.133  exp loss = 0.145  adjusted loss = 0.145  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.054  exp loss = 0.054  adjusted loss = 0.054  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 108]:	loss = 1.609  exp loss = 1.620  adjusted loss = 1.620  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.395  exp loss = 2.322  adjusted loss = 2.322  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 160]:	loss = 0.132  exp loss = 0.135  adjusted loss = 0.135  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2927]:	loss = 0.054  exp loss = 0.055  adjusted loss = 0.055  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.105  
+Average sample loss: 0.105  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 85]:	loss = 1.590  exp loss = 1.605  adjusted loss = 1.605  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.136  exp loss = 2.241  adjusted loss = 2.241  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 175]:	loss = 0.134  exp loss = 0.149  adjusted loss = 0.149  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.055  exp loss = 0.054  adjusted loss = 0.054  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 98]:	loss = 1.593  exp loss = 1.610  adjusted loss = 1.610  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 1.976  exp loss = 2.140  adjusted loss = 2.140  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 164]:	loss = 0.128  exp loss = 0.118  adjusted loss = 0.118  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.055  exp loss = 0.057  adjusted loss = 0.057  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.568  exp loss = 1.537  adjusted loss = 1.537  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.373  exp loss = 2.260  adjusted loss = 2.260  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.144  exp loss = 0.139  adjusted loss = 0.139  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.056  exp loss = 0.056  adjusted loss = 0.056  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.563  exp loss = 1.535  adjusted loss = 1.535  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.795  exp loss = 2.440  adjusted loss = 2.440  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 151]:	loss = 0.136  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2950]:	loss = 0.056  exp loss = 0.056  adjusted loss = 0.056  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 104]:	loss = 1.560  exp loss = 1.571  adjusted loss = 1.571  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.500  exp loss = 2.454  adjusted loss = 2.454  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.136  exp loss = 0.144  adjusted loss = 0.144  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2934]:	loss = 0.056  exp loss = 0.057  adjusted loss = 0.057  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.534  exp loss = 1.513  adjusted loss = 1.513  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.316  exp loss = 2.378  adjusted loss = 2.378  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.135  exp loss = 0.137  adjusted loss = 0.137  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2929]:	loss = 0.057  exp loss = 0.057  adjusted loss = 0.057  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 108]:	loss = 1.506  exp loss = 1.498  adjusted loss = 1.498  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 1.915  exp loss = 2.103  adjusted loss = 2.103  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.141  exp loss = 0.147  adjusted loss = 0.147  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2926]:	loss = 0.057  exp loss = 0.057  adjusted loss = 0.057  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.112  
+Average sample loss: 0.112  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.522  exp loss = 1.585  adjusted loss = 1.585  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.259  exp loss = 2.126  adjusted loss = 2.126  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 166]:	loss = 0.145  exp loss = 0.153  adjusted loss = 0.153  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2925]:	loss = 0.057  exp loss = 0.058  adjusted loss = 0.058  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.106  
+Average sample loss: 0.106  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 1.550  exp loss = 1.590  adjusted loss = 1.590  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.475  exp loss = 2.219  adjusted loss = 2.219  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.143  exp loss = 0.147  adjusted loss = 0.147  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.058  exp loss = 0.059  adjusted loss = 0.059  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.114  
+Average sample loss: 0.114  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 103]:	loss = 1.546  exp loss = 1.551  adjusted loss = 1.551  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.260  exp loss = 2.253  adjusted loss = 2.253  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 163]:	loss = 0.138  exp loss = 0.140  adjusted loss = 0.140  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2928]:	loss = 0.058  exp loss = 0.059  adjusted loss = 0.059  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.523  exp loss = 1.513  adjusted loss = 1.513  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.278  exp loss = 2.267  adjusted loss = 2.267  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 167]:	loss = 0.143  exp loss = 0.143  adjusted loss = 0.143  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2936]:	loss = 0.059  exp loss = 0.059  adjusted loss = 0.059  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.108  
+Average sample loss: 0.108  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 83]:	loss = 1.529  exp loss = 1.488  adjusted loss = 1.488  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.401  exp loss = 2.337  adjusted loss = 2.337  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 179]:	loss = 0.150  exp loss = 0.146  adjusted loss = 0.146  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2931]:	loss = 0.059  exp loss = 0.060  adjusted loss = 0.060  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.111  
+Average sample loss: 0.111  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 1.475  exp loss = 1.410  adjusted loss = 1.410  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.554  exp loss = 2.407  adjusted loss = 2.407  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.152  exp loss = 0.166  adjusted loss = 0.166  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.059  exp loss = 0.060  adjusted loss = 0.060  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 1.552  exp loss = 1.570  adjusted loss = 1.570  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 10]:	loss = 2.146  exp loss = 2.228  adjusted loss = 2.228  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.144  exp loss = 0.141  adjusted loss = 0.141  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2937]:	loss = 0.060  exp loss = 0.061  adjusted loss = 0.061  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 110]:	loss = 1.503  exp loss = 1.520  adjusted loss = 1.520  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.431  exp loss = 2.292  adjusted loss = 2.292  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 138]:	loss = 0.145  exp loss = 0.149  adjusted loss = 0.149  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2949]:	loss = 0.060  exp loss = 0.061  adjusted loss = 0.061  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.116  
+Average sample loss: 0.116  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.531  exp loss = 1.556  adjusted loss = 1.556  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.164  exp loss = 2.257  adjusted loss = 2.257  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 170]:	loss = 0.147  exp loss = 0.155  adjusted loss = 0.155  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2920]:	loss = 0.060  exp loss = 0.060  adjusted loss = 0.060  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.112  
+Average sample loss: 0.112  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 1.493  exp loss = 1.532  adjusted loss = 1.532  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.428  exp loss = 2.347  adjusted loss = 2.347  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 146]:	loss = 0.156  exp loss = 0.159  adjusted loss = 0.159  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2956]:	loss = 0.062  exp loss = 0.063  adjusted loss = 0.063  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.517  exp loss = 1.527  adjusted loss = 1.527  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.264  exp loss = 2.331  adjusted loss = 2.331  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.143  exp loss = 0.151  adjusted loss = 0.151  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2938]:	loss = 0.062  exp loss = 0.063  adjusted loss = 0.063  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.121  
+Average sample loss: 0.121  
+Average acc: 0.964  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 107]:	loss = 1.507  exp loss = 1.524  adjusted loss = 1.524  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.381  exp loss = 2.348  adjusted loss = 2.348  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 157]:	loss = 0.150  exp loss = 0.150  adjusted loss = 0.150  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2928]:	loss = 0.062  exp loss = 0.061  adjusted loss = 0.061  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 91]:	loss = 1.461  exp loss = 1.457  adjusted loss = 1.457  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.054  exp loss = 2.311  adjusted loss = 2.311  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.145  exp loss = 0.136  adjusted loss = 0.136  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2951]:	loss = 0.063  exp loss = 0.063  adjusted loss = 0.063  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.470  exp loss = 1.502  adjusted loss = 1.502  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 1]:	loss = 2.571  exp loss = 2.337  adjusted loss = 2.337  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 148]:	loss = 0.156  exp loss = 0.161  adjusted loss = 0.161  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.063  exp loss = 0.063  adjusted loss = 0.063  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.118  
+Average sample loss: 0.118  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 105]:	loss = 1.496  exp loss = 1.509  adjusted loss = 1.509  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.237  exp loss = 2.301  adjusted loss = 2.301  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.151  exp loss = 0.172  adjusted loss = 0.172  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2935]:	loss = 0.064  exp loss = 0.065  adjusted loss = 0.065  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.109  
+Average sample loss: 0.109  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 84]:	loss = 1.466  exp loss = 1.417  adjusted loss = 1.417  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.472  exp loss = 2.353  adjusted loss = 2.353  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 148]:	loss = 0.161  exp loss = 0.158  adjusted loss = 0.158  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2964]:	loss = 0.065  exp loss = 0.065  adjusted loss = 0.065  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.121  
+Average sample loss: 0.121  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 115]:	loss = 1.449  exp loss = 1.461  adjusted loss = 1.461  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 3.029  exp loss = 2.479  adjusted loss = 2.479  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 131]:	loss = 0.169  exp loss = 0.163  adjusted loss = 0.163  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2952]:	loss = 0.065  exp loss = 0.065  adjusted loss = 0.065  adv prob = 0.250000   acc = 1.000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_train_epoch_4.csv
+logged to wandb
+Average incurred loss: 0.113  
+Average sample loss: 0.111  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 59]:	loss = 1.442  exp loss = 1.411  adjusted loss = 1.411  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 2.041  exp loss = 2.395  adjusted loss = 2.395  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 101]:	loss = 0.152  exp loss = 0.150  adjusted loss = 0.150  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1833]:	loss = 0.065  exp loss = 0.066  adjusted loss = 0.066  adv prob = 0.250000   acc = 1.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_val_epoch_4.csv
+logged to wandb
+Average incurred loss: 1.428  
+Average sample loss: 1.433  
+Average acc: 0.222  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 1.418  exp loss = 1.430  adjusted loss = 1.430  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 2.184  exp loss = 2.185  adjusted loss = 2.185  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 0.176  exp loss = 0.178  adjusted loss = 0.178  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.068  exp loss = 0.069  adjusted loss = 0.069  adv prob = 0.250000   acc = 1.000
+Spurious Score = 1.000000
+Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_4.csv
+logged to wandb
+Current lr: 0.000010
+
+
+Epoch [5]:
+Training:
+Average incurred loss: 0.125  
+Average sample loss: 0.125  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 111]:	loss = 1.447  exp loss = 1.466  adjusted loss = 1.466  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 10]:	loss = 2.239  exp loss = 2.262  adjusted loss = 2.262  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.163  exp loss = 0.154  adjusted loss = 0.154  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2924]:	loss = 0.065  exp loss = 0.066  adjusted loss = 0.066  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 98]:	loss = 1.420  exp loss = 1.398  adjusted loss = 1.398  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.011  exp loss = 2.178  adjusted loss = 2.178  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 189]:	loss = 0.149  exp loss = 0.152  adjusted loss = 0.152  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2909]:	loss = 0.066  exp loss = 0.067  adjusted loss = 0.067  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.118  
+Average sample loss: 0.118  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 100]:	loss = 1.400  exp loss = 1.355  adjusted loss = 1.355  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.290  exp loss = 2.213  adjusted loss = 2.213  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 170]:	loss = 0.154  exp loss = 0.165  adjusted loss = 0.165  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2923]:	loss = 0.067  exp loss = 0.067  adjusted loss = 0.067  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.115  
+Average sample loss: 0.115  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.432  exp loss = 1.549  adjusted loss = 1.549  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 1.899  exp loss = 2.044  adjusted loss = 2.044  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.168  exp loss = 0.174  adjusted loss = 0.174  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2947]:	loss = 0.068  exp loss = 0.067  adjusted loss = 0.067  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.125  
+Average sample loss: 0.125  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 115]:	loss = 1.458  exp loss = 1.513  adjusted loss = 1.513  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.625  exp loss = 2.246  adjusted loss = 2.246  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 167]:	loss = 0.157  exp loss = 0.162  adjusted loss = 0.162  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2914]:	loss = 0.067  exp loss = 0.068  adjusted loss = 0.068  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.110  
+Average sample loss: 0.110  
+Average acc: 0.973  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 82]:	loss = 1.367  exp loss = 1.402  adjusted loss = 1.402  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.212  exp loss = 2.243  adjusted loss = 2.243  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.164  exp loss = 0.158  adjusted loss = 0.158  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2959]:	loss = 0.069  exp loss = 0.069  adjusted loss = 0.069  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.120  
+Average sample loss: 0.120  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 97]:	loss = 1.450  exp loss = 1.423  adjusted loss = 1.423  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.149  exp loss = 2.196  adjusted loss = 2.196  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 154]:	loss = 0.173  exp loss = 0.163  adjusted loss = 0.163  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.069  exp loss = 0.069  adjusted loss = 0.069  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.117  
+Average sample loss: 0.117  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 1.432  exp loss = 1.410  adjusted loss = 1.410  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.283  exp loss = 2.216  adjusted loss = 2.216  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 142]:	loss = 0.158  exp loss = 0.152  adjusted loss = 0.152  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2961]:	loss = 0.071  exp loss = 0.071  adjusted loss = 0.071  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.118  
+Average sample loss: 0.118  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.445  exp loss = 1.362  adjusted loss = 1.362  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.260  exp loss = 2.256  adjusted loss = 2.256  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 145]:	loss = 0.166  exp loss = 0.178  adjusted loss = 0.178  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2960]:	loss = 0.071  exp loss = 0.071  adjusted loss = 0.071  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.127  
+Average sample loss: 0.127  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 112]:	loss = 1.419  exp loss = 1.437  adjusted loss = 1.437  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.047  exp loss = 2.193  adjusted loss = 2.193  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.162  exp loss = 0.163  adjusted loss = 0.163  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2920]:	loss = 0.070  exp loss = 0.071  adjusted loss = 0.071  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.118  
+Average sample loss: 0.118  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 1.420  exp loss = 1.382  adjusted loss = 1.382  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.260  exp loss = 2.234  adjusted loss = 2.234  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 186]:	loss = 0.163  exp loss = 0.160  adjusted loss = 0.160  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2920]:	loss = 0.071  exp loss = 0.071  adjusted loss = 0.071  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.122  
+Average sample loss: 0.122  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.377  exp loss = 1.355  adjusted loss = 1.355  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.025  exp loss = 2.134  adjusted loss = 2.134  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.166  exp loss = 0.171  adjusted loss = 0.171  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2936]:	loss = 0.072  exp loss = 0.072  adjusted loss = 0.072  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.125  
+Average sample loss: 0.125  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 100]:	loss = 1.405  exp loss = 1.386  adjusted loss = 1.386  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 2.490  exp loss = 2.308  adjusted loss = 2.308  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.172  exp loss = 0.169  adjusted loss = 0.169  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2937]:	loss = 0.073  exp loss = 0.073  adjusted loss = 0.073  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.121  
+Average sample loss: 0.121  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.407  exp loss = 1.374  adjusted loss = 1.374  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 1.940  exp loss = 2.145  adjusted loss = 2.145  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 180]:	loss = 0.168  exp loss = 0.169  adjusted loss = 0.169  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2921]:	loss = 0.073  exp loss = 0.074  adjusted loss = 0.074  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.130  
+Average sample loss: 0.130  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 118]:	loss = 1.390  exp loss = 1.419  adjusted loss = 1.419  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.178  exp loss = 2.169  adjusted loss = 2.169  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.165  exp loss = 0.169  adjusted loss = 0.169  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2925]:	loss = 0.074  exp loss = 0.075  adjusted loss = 0.075  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.121  
+Average sample loss: 0.121  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.352  exp loss = 1.411  adjusted loss = 1.411  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 1.995  exp loss = 2.080  adjusted loss = 2.080  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 128]:	loss = 0.180  exp loss = 0.181  adjusted loss = 0.181  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2972]:	loss = 0.075  exp loss = 0.075  adjusted loss = 0.075  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.128  
+Average sample loss: 0.128  
+Average acc: 0.962  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 116]:	loss = 1.334  exp loss = 1.303  adjusted loss = 1.303  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.067  exp loss = 2.082  adjusted loss = 2.082  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 147]:	loss = 0.178  exp loss = 0.174  adjusted loss = 0.174  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2933]:	loss = 0.075  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.123  
+Average sample loss: 0.123  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 1.339  exp loss = 1.299  adjusted loss = 1.299  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.003  exp loss = 2.030  adjusted loss = 2.030  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 147]:	loss = 0.186  exp loss = 0.197  adjusted loss = 0.197  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2953]:	loss = 0.077  exp loss = 0.076  adjusted loss = 0.076  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.120  
+Average sample loss: 0.120  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 89]:	loss = 1.379  exp loss = 1.346  adjusted loss = 1.346  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 1.982  exp loss = 2.005  adjusted loss = 2.005  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 168]:	loss = 0.174  exp loss = 0.182  adjusted loss = 0.182  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2940]:	loss = 0.077  exp loss = 0.077  adjusted loss = 0.077  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.129  
+Average sample loss: 0.129  
+Average acc: 0.965  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 105]:	loss = 1.356  exp loss = 1.379  adjusted loss = 1.379  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 2.216  exp loss = 2.058  adjusted loss = 2.058  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 159]:	loss = 0.183  exp loss = 0.180  adjusted loss = 0.180  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.077  exp loss = 0.079  adjusted loss = 0.079  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.125  
+Average sample loss: 0.125  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 98]:	loss = 1.354  exp loss = 1.348  adjusted loss = 1.348  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 1.995  exp loss = 2.048  adjusted loss = 2.048  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.181  exp loss = 0.182  adjusted loss = 0.182  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2943]:	loss = 0.079  exp loss = 0.079  adjusted loss = 0.079  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.120  
+Average sample loss: 0.120  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 85]:	loss = 1.320  exp loss = 1.278  adjusted loss = 1.278  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.223  exp loss = 2.105  adjusted loss = 2.105  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 152]:	loss = 0.185  exp loss = 0.182  adjusted loss = 0.182  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2959]:	loss = 0.080  exp loss = 0.080  adjusted loss = 0.080  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.133  
+Average sample loss: 0.133  
+Average acc: 0.963  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 118]:	loss = 1.381  exp loss = 1.379  adjusted loss = 1.379  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 0]:	loss = 0.000  exp loss = 2.105  adjusted loss = 2.105  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 155]:	loss = 0.183  exp loss = 0.192  adjusted loss = 0.192  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2927]:	loss = 0.080  exp loss = 0.079  adjusted loss = 0.079  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.124  
+Average sample loss: 0.124  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 86]:	loss = 1.336  exp loss = 1.333  adjusted loss = 1.333  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.066  exp loss = 2.099  adjusted loss = 2.099  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 181]:	loss = 0.181  exp loss = 0.187  adjusted loss = 0.187  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2928]:	loss = 0.081  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.127  
+Average sample loss: 0.127  
+Average acc: 0.969  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 94]:	loss = 1.305  exp loss = 1.338  adjusted loss = 1.338  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.354  exp loss = 2.191  adjusted loss = 2.191  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 176]:	loss = 0.188  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2925]:	loss = 0.081  exp loss = 0.081  adjusted loss = 0.081  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.126  
+Average sample loss: 0.126  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 89]:	loss = 1.325  exp loss = 1.311  adjusted loss = 1.311  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 7]:	loss = 1.959  exp loss = 2.044  adjusted loss = 2.044  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 149]:	loss = 0.190  exp loss = 0.193  adjusted loss = 0.193  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2955]:	loss = 0.083  exp loss = 0.083  adjusted loss = 0.083  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.124  
+Average sample loss: 0.124  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 87]:	loss = 1.290  exp loss = 1.294  adjusted loss = 1.294  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 1.944  exp loss = 1.974  adjusted loss = 1.974  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 163]:	loss = 0.191  exp loss = 0.187  adjusted loss = 0.187  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.083  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.128  
+Average sample loss: 0.128  
+Average acc: 0.970  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 92]:	loss = 1.312  exp loss = 1.237  adjusted loss = 1.237  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 5]:	loss = 2.178  exp loss = 2.066  adjusted loss = 2.066  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 158]:	loss = 0.179  exp loss = 0.184  adjusted loss = 0.184  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.084  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.128  
+Average sample loss: 0.128  
+Average acc: 0.971  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 90]:	loss = 1.326  exp loss = 1.324  adjusted loss = 1.324  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 2.286  exp loss = 2.147  adjusted loss = 2.147  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 161]:	loss = 0.192  exp loss = 0.187  adjusted loss = 0.187  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2945]:	loss = 0.085  exp loss = 0.084  adjusted loss = 0.084  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.130  
+Average sample loss: 0.130  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 102]:	loss = 1.273  exp loss = 1.235  adjusted loss = 1.235  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 1.946  exp loss = 2.087  adjusted loss = 2.087  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 177]:	loss = 0.187  exp loss = 0.194  adjusted loss = 0.194  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2918]:	loss = 0.085  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.140  
+Average sample loss: 0.140  
+Average acc: 0.960  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 126]:	loss = 1.293  exp loss = 1.307  adjusted loss = 1.307  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 3]:	loss = 2.223  exp loss = 2.128  adjusted loss = 2.128  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 145]:	loss = 0.190  exp loss = 0.198  adjusted loss = 0.198  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2926]:	loss = 0.086  exp loss = 0.086  adjusted loss = 0.086  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.127  
+Average sample loss: 0.127  
+Average acc: 0.972  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 88]:	loss = 1.297  exp loss = 1.258  adjusted loss = 1.258  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 2]:	loss = 1.955  exp loss = 2.097  adjusted loss = 2.097  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 156]:	loss = 0.191  exp loss = 0.192  adjusted loss = 0.192  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2954]:	loss = 0.088  exp loss = 0.088  adjusted loss = 0.088  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.134  
+Average sample loss: 0.134  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 96]:	loss = 1.262  exp loss = 1.212  adjusted loss = 1.212  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 8]:	loss = 2.069  exp loss = 2.039  adjusted loss = 2.039  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.206  exp loss = 0.212  adjusted loss = 0.212  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2931]:	loss = 0.088  exp loss = 0.087  adjusted loss = 0.087  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.137  
+Average sample loss: 0.137  
+Average acc: 0.966  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 106]:	loss = 1.311  exp loss = 1.344  adjusted loss = 1.344  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 4]:	loss = 1.851  exp loss = 1.993  adjusted loss = 1.993  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 134]:	loss = 0.202  exp loss = 0.215  adjusted loss = 0.215  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2956]:	loss = 0.090  exp loss = 0.089  adjusted loss = 0.089  adv prob = 0.250000   acc = 1.000
+Average incurred loss: 0.136  
+Average sample loss: 0.136  
+Average acc: 0.967  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 99]:	loss = 1.305  exp loss = 1.302  adjusted loss = 1.302  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 6]:	loss = 1.696  exp loss = 1.856  adjusted loss = 1.856  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 165]:	loss = 0.200  exp loss = 0.193  adjusted loss = 0.193  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 2930]:	loss = 0.090  exp loss = 0.091  adjusted loss = 0.091  adv prob = 0.250000   acc = 1.000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_train_epoch_5.csv
+logged to wandb
+Average incurred loss: 0.134  
+Average sample loss: 0.134  
+Average acc: 0.968  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 62]:	loss = 1.270  exp loss = 1.248  adjusted loss = 1.248  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 1]:	loss = 2.150  exp loss = 1.885  adjusted loss = 1.885  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 89]:	loss = 0.198  exp loss = 0.199  adjusted loss = 0.199  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 1843]:	loss = 0.092  exp loss = 0.091  adjusted loss = 0.091  adv prob = 0.250000   acc = 1.000
+
+Validation:
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_val_epoch_5.csv
+logged to wandb
+Average incurred loss: 1.276  
+Average sample loss: 1.280  
+Average acc: 0.222  
+  waterbird_complete95 = 0, forest2water2 = 0  [n = 467]:	loss = 1.249  exp loss = 1.258  adjusted loss = 1.258  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 0, forest2water2 = 1  [n = 466]:	loss = 1.939  exp loss = 1.940  adjusted loss = 1.940  adv prob = 0.250000   acc = 0.000
+  waterbird_complete95 = 1, forest2water2 = 0  [n = 133]:	loss = 0.227  exp loss = 0.229  adjusted loss = 0.229  adv prob = 0.250000   acc = 1.000
+  waterbird_complete95 = 1, forest2water2 = 1  [n = 133]:	loss = 0.094  exp loss = 0.096  adjusted loss = 0.096  adv prob = 0.250000   acc = 1.000
+Spurious Score = 1.000000
+Weighted Spurious Score = 1.000000
+Saved results/CUB/CUB_sample_exp/train_downstream_AUX1_upweight_0_epochs_5_lr_1e-05_weight_decay_0.0_aux_lambda_0.1/final_epoch4/AUX2_upweight_100_epochs_6_lr_1e-05_weight_decay_1.0/model_outputs/output_test_epoch_5.csv
+logged to wandb
+Current lr: 0.000010
+
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:209: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  f"The parameter '{pretrained_param}' is deprecated since 0.13 and will be removed in 0.15, "
+/home/ljrjerry/.local/lib/python3.7/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: ERROR Problem finishing run
+/home/ljrjerry/anaconda3/envs/jtt/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 6 leaked semaphores to clean up at shutdown
+  len(cache))
+Done
