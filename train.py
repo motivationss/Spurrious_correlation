@@ -99,7 +99,7 @@ def run_epoch(
             
             # if is_training:
             #     for idx, i in enumerate(data_idx.detach().tolist()):
-            #         outputs[idx] += model.b[i] * 8
+            #         outputs[idx] += model.b[i] * 5
             
                 
             output_df = pd.DataFrame()

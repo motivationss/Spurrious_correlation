@@ -136,7 +136,8 @@ def generate_downstream_commands(args):
                     )
                 )
                 print(
-                    f"python run_expt.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
+                   # f"python run_expt.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
+                    f"python run_onemodel.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
                     + f" --batch_size {args.batch_size} --root_dir {args.root_dir} --n_epochs {args.n_epochs}"
                     + f" --aug_col {aug_col} --log_dir {training_output_dir}"
                     + f" --metadata_path {metadata_path}"
@@ -149,7 +150,8 @@ def generate_downstream_commands(args):
                 )
 
                 file.write(
-                    f"python run_expt.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
+                   # f"python run_expt.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
+                    f"python run_onemodel.py -s confounder -d {args.dataset} -t {args.target} -c {confounder_name}"
                     + f" --batch_size {args.batch_size} --root_dir {args.root_dir} --n_epochs {args.n_epochs}"
                     + f" --aug_col {aug_col} --log_dir {training_output_dir} --metadata_path {metadata_path}"
                     + f" --lr {args.lr} --weight_decay {args.weight_decay} --up_weight {up_weight} --metadata_csv_name {args.metadata_csv_name} --model {args.model} --use_bert_params {args.use_bert_params}"
@@ -244,7 +246,7 @@ if __name__ == "__main__":
         args.model = "resnet50"
         args.batch_size = 64
         # args.n_epochs = 300
-        args.n_epochs = 100
+        args.n_epochs = 300
         # args.n_epochs = 304 #aux 100
         args.memory = 30 if not args.memory else args.memory
         args.metadata_csv_name = "metadata.csv" if not args.metadata_csv_name else args.metadata_csv_name

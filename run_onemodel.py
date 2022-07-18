@@ -150,7 +150,7 @@ def main(args):
     n_classes = train_data.n_classes
 
     log_data(data, logger)
-
+    
     ## Initialize model
     model = get_model(
         model=args.model,
@@ -160,8 +160,9 @@ def main(args):
         dataset=args.dataset,
         log_dir=args.log_dir,
     )
-    if args.wandb:
-        wandb.watch(model)
+    
+    # if args.wandb:
+    #     wandb.watch(model)
 
     logger.flush()
 
@@ -172,13 +173,13 @@ def main(args):
     else:
         criterion = torch.nn.CrossEntropyLoss(reduction="none")
 
-    if resume:
-        raise NotImplementedError  # Check this implementation.
-        df = pd.read_csv(os.path.join(args.log_dir, "test.csv"))
-        epoch_offset = df.loc[len(df) - 1, "epoch"] + 1
-        logger.write(f"starting from epoch {epoch_offset}")
-    else:
-        epoch_offset = 0
+    # if resume:
+    #     raise NotImplementedError  # Check this implementation.
+    #     df = pd.read_csv(os.path.join(args.log_dir, "test.csv"))
+    #     epoch_offset = df.loc[len(df) - 1, "epoch"] + 1
+    #     logger.write(f"starting from epoch {epoch_offset}")
+    # else:
+    epoch_offset = 0
 
     
     train_csv_logger = CSVBatchLogger(os.path.join(args.log_dir, f"train.csv"),
@@ -204,6 +205,8 @@ def main(args):
         wandb=wandb if args.wandb else None,
     )
 
+    torch.save(model, 'first_train_model_aux5_epoch32.pth')
+    
     train_csv_logger.close()
     val_csv_logger.close()
     test_csv_logger.close()

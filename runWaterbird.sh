@@ -9,4 +9,4 @@
 #SBATCH --nodes=1
 #SBATCH --mem-per-gpu=64g
 
-bash results/CUB/CUB_sample_exp/ERM_upweight_0_epochs_100_lr_1e-05_weight_decay_1.0/job.sh
+bash results/CUB/CUB_sample_exp/ERM_upweight_0_epochs_33_lr_1e-05_weight_decay_0.0/job.sh
